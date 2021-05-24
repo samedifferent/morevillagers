@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "morevillagers-fabric",
+  "version": "${version}",
+  "name": "MoreVillagersFabric",
+  "description": "Adds new villager jobs, trades, and workstations! Designed and programmed by SameButDifferent. Special thanks to Kreezxil and Cryness for their help. Ported to Fabric by PheonixVX.",
+  "authors": ["SameButDifferent", "PheonixVX"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/morevillagersfabric/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "io.github.pheonixvx.morevillagersfabric.client.MoreVillagersFabricClient"
+    ],
+    "main": [
+      "io.github.pheonixvx.morevillagersfabric.MoreVillagersFabric"
+    ]
+  },
+  "accessWidener": "MoreVillagersFabric.accessWidener",
+  "mixins": [
+    "MoreVillagersFabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  }
+}
