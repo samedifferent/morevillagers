@@ -1,8 +1,6 @@
 package io.github.pheonixvx.morevillagersfabric.init;
 
 import com.google.common.collect.ImmutableMap;
-import io.github.pheonixvx.morevillagersfabric.mixin.PointOfInterestTypeInterface;
-import io.github.pheonixvx.morevillagersfabric.mixin.VillagerProfessionInterface;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.minecraft.block.Blocks;
@@ -16,18 +14,18 @@ import net.minecraft.world.poi.PointOfInterestType;
 
 public class VillagerInit {
     // Points of Interest
-    public static final PointOfInterestType OCEANOGRAPHER_POI = PointOfInterestTypeInterface.callRegister("oceanographer", PointOfInterestTypeInterface.callGetAllStatesOf(BlockInit.OCEANOGRAPHY_TABLE), 1, 1);
-    public static final PointOfInterestType NETHERIAN_POI = PointOfInterestTypeInterface.callRegister("netherian", PointOfInterestTypeInterface.callGetAllStatesOf(Blocks.CHISELED_POLISHED_BLACKSTONE), 1, 1);
-    public static final PointOfInterestType WOODWORKER_POI = PointOfInterestTypeInterface.callRegister("woodworker", PointOfInterestTypeInterface.callGetAllStatesOf(BlockInit.WOODWORKING_TABLE), 1, 1);
-    public static final PointOfInterestType ENDERIAN_POI = PointOfInterestTypeInterface.callRegister("enderian",  PointOfInterestTypeInterface.callGetAllStatesOf(Blocks.PURPUR_PILLAR), 1, 1);
-    public static final PointOfInterestType ENGINEER_POI = PointOfInterestTypeInterface.callRegister("engineer", PointOfInterestTypeInterface.callGetAllStatesOf(Blocks.REDSTONE_BLOCK), 1, 1);
+    public static final PointOfInterestType OCEANOGRAPHER_POI = PointOfInterestType.register("oceanographer", PointOfInterestType.getAllStatesOf(BlockInit.OCEANOGRAPHY_TABLE), 1, 1);
+    public static final PointOfInterestType NETHERIAN_POI = PointOfInterestType.register("netherian", PointOfInterestType.getAllStatesOf(Blocks.CHISELED_POLISHED_BLACKSTONE), 1, 1);
+    public static final PointOfInterestType WOODWORKER_POI = PointOfInterestType.register("woodworker", PointOfInterestType.getAllStatesOf(BlockInit.WOODWORKING_TABLE), 1, 1);
+    public static final PointOfInterestType ENDERIAN_POI = PointOfInterestType.register("enderian",  PointOfInterestType.getAllStatesOf(Blocks.PURPUR_PILLAR), 1, 1);
+    public static final PointOfInterestType ENGINEER_POI = PointOfInterestType.register("engineer", PointOfInterestType.getAllStatesOf(Blocks.REDSTONE_BLOCK), 1, 1);
 
-    // Vilager Professions
-    public static final VillagerProfession OCEANOGRAPHER = VillagerProfessionInterface.callRegister("oceanographer", OCEANOGRAPHER_POI, SoundEvents.ENTITY_VILLAGER_WORK_CARTOGRAPHER);
-    public static final VillagerProfession NETHERIAN = VillagerProfessionInterface.callRegister("netherian", NETHERIAN_POI, SoundEvents.ENTITY_VILLAGER_WORK_BUTCHER);
-    public static final VillagerProfession WOODWORKER = VillagerProfessionInterface.callRegister("woodworker", WOODWORKER_POI, SoundEvents.ENTITY_VILLAGER_WORK_LEATHERWORKER);
-    public static final VillagerProfession ENDERIAN = VillagerProfessionInterface.callRegister("enderian", ENDERIAN_POI, SoundEvents.ENTITY_VILLAGER_WORK_BUTCHER);
-    public static final VillagerProfession ENGINEER = VillagerProfessionInterface.callRegister("engineer", ENGINEER_POI, SoundEvents.ENTITY_VILLAGER_WORK_TOOLSMITH);
+    // Villager Professions
+    public static final VillagerProfession OCEANOGRAPHER = VillagerProfession.register("oceanographer", OCEANOGRAPHER_POI, SoundEvents.ENTITY_VILLAGER_WORK_CARTOGRAPHER);
+    public static final VillagerProfession NETHERIAN = VillagerProfession.register("netherian", NETHERIAN_POI, SoundEvents.ENTITY_VILLAGER_WORK_BUTCHER);
+    public static final VillagerProfession WOODWORKER = VillagerProfession.register("woodworker", WOODWORKER_POI, SoundEvents.ENTITY_VILLAGER_WORK_LEATHERWORKER);
+    public static final VillagerProfession ENDERIAN = VillagerProfession.register("enderian", ENDERIAN_POI, SoundEvents.ENTITY_VILLAGER_WORK_BUTCHER);
+    public static final VillagerProfession ENGINEER = VillagerProfession.register("engineer", ENGINEER_POI, SoundEvents.ENTITY_VILLAGER_WORK_TOOLSMITH);
 
     public static void fillTradeData() {
         TradeOffers.Factory[] oceanographerLevel1 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.PRISMARINE, 14, 16, 2), new TradeOffers.SellItemFactory(Items.SEA_LANTERN, 1, 4, 16, 1)};
