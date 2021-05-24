@@ -1,0 +1,13 @@
+{
+  "block.morevillagers.oceanography_table": "Oceanography Table",
+  "block.morevillagers.woodworking_table": "Woodworking Table",
+  "filled_map.bastion_remnant": "Bastion Explorer Map",
+  "filled_map.fortress": "Fortress Explorer Map",
+  "filled_map.endcity": "End City Explorer Map",
+  "itemGroup.morevillagers": "More Villagers",
+  "entity.minecraft.villager.morevillagers.oceanographer": "Oceanographer",
+  "entity.minecraft.villager.morevillagers.netherian": "Netherian",
+  "entity.minecraft.villager.morevillagers.woodworker": "Woodworker",
+  "entity.minecraft.villager.morevillagers.enderian": "Enderian",
+  "entity.minecraft.villager.morevillagers.engineer": "Engineer"
+}
