@@ -18,4 +18,7 @@ public class BlockInit {
     public static final RegistryObject<Block> WOODWORKING_TABLE = BLOCKS.register("woodworking_table",
             () -> new Block(AbstractBlock.Properties.copy(Blocks.CARTOGRAPHY_TABLE)));
 
+    public static final RegistryObject<Block> DECAYED_WORKBENCH = BLOCKS.register("decayed_workbench",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.CARTOGRAPHY_TABLE)));
+
 }

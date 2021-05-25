@@ -17,4 +17,7 @@ public class ItemInit {
 
     public static final RegistryObject<BlockItem> WOODWORKING_TABLE = ITEMS.register("woodworking_table",
             () -> new BlockItem(BlockInit.WOODWORKING_TABLE.get(), new Item.Properties().tab(MoreVillagers.GROUP)));
+
+    public static final RegistryObject<BlockItem> DECAYED_WORKBENCH = ITEMS.register("decayed_workbench",
+            () -> new BlockItem(BlockInit.DECAYED_WORKBENCH.get(), new Item.Properties().tab(MoreVillagers.GROUP)));
 }

@@ -40,7 +40,7 @@ public class VillagerInit {
 
     // CREATE NETHERIAN WORKSTATION AND PROFESSION
     public static final RegistryObject<PointOfInterestType> NETHERIAN_POI = POINT_OF_INTEREST_TYPES.register("netherian",
-            () -> new PointOfInterestType("netherian", PointOfInterestType.getBlockStates(Blocks.CHISELED_POLISHED_BLACKSTONE), 1, 1));
+            () -> new PointOfInterestType("netherian", PointOfInterestType.getBlockStates(BlockInit.DECAYED_WORKBENCH.get()), 1, 1));
     public static final RegistryObject<VillagerProfession> NETHERIAN = VILLAGER_PROFESSIONS.register("netherian",
             () -> new VillagerProfession("netherian", NETHERIAN_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER));
     public static void registerNetherianPOI() {
