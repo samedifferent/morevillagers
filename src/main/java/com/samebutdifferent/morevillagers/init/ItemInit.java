@@ -20,4 +20,7 @@ public class ItemInit {
 
     public static final RegistryObject<BlockItem> DECAYED_WORKBENCH = ITEMS.register("decayed_workbench",
             () -> new BlockItem(BlockInit.DECAYED_WORKBENCH.get(), new Item.Properties().tab(MoreVillagers.GROUP)));
+
+    public static final RegistryObject<BlockItem> PURPUR_ALTAR = ITEMS.register("purpur_altar",
+            () -> new BlockItem(BlockInit.PURPUR_ALTAR.get(), new Item.Properties().tab(MoreVillagers.GROUP)));
 }

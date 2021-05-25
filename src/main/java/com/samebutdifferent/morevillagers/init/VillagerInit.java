@@ -66,7 +66,7 @@ public class VillagerInit {
 
     // CREATE ENDERIAN WORKSTATION AND PROFESSION
     public static final RegistryObject<PointOfInterestType> ENDERIAN_POI = POINT_OF_INTEREST_TYPES.register("enderian",
-            () -> new PointOfInterestType("enderian", PointOfInterestType.getBlockStates(Blocks.PURPUR_PILLAR), 1, 1));
+            () -> new PointOfInterestType("enderian", PointOfInterestType.getBlockStates(BlockInit.PURPUR_ALTAR.get()), 1, 1));
     public static final RegistryObject<VillagerProfession> ENDERIAN = VILLAGER_PROFESSIONS.register("enderian",
             () -> new VillagerProfession("enderian", ENDERIAN_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER));
     public static void registerEnderianPOI() {
