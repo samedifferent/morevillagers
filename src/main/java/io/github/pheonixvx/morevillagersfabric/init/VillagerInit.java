@@ -18,7 +18,8 @@ public class VillagerInit {
     public static final PointOfInterestType NETHERIAN_POI = PointOfInterestType.register("netherian", PointOfInterestType.getAllStatesOf(BlockInit.DECAYED_WORKBRENCH), 1, 1);
     public static final PointOfInterestType WOODWORKER_POI = PointOfInterestType.register("woodworker", PointOfInterestType.getAllStatesOf(BlockInit.WOODWORKING_TABLE), 1, 1);
     public static final PointOfInterestType ENDERIAN_POI = PointOfInterestType.register("enderian", PointOfInterestType.getAllStatesOf(BlockInit.PURPUR_ALTAR), 1, 1);
-    public static final PointOfInterestType ENGINEER_POI = PointOfInterestType.register("engineer", PointOfInterestType.getAllStatesOf(Blocks.REDSTONE_BLOCK), 1, 1);
+    public static final PointOfInterestType ENGINEER_POI = PointOfInterestType.register("engineer", PointOfInterestType.getAllStatesOf(BlockInit.BLUEPRINT_TABLE), 1, 1);
+    public static final PointOfInterestType FLORIST_POI = PointOfInterestType.register("florist", PointOfInterestType.getAllStatesOf(Blocks.FLOWER_POT), 1, 1);
 
     // Villager Professions
     public static final VillagerProfession OCEANOGRAPHER = VillagerProfession.register("oceanographer", OCEANOGRAPHER_POI, SoundEvents.ENTITY_VILLAGER_WORK_CARTOGRAPHER);
@@ -26,6 +27,7 @@ public class VillagerInit {
     public static final VillagerProfession WOODWORKER = VillagerProfession.register("woodworker", WOODWORKER_POI, SoundEvents.ENTITY_VILLAGER_WORK_LEATHERWORKER);
     public static final VillagerProfession ENDERIAN = VillagerProfession.register("enderian", ENDERIAN_POI, SoundEvents.ENTITY_VILLAGER_WORK_BUTCHER);
     public static final VillagerProfession ENGINEER = VillagerProfession.register("engineer", ENGINEER_POI, SoundEvents.ENTITY_VILLAGER_WORK_TOOLSMITH);
+    public static final VillagerProfession FLORIST = VillagerProfession.register("florist", FLORIST_POI, SoundEvents.ENTITY_VILLAGER_WORK_FARMER);
 
     public static void fillTradeData() {
         TradeOffers.Factory[] oceanographerLevel1 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.PRISMARINE, 14, 16, 2), new TradeOffers.SellItemFactory(Items.SEA_LANTERN, 1, 4, 16, 1)};
