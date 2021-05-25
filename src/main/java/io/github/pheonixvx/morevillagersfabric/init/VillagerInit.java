@@ -17,7 +17,7 @@ public class VillagerInit {
     public static final PointOfInterestType OCEANOGRAPHER_POI = PointOfInterestType.register("oceanographer", PointOfInterestType.getAllStatesOf(BlockInit.OCEANOGRAPHY_TABLE), 1, 1);
     public static final PointOfInterestType NETHERIAN_POI = PointOfInterestType.register("netherian", PointOfInterestType.getAllStatesOf(Blocks.CHISELED_POLISHED_BLACKSTONE), 1, 1);
     public static final PointOfInterestType WOODWORKER_POI = PointOfInterestType.register("woodworker", PointOfInterestType.getAllStatesOf(BlockInit.WOODWORKING_TABLE), 1, 1);
-    public static final PointOfInterestType ENDERIAN_POI = PointOfInterestType.register("enderian",  PointOfInterestType.getAllStatesOf(Blocks.PURPUR_PILLAR), 1, 1);
+    public static final PointOfInterestType ENDERIAN_POI = PointOfInterestType.register("enderian", PointOfInterestType.getAllStatesOf(Blocks.PURPUR_PILLAR), 1, 1);
     public static final PointOfInterestType ENGINEER_POI = PointOfInterestType.register("engineer", PointOfInterestType.getAllStatesOf(Blocks.REDSTONE_BLOCK), 1, 1);
 
     // Villager Professions
