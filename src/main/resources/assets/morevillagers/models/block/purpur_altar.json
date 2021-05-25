@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "morevillagers:block/purpur_altar_side",
+    "bottom": "morevillagers:block/purpur_altar_bottom",
+    "top": "morevillagers:block/purpur_altar_top"
+  }
+}
