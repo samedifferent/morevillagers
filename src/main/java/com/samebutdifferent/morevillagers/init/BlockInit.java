@@ -27,4 +27,7 @@ public class BlockInit {
     public static final RegistryObject<Block> BLUEPRINT_TABLE = BLOCKS.register("blueprint_table",
             () -> new Block(AbstractBlock.Properties.copy(Blocks.CARTOGRAPHY_TABLE)));
 
+    public static final RegistryObject<Block> GARDENING_TABLE = BLOCKS.register("gardening_table",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.CARTOGRAPHY_TABLE)));
+
 }

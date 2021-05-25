@@ -92,7 +92,7 @@ public class VillagerInit {
 
     // CREATE FLORIST WORKSTATION AND PROFESSION
     public static final RegistryObject<PointOfInterestType> FLORIST_POI = POINT_OF_INTEREST_TYPES.register("florist",
-            () -> new PointOfInterestType("florist", PointOfInterestType.getBlockStates(Blocks.FLOWER_POT), 1, 1));
+            () -> new PointOfInterestType("florist", PointOfInterestType.getBlockStates(BlockInit.GARDENING_TABLE.get()), 1, 1));
     public static final RegistryObject<VillagerProfession> FLORIST = VILLAGER_PROFESSIONS.register("florist",
             () -> new VillagerProfession("florist", FLORIST_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FARMER));
     public static void registerFloristPOI() {
@@ -102,7 +102,7 @@ public class VillagerInit {
             e.printStackTrace();
         }
     }
-    
+
     // TRADE LISTS
     public static void fillTradeData() {
         // OCEANOGRAPHER TRADES
@@ -225,6 +225,44 @@ public class VillagerInit {
                 new VillagerTrades.ItemsForEmeraldsTrade(Items.HOPPER, 6, 1, 16, 30)
         };
         VillagerTrades.TRADES.put(ENGINEER.get(),toIntMap(ImmutableMap.of(1,engineerLevel1,2,engineerLevel2,3,engineerLevel3,4,engineerLevel4,5,engineerLevel5)));
+
+        // FLORIST TRADES
+        VillagerTrades.ITrade[] floristLevel1 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.DANDELION, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.POPPY, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.BLUE_ORCHID, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.ALLIUM, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.AZURE_BLUET, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.RED_TULIP, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.ORANGE_TULIP, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.WHITE_TULIP, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.PINK_TULIP, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.OXEYE_DAISY, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.CORNFLOWER, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.LILY_OF_THE_VALLEY, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.SUNFLOWER, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.LILAC, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.ROSE_BUSH, 1, 8, 16, 2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.PEONY, 1, 8, 16, 2)
+
+        };
+        VillagerTrades.ITrade[] floristLevel2 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.EmeraldForItemsTrade(Items.LILY_PAD,24,16,10),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.HONEYCOMB, 2, 1, 16, 5)
+        };
+        VillagerTrades.ITrade[] floristLevel3 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.EmeraldForItemsTrade(Items.VINE,30,16,20),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.HONEY_BOTTLE, 6, 1, 16, 10)
+        };
+        VillagerTrades.ITrade[] floristLevel4 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.EmeraldForItemsTrade(Items.FLOWER_POT,3,12,30),
+                new VillagerTrades.EmeraldForMapTrade(13, Structure.SWAMP_HUT, MapDecoration.Type.BANNER_GREEN, 12, 15)
+        };
+        VillagerTrades.ITrade[] floristLevel5 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.BEE_NEST, 8, 1, 3, 30),
+                new VillagerTrades.EmeraldForMapTrade(15, Structure.JUNGLE_TEMPLE, MapDecoration.Type.BANNER_LIME, 12, 30)
+        };
+        VillagerTrades.TRADES.put(FLORIST.get(),toIntMap(ImmutableMap.of(1,floristLevel1,2,floristLevel2,3,floristLevel3,4,floristLevel4,5,floristLevel5)));
     }
 
     private static Int2ObjectMap<VillagerTrades.ITrade[]> toIntMap(ImmutableMap<Integer, VillagerTrades.ITrade[]> p_221238_0_) {

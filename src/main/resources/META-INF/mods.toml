@@ -27,9 +27,9 @@ displayName="More Villagers" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 displayURL="https://www.curseforge.com/minecraft/mc-mods/more-villagers" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-#logoFile="morevillagers.png" #optional
+logoFile="logo_forge.png" #optional
 # A text field displayed in the mod UI
-credits="Designed and programmed by SameButDifferent. Special thanks to Kreezxil and Cryness for their help." #optional
+credits="Designed and programmed by SameButDifferent. Textures by Dansab158. Special thanks to Kreezxil and Cryness for their help." #optional
 # A text field displayed in the mod UI
 authors="SameButDifferent" #optional
 # The description text for the mod (multi line!) (#mandatory)
