@@ -79,12 +79,25 @@ public class VillagerInit {
 
     // CREATE ENGINEER WORKSTATION AND PROFESSION
     public static final RegistryObject<PointOfInterestType> ENGINEER_POI = POINT_OF_INTEREST_TYPES.register("engineer",
-            () -> new PointOfInterestType("engineer", PointOfInterestType.getBlockStates(Blocks.REDSTONE_BLOCK), 1, 1));
+            () -> new PointOfInterestType("engineer", PointOfInterestType.getBlockStates(BlockInit.BLUEPRINT_TABLE.get()), 1, 1));
     public static final RegistryObject<VillagerProfession> ENGINEER = VILLAGER_PROFESSIONS.register("engineer",
             () -> new VillagerProfession("engineer", ENGINEER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_TOOLSMITH));
     public static void registerEngineerPOI() {
         try {
             ObfuscationReflectionHelper.findMethod(PointOfInterestType.class, "registerBlockStates", PointOfInterestType.class).invoke(null, ENGINEER_POI.get());
+        } catch (InvocationTargetException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // CREATE FLORIST WORKSTATION AND PROFESSION
+    public static final RegistryObject<PointOfInterestType> FLORIST_POI = POINT_OF_INTEREST_TYPES.register("florist",
+            () -> new PointOfInterestType("florist", PointOfInterestType.getBlockStates(Blocks.FLOWER_POT), 1, 1));
+    public static final RegistryObject<VillagerProfession> FLORIST = VILLAGER_PROFESSIONS.register("florist",
+            () -> new VillagerProfession("florist", FLORIST_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FARMER));
+    public static void registerFloristPOI() {
+        try {
+            ObfuscationReflectionHelper.findMethod(PointOfInterestType.class, "registerBlockStates", PointOfInterestType.class).invoke(null, FLORIST_POI.get());
         } catch (InvocationTargetException | IllegalAccessException e) {
             e.printStackTrace();
         }

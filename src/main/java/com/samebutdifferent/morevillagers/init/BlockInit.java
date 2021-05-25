@@ -24,4 +24,7 @@ public class BlockInit {
     public static final RegistryObject<Block> PURPUR_ALTAR = BLOCKS.register("purpur_altar",
             () -> new Block(AbstractBlock.Properties.copy(Blocks.END_STONE)));
 
+    public static final RegistryObject<Block> BLUEPRINT_TABLE = BLOCKS.register("blueprint_table",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.CARTOGRAPHY_TABLE)));
+
 }

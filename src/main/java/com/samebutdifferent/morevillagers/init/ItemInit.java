@@ -23,4 +23,7 @@ public class ItemInit {
 
     public static final RegistryObject<BlockItem> PURPUR_ALTAR = ITEMS.register("purpur_altar",
             () -> new BlockItem(BlockInit.PURPUR_ALTAR.get(), new Item.Properties().tab(MoreVillagers.GROUP)));
+
+    public static final RegistryObject<BlockItem> BLUEPRINT_TABLE = ITEMS.register("blueprint_table",
+            () -> new BlockItem(BlockInit.BLUEPRINT_TABLE.get(), new Item.Properties().tab(MoreVillagers.GROUP)));
 }
