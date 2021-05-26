@@ -3,11 +3,11 @@
   "id": "morevillagers-fabric",
   "version": "${version}",
   "name": "MoreVillagersFabric",
-  "description": "Adds new villager jobs, trades, and workstations! Designed and programmed by SameButDifferent. Special thanks to Kreezxil and Cryness for their help. Ported to Fabric by PheonixVX.",
+  "description": "Adds new villager jobs, trades, and workstations! Textures by Dansab158. Designed and programmed by SameButDifferent. Special thanks to Kreezxil and Cryness for their help. Ported to Fabric by PheonixVX.",
   "authors": ["SameButDifferent", "PheonixVX"],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/morevillagersfabric/icon.png",
+  "icon": "assets/morevillagers/logo_fabric.png",
   "environment": "*",
   "entrypoints": {
     "main": [
