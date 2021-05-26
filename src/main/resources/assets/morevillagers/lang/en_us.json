@@ -15,6 +15,6 @@
   "entity.minecraft.villager.netherian": "Netherian",
   "entity.minecraft.villager.woodworker": "Woodworker",
   "entity.minecraft.villager.enderian": "Enderian",
-  "entity.minecraft.villager.morevillagers.engineer": "Engineer",
-  "entity.minecraft.villager.morevillagers.florist": "Florist"
+  "entity.minecraft.villager.engineer": "Engineer",
+  "entity.minecraft.villager.florist": "Florist"
 }
