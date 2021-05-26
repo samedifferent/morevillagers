@@ -1,0 +1,20 @@
+{
+  "block.morevillagers.oceanography_table": "海研台",
+  "block.morevillagers.woodworking_table": "鋸木機",
+  "block.morevillagers.decayed_workbench": "腐朽壇",
+  "block.morevillagers.purpur_altar": "紫珀壇",
+  "block.morevillagers.blueprint_table": "藍圖台",
+  "block.morevillagers.gardening_table": "園藝台,
+  "filled_map.bastion_remnant": "堡壘遺跡探險家地圖",
+  "filled_map.fortress": "地獄堡壘探險家地圖",
+  "filled_map.endcity": "終界城探險家地圖",
+  "filled_map.swamp_hut": "沼澤探險家地圖",
+  "filled_map.jungle_pyramid": "叢林探險家地圖",
+  "itemGroup.morevillagers": "More Villagers",
+  "entity.minecraft.villager.morevillagers.oceanographer": "海洋學家",
+  "entity.minecraft.villager.morevillagers.netherian": "地獄旅者",
+  "entity.minecraft.villager.morevillagers.woodworker": "木匠",
+  "entity.minecraft.villager.morevillagers.enderian": "終界旅者",
+  "entity.minecraft.villager.morevillagers.engineer": "工程學家",
+  "entity.minecraft.villager.morevillagers.florist": "園藝匠"
+}
