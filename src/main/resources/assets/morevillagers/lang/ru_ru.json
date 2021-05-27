@@ -1,0 +1,20 @@
+{
+  "block.morevillagers.oceanography_table": "Станция Океанографа",
+  "block.morevillagers.woodworking_table": "Стол Лесника",
+  "block.morevillagers.decayed_workbench": "Брошенная Станция",
+  "block.morevillagers.purpur_altar": "Пурпуровый Алтарь",
+  "block.morevillagers.blueprint_table": "Чертежный Стол",
+  "block.morevillagers.gardening_table": "Столик Садовника",
+  "filled_map.bastion_remnant": "Карта пути к Бастиону",
+  "filled_map.fortress": "Карта пути к Твердыне",
+  "filled_map.endcity": "Карта пути к Городу Края",
+  "filled_map.swamp_hut": "Карта Болот",
+  "filled_map.jungle_pyramid": "Карта Джунглей",
+  "itemGroup.morevillagers.item_group": "Разнообразные профессии",
+  "entity.minecraft.villager.oceanographer": "Океанограф",
+  "entity.minecraft.villager.netherian": "Нижнемиролог",
+  "entity.minecraft.villager.woodworker": "Лесник",
+  "entity.minecraft.villager.enderian": "Краёлог",
+  "entity.minecraft.villager.engineer": "Инженер",
+  "entity.minecraft.villager.florist": "Садовник"
+}
