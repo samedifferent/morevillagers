@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "morevillagers:block/hunting_post_bottom",
+    "north": "morevillagers:block/hunting_post_back",
+    "south": "morevillagers:block/hunting_post_front",
+    "east": "morevillagers:block/hunting_post_right",
+    "west": "morevillagers:block/hunting_post_left",
+    "up": "morevillagers:block/hunting_post_top",
+    "down": "morevillagers:block/hunting_post_bottom"
+  }
+}

@@ -30,4 +30,7 @@ public class BlockInit {
     public static final RegistryObject<Block> GARDENING_TABLE = BLOCKS.register("gardening_table",
             () -> new Block(AbstractBlock.Properties.copy(Blocks.CARTOGRAPHY_TABLE)));
 
+    public static final RegistryObject<Block> HUNTING_POST = BLOCKS.register("hunting_post",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.CARTOGRAPHY_TABLE)));
+
 }
