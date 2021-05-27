@@ -1,6 +1,6 @@
 {
   "block.morevillagers.oceanography_table": "Oceanography Table",
-  "block.morevillagers.woodworking_table": "Woodworking Table",
+  "block.morevillagers.woodworking_table": "Forestry Bench",
   "block.morevillagers.decayed_workbench": "Decayed Workbench",
   "block.morevillagers.purpur_altar": "Purpur Altar",
   "block.morevillagers.blueprint_table": "Blueprint Table",
@@ -12,9 +12,9 @@
   "filled_map.jungle_pyramid": "Jungle Explorer Map",
   "itemGroup.morevillagers": "More Villagers",
   "entity.minecraft.villager.morevillagers.oceanographer": "Oceanographer",
-  "entity.minecraft.villager.morevillagers.netherian": "Netherian",
-  "entity.minecraft.villager.morevillagers.woodworker": "Woodworker",
-  "entity.minecraft.villager.morevillagers.enderian": "Enderian",
+  "entity.minecraft.villager.morevillagers.netherian": "Netherologist",
+  "entity.minecraft.villager.morevillagers.woodworker": "Forester",
+  "entity.minecraft.villager.morevillagers.enderian": "Enderologist",
   "entity.minecraft.villager.morevillagers.engineer": "Engineer",
   "entity.minecraft.villager.morevillagers.florist": "Florist"
 }
