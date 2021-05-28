@@ -103,6 +103,19 @@ public class VillagerInit {
         }
     }
 
+    // CREATE HUNTER WORKSTATION AND PROFESSION
+    public static final RegistryObject<PointOfInterestType> HUNTER_POI = POINT_OF_INTEREST_TYPES.register("hunter",
+            () -> new PointOfInterestType("hunter", PointOfInterestType.getBlockStates(BlockInit.HUNTING_POST.get()), 1, 1));
+    public static final RegistryObject<VillagerProfession> HUNTER = VILLAGER_PROFESSIONS.register("hunter",
+            () -> new VillagerProfession("hunter", HUNTER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FLETCHER));
+    public static void registerHunterPOI() {
+        try {
+            ObfuscationReflectionHelper.findMethod(PointOfInterestType.class, "registerBlockStates", PointOfInterestType.class).invoke(null, HUNTER_POI.get());
+        } catch (InvocationTargetException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
     // TRADE LISTS
     public static void fillTradeData() {
         // OCEANOGRAPHER TRADES
@@ -263,6 +276,29 @@ public class VillagerInit {
                 new VillagerTrades.EmeraldForMapTrade(15, Structure.JUNGLE_TEMPLE, MapDecoration.Type.BANNER_LIME, 12, 30)
         };
         VillagerTrades.TRADES.put(FLORIST.get(),toIntMap(ImmutableMap.of(1,floristLevel1,2,floristLevel2,3,floristLevel3,4,floristLevel4,5,floristLevel5)));
+
+        // HUNTER TRADES
+        VillagerTrades.ITrade[] hunterLevel1 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.EmeraldForItemsTrade(Items.BONE,32,16,2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.SLIME_BALL, 5, 2, 16, 1)
+        };
+        VillagerTrades.ITrade[] hunterLevel2 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.EmeraldForItemsTrade(Items.SPIDER_EYE,24,16,10),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.FERMENTED_SPIDER_EYE, 5, 1, 16, 5)
+        };
+        VillagerTrades.ITrade[] hunterLevel3 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.EmeraldForItemsTrade(Items.GUNPOWDER,20,16,20),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.MAGMA_CREAM, 5, 1, 12, 10)
+        };
+        VillagerTrades.ITrade[] hunterLevel4 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.BLAZE_ROD, 5, 1, 12, 15),
+                new VillagerTrades.EmeraldForMapTrade(13, Structure.PILLAGER_OUTPOST, MapDecoration.Type.BANNER_BLACK, 12, 15)
+        };
+        VillagerTrades.ITrade[] hunterLevel5 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.GHAST_TEAR, 8, 1, 12, 30),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.RABBIT_FOOT, 8, 1, 12, 30)
+        };
+        VillagerTrades.TRADES.put(HUNTER.get(),toIntMap(ImmutableMap.of(1,hunterLevel1,2,hunterLevel2,3,hunterLevel3,4,hunterLevel4,5,hunterLevel5)));
     }
 
     private static Int2ObjectMap<VillagerTrades.ITrade[]> toIntMap(ImmutableMap<Integer, VillagerTrades.ITrade[]> p_221238_0_) {

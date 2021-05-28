@@ -11,11 +11,13 @@
   "filled_map.endcity": "End City Explorer Map",
   "filled_map.swamp_hut": "Swamp Explorer Map",
   "filled_map.jungle_pyramid": "Jungle Explorer Map",
+  "filled_map.pillager_outpost": "Outpost Explorer Map",
   "itemGroup.morevillagers": "More Villagers",
   "entity.minecraft.villager.morevillagers.oceanographer": "Oceanographer",
   "entity.minecraft.villager.morevillagers.netherian": "Netherologist",
   "entity.minecraft.villager.morevillagers.woodworker": "Forester",
   "entity.minecraft.villager.morevillagers.enderian": "Enderologist",
   "entity.minecraft.villager.morevillagers.engineer": "Engineer",
-  "entity.minecraft.villager.morevillagers.florist": "Florist"
+  "entity.minecraft.villager.morevillagers.florist": "Florist",
+  "entity.minecraft.villager.morevillagers.hunter": "Hunter"
 }
