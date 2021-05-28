@@ -121,11 +121,11 @@ public class VillagerInit {
         // OCEANOGRAPHER TRADES
         VillagerTrades.ITrade[] oceanographerLevel1 = new VillagerTrades.ITrade[]{
                 new VillagerTrades.EmeraldForItemsTrade(Items.PRISMARINE,14,16,2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.SEA_LANTERN, 1, 4, 16, 1)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.SEA_LANTERN, 2, 4, 16, 1)
         };
         VillagerTrades.ITrade[] oceanographerLevel2 = new VillagerTrades.ITrade[]{
                 new VillagerTrades.EmeraldForItemsTrade(Items.PRISMARINE_BRICKS,14,16,10),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.SPONGE, 1, 2, 16, 5)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.SPONGE, 4, 2, 16, 5)
         };
         VillagerTrades.ITrade[] oceanographerLevel3 = new VillagerTrades.ITrade[]{
                 new VillagerTrades.EmeraldForItemsTrade(Items.DARK_PRISMARINE,12,16,20),
@@ -133,32 +133,32 @@ public class VillagerInit {
         };
         VillagerTrades.ITrade[] oceanographerLevel4 = new VillagerTrades.ITrade[]{
                 new VillagerTrades.ItemsForEmeraldsTrade(Items.NAUTILUS_SHELL, 3, 1, 12, 15),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.HEART_OF_THE_SEA, 6, 1, 3, 15),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.HEART_OF_THE_SEA, 8, 1, 12, 15),
         };
         VillagerTrades.ITrade[] oceanographerLevel5 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.TRIDENT, 32, 1, 3, 30)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.TRIDENT, 32, 1, 2, 30)
         };
         VillagerTrades.TRADES.put(OCEANOGRAPHER.get(),toIntMap(ImmutableMap.of(1,oceanographerLevel1,2,oceanographerLevel2,3,oceanographerLevel3,4,oceanographerLevel4,5,oceanographerLevel5)));
 
         // NETHERIAN TRADES
         VillagerTrades.ITrade[] netherianLevel1 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.EmeraldForItemsTrade(Items.BASALT,20,16,2),
+                new VillagerTrades.EmeraldForItemsTrade(Items.BASALT,24,16,2),
                 new VillagerTrades.ItemsForEmeraldsTrade(Items.NETHER_BRICK, 1, 10, 16, 1)
         };
         VillagerTrades.ITrade[] netherianLevel2 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.EmeraldForItemsTrade(Items.BLACKSTONE,20,16,10),
+                new VillagerTrades.EmeraldForItemsTrade(Items.BLACKSTONE,24,16,10),
                 new VillagerTrades.ItemsForEmeraldsTrade(Items.NETHER_QUARTZ_ORE, 4, 1, 16, 5)
         };
         VillagerTrades.ITrade[] netherianLevel3 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.EmeraldForItemsTrade(Items.OBSIDIAN,2,16,20),
+                new VillagerTrades.EmeraldForItemsTrade(Items.OBSIDIAN,4,16,20),
                 new VillagerTrades.EmeraldForMapTrade(13, Structure.NETHER_BRIDGE, MapDecoration.Type.BANNER_RED, 12, 10),
         };
         VillagerTrades.ITrade[] netherianLevel4 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.EmeraldForMapTrade(13, Structure.BASTION_REMNANT, MapDecoration.Type.BANNER_YELLOW, 12, 15),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.MUSIC_DISC_PIGSTEP, 12, 1, 3, 15),
+                new VillagerTrades.EmeraldForItemsTrade(Items.GOLD_INGOT,4,16,30),
+                new VillagerTrades.EmeraldForMapTrade(14, Structure.BASTION_REMNANT, MapDecoration.Type.BANNER_YELLOW, 12, 15),
         };
         VillagerTrades.ITrade[] netherianLevel5 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.WITHER_SKELETON_SKULL, 64, 1, 1, 30)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.MUSIC_DISC_PIGSTEP, 20, 1, 12, 30),
         };
         VillagerTrades.TRADES.put(NETHERIAN.get(),toIntMap(ImmutableMap.of(1,netherianLevel1,2,netherianLevel2,3,netherianLevel3,4,netherianLevel4,5,netherianLevel5)));
 
@@ -194,85 +194,86 @@ public class VillagerInit {
 
         // ENDERIAN TRADES
         VillagerTrades.ITrade[] enderianLevel1 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.EmeraldForItemsTrade(Items.END_STONE,20,16,2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.DRAGON_BREATH, 1, 3, 16, 1)
+                new VillagerTrades.EmeraldForItemsTrade(Items.END_STONE,24,16,2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.END_ROD, 4, 3, 16, 1)
         };
         VillagerTrades.ITrade[] enderianLevel2 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.EmeraldForItemsTrade(Items.POPPED_CHORUS_FRUIT,28,16,10),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.PHANTOM_MEMBRANE, 4, 1, 16, 5)
+                new VillagerTrades.EmeraldForItemsTrade(Items.POPPED_CHORUS_FRUIT,20,16,10),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.PHANTOM_MEMBRANE, 5, 1, 16, 5)
         };
         VillagerTrades.ITrade[] enderianLevel3 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.EmeraldForItemsTrade(Items.ENDER_PEARL,12,16,20),
-                new VillagerTrades.EmeraldForMapTrade(13, Structure.END_CITY, MapDecoration.Type.BANNER_PURPLE, 12, 10)
+                new VillagerTrades.EmeraldForItemsTrade(Items.ENDER_PEARL,14,16,20),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.FIREWORK_ROCKET, 3, 8, 16, 10)
         };
         VillagerTrades.ITrade[] enderianLevel4 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.SHULKER_SHELL, 6, 1, 6, 15),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.DRAGON_HEAD, 12, 1, 2, 15)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.DRAGON_BREATH, 6, 2, 12, 15),
+                new VillagerTrades.EmeraldForMapTrade(14, Structure.END_CITY, MapDecoration.Type.BANNER_PURPLE, 12, 15)
         };
         VillagerTrades.ITrade[] enderianLevel5 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.ELYTRA, 64, 1, 1, 30)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.SHULKER_SHELL, 12, 1, 8, 30),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.DRAGON_HEAD, 20, 1, 2, 30)
         };
         VillagerTrades.TRADES.put(ENDERIAN.get(),toIntMap(ImmutableMap.of(1,enderianLevel1,2,enderianLevel2,3,enderianLevel3,4,enderianLevel4,5,enderianLevel5)));
 
         // ENGINEER TRADES
         VillagerTrades.ITrade[] engineerLevel1 = new VillagerTrades.ITrade[]{
                 new VillagerTrades.EmeraldForItemsTrade(Items.REDSTONE,20,16,2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.REPEATER, 2, 1, 16, 1)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.REPEATER, 4, 3, 16, 1)
         };
         VillagerTrades.ITrade[] engineerLevel2 = new VillagerTrades.ITrade[]{
                 new VillagerTrades.EmeraldForItemsTrade(Items.REDSTONE_TORCH,12,16,10),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.DROPPER, 1, 3, 16, 5),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.DISPENSER, 1, 1, 16, 5)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.DROPPER, 3, 3, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.DISPENSER, 4, 1, 16, 5)
         };
         VillagerTrades.ITrade[] engineerLevel3 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.EmeraldForItemsTrade(Items.REDSTONE_LAMP,1,16,20),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.OBSERVER, 2, 1, 16, 10),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.COMPARATOR, 3, 1, 16, 10)
+                new VillagerTrades.EmeraldForItemsTrade(Items.REDSTONE_LAMP,4,16,20),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.OBSERVER, 4, 1, 16, 10),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.COMPARATOR, 5, 1, 16, 10)
         };
         VillagerTrades.ITrade[] engineerLevel4 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.PISTON, 2, 1, 16, 15),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.STICKY_PISTON, 3, 1, 16, 15)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.PISTON, 5, 1, 16, 15),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.STICKY_PISTON, 6, 1, 16, 15)
         };
         VillagerTrades.ITrade[] engineerLevel5 = new VillagerTrades.ITrade[]{
                 new VillagerTrades.ItemsForEmeraldsTrade(Items.DAYLIGHT_DETECTOR, 5, 2, 16, 30),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.HOPPER, 6, 1, 16, 30)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.HOPPER, 7, 1, 16, 30)
         };
         VillagerTrades.TRADES.put(ENGINEER.get(),toIntMap(ImmutableMap.of(1,engineerLevel1,2,engineerLevel2,3,engineerLevel3,4,engineerLevel4,5,engineerLevel5)));
 
         // FLORIST TRADES
         VillagerTrades.ITrade[] floristLevel1 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.DANDELION, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.POPPY, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.BLUE_ORCHID, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.ALLIUM, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.AZURE_BLUET, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.RED_TULIP, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.ORANGE_TULIP, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.WHITE_TULIP, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.PINK_TULIP, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.OXEYE_DAISY, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.CORNFLOWER, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.LILY_OF_THE_VALLEY, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.SUNFLOWER, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.LILAC, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.ROSE_BUSH, 1, 8, 16, 2),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.PEONY, 1, 8, 16, 2)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.DANDELION, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.POPPY, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.BLUE_ORCHID, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.ALLIUM, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.AZURE_BLUET, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.RED_TULIP, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.ORANGE_TULIP, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.WHITE_TULIP, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.PINK_TULIP, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.OXEYE_DAISY, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.CORNFLOWER, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.LILY_OF_THE_VALLEY, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.SUNFLOWER, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.LILAC, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.ROSE_BUSH, 1, 8, 16, 1),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.PEONY, 1, 8, 16, 1)
 
         };
         VillagerTrades.ITrade[] floristLevel2 = new VillagerTrades.ITrade[]{
                 new VillagerTrades.EmeraldForItemsTrade(Items.LILY_PAD,24,16,10),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.HONEYCOMB, 2, 1, 16, 5)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.HONEYCOMB, 3, 1, 16, 5)
         };
         VillagerTrades.ITrade[] floristLevel3 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.EmeraldForItemsTrade(Items.VINE,30,16,20),
+                new VillagerTrades.EmeraldForItemsTrade(Items.VINE,24,16,20),
                 new VillagerTrades.ItemsForEmeraldsTrade(Items.HONEY_BOTTLE, 6, 1, 16, 10)
         };
         VillagerTrades.ITrade[] floristLevel4 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.EmeraldForItemsTrade(Items.FLOWER_POT,3,12,30),
+                new VillagerTrades.EmeraldForItemsTrade(Items.FLOWER_POT,3,16,30),
                 new VillagerTrades.EmeraldForMapTrade(13, Structure.SWAMP_HUT, MapDecoration.Type.BANNER_GREEN, 12, 15)
         };
         VillagerTrades.ITrade[] floristLevel5 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.BEE_NEST, 8, 1, 3, 30),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.BEE_NEST, 6, 1, 12, 30),
                 new VillagerTrades.EmeraldForMapTrade(15, Structure.JUNGLE_TEMPLE, MapDecoration.Type.BANNER_LIME, 12, 30)
         };
         VillagerTrades.TRADES.put(FLORIST.get(),toIntMap(ImmutableMap.of(1,floristLevel1,2,floristLevel2,3,floristLevel3,4,floristLevel4,5,floristLevel5)));
