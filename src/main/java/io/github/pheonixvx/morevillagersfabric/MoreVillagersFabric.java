@@ -40,8 +40,13 @@ public class MoreVillagersFabric implements ModInitializer {
 
         ServerLifecycleEvents.SERVER_STARTING.register((server) -> {
             Identifier plainsPoolLocation = new Identifier("minecraft:village/plains/houses");
+            Identifier desertPoolLocation = new Identifier("minecraft:village/desert/houses");
+            Identifier savannaPoolLocation = new Identifier("minecraft:village/savanna/houses");
+            Identifier snowyPoolLocation = new Identifier("minecraft:village/snowy/houses");
+            Identifier taigaPoolLocation = new Identifier("minecraft:village/taiga/houses");
 
-            registerJigsaw(server, plainsPoolLocation, new Identifier("morevillagers:village/plains/plains_woodworker"), 2);
+            registerJigsaw(server, plainsPoolLocation, new Identifier("morevillagers:village/plains/plains_woodworker"), 6);
+            //registerJigsaw(server, plainsPoolLocation, new Identifier("morevillagers:village/plains/plains_oceanographer"), 6);
         });
     }
 
