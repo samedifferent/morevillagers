@@ -32,24 +32,6 @@ public class MoreVillagersFabric implements ModInitializer {
             .icon(() -> new ItemStack(Items.EMERALD))
             .build();
 
-    @Override
-    public void onInitialize() {
-        BlockInit.initBlocks();
-        ItemInit.initItems();
-        VillagerInit.fillTradeData();
-
-        ServerLifecycleEvents.SERVER_STARTING.register((server) -> {
-            Identifier plainsPoolLocation = new Identifier("minecraft:village/plains/houses");
-            Identifier desertPoolLocation = new Identifier("minecraft:village/desert/houses");
-            Identifier savannaPoolLocation = new Identifier("minecraft:village/savanna/houses");
-            Identifier snowyPoolLocation = new Identifier("minecraft:village/snowy/houses");
-            Identifier taigaPoolLocation = new Identifier("minecraft:village/taiga/houses");
-
-            registerJigsaw(server, plainsPoolLocation, new Identifier("morevillagers:village/plains/plains_woodworker"), 6);
-            //registerJigsaw(server, plainsPoolLocation, new Identifier("morevillagers:village/plains/plains_oceanographer"), 6);
-        });
-    }
-
     public static void registerJigsaw(MinecraftServer server, Identifier poolLocation, Identifier nbtLocation, int weight) {
         DynamicRegistryManager manager = server.getRegistryManager();
         MutableRegistry<StructurePool> pools = manager.get(Registry.TEMPLATE_POOL_WORLDGEN);
@@ -63,12 +45,61 @@ public class MoreVillagersFabric implements ModInitializer {
             elements.add(element);
         }
 
-        List<Pair<StructurePoolElement, Integer>> elementCounts = new ArrayList(((StructurePoolAccessor) pool).getElementCounts());
+        List<Pair<StructurePoolElement, Integer>> elementCounts = new ArrayList<>(((StructurePoolAccessor) pool).getElementCounts());
 
         elements.addAll(((StructurePoolAccessor) pool).getElements());
         elementCounts.addAll(((StructurePoolAccessor) pool).getElementCounts());
 
         ((StructurePoolAccessor) pool).setElements(elements);
         ((StructurePoolAccessor) pool).setElementCounts(elementCounts);
+    }
+
+    @Override
+    public void onInitialize() {
+        BlockInit.initBlocks();
+        ItemInit.initItems();
+        VillagerInit.fillTradeData();
+
+        ServerLifecycleEvents.SERVER_STARTING.register((server) -> {
+            Identifier plainsPoolLocation = new Identifier("minecraft:village/plains/houses");
+            Identifier desertPoolLocation = new Identifier("minecraft:village/desert/houses");
+            Identifier savannaPoolLocation = new Identifier("minecraft:village/savanna/houses");
+            Identifier snowyPoolLocation = new Identifier("minecraft:village/snowy/houses");
+            Identifier taigaPoolLocation = new Identifier("minecraft:village/taiga/houses");
+
+            // PLAINS VILLAGE HOUSES
+            registerJigsaw(server, plainsPoolLocation, new Identifier("morevillagers:village/plains/plains_woodworker"), 20);
+            registerJigsaw(server, plainsPoolLocation, new Identifier("morevillagers:village/plains/plains_oceanographer"), 12);
+            registerJigsaw(server, plainsPoolLocation, new Identifier("morevillagers:village/plains/plains_florist"), 20);
+            registerJigsaw(server, plainsPoolLocation, new Identifier("morevillagers:village/plains/plains_hunter"), 20);
+            registerJigsaw(server, plainsPoolLocation, new Identifier("morevillagers:village/plains/plains_engineer"), 20);
+
+            // TAIGA VILLAGE HOUSES
+            registerJigsaw(server, taigaPoolLocation, new Identifier("morevillagers:village/taiga/taiga_woodworker"), 20);
+            registerJigsaw(server, taigaPoolLocation, new Identifier("morevillagers:village/taiga/taiga_oceanographer"), 12);
+            registerJigsaw(server, taigaPoolLocation, new Identifier("morevillagers:village/taiga/taiga_florist"), 20);
+            registerJigsaw(server, taigaPoolLocation, new Identifier("morevillagers:village/taiga/taiga_hunter"), 20);
+            registerJigsaw(server, taigaPoolLocation, new Identifier("morevillagers:village/taiga/taiga_engineer"), 20);
+
+            // SAVANNA VILLAGE HOUSES
+            registerJigsaw(server, savannaPoolLocation, new Identifier("morevillagers:village/savanna/savanna_woodworker"), 20);
+            registerJigsaw(server, savannaPoolLocation, new Identifier("morevillagers:village/savanna/savanna_oceanographer"), 12);
+            registerJigsaw(server, savannaPoolLocation, new Identifier("morevillagers:village/savanna/savanna_florist"), 20);
+            registerJigsaw(server, savannaPoolLocation, new Identifier("morevillagers:village/savanna/savanna_hunter"), 20);
+            registerJigsaw(server, savannaPoolLocation, new Identifier("morevillagers:village/savanna/savanna_engineer"), 20);
+
+            // SNOWY VILLAGE HOUSES
+            registerJigsaw(server, snowyPoolLocation, new Identifier("morevillagers:village/snowy/snowy_woodworker"), 20);
+            registerJigsaw(server, snowyPoolLocation, new Identifier("morevillagers:village/snowy/snowy_oceanographer"), 12);
+            registerJigsaw(server, snowyPoolLocation, new Identifier("morevillagers:village/snowy/snowy_florist"), 20);
+            registerJigsaw(server, snowyPoolLocation, new Identifier("morevillagers:village/snowy/snowy_hunter"), 20);
+            registerJigsaw(server, snowyPoolLocation, new Identifier("morevillagers:village/snowy/snowy_engineer"), 20);
+
+            // DESERT VILLAGE HOUSES
+            registerJigsaw(server, desertPoolLocation, new Identifier("morevillagers:village/desert/desert_woodworker"), 20);
+            registerJigsaw(server, desertPoolLocation, new Identifier("morevillagers:village/desert/desert_oceanographer"), 12);
+            registerJigsaw(server, desertPoolLocation, new Identifier("morevillagers:village/desert/desert_florist"), 20);
+            registerJigsaw(server, desertPoolLocation, new Identifier("morevillagers:village/desert/desert_hunter_hunter_engineer"), 20);
+        });
     }
 }
