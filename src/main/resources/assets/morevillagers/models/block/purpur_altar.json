@@ -1,8 +1,12 @@
 {
-  "parent": "minecraft:block/cube_bottom_top",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "side": "morevillagers:block/purpur_altar_side",
-    "bottom": "morevillagers:block/purpur_altar_bottom",
-    "top": "morevillagers:block/purpur_altar_top"
+    "particle": "morevillagers:block/purpur_altar_bottom",
+    "north": "morevillagers:block/purpur_altar_back",
+    "south": "morevillagers:block/purpur_altar_front",
+    "east": "morevillagers:block/purpur_altar_right",
+    "west": "morevillagers:block/purpur_altar_left",
+    "up": "morevillagers:block/purpur_altar_top",
+    "down": "morevillagers:block/purpur_altar_bottom"
   }
 }

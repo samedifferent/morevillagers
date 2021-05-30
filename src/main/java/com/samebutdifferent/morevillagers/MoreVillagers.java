@@ -47,7 +47,7 @@ public class MoreVillagers {
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/plains/houses"),
                 new ResourceLocation("morevillagers:village/plains/plains_woodworker"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/plains/houses"),
-                new ResourceLocation("morevillagers:village/plains/plains_oceanographer"), 20);
+                new ResourceLocation("morevillagers:village/plains/plains_oceanographer"), 12);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/plains/houses"),
                 new ResourceLocation("morevillagers:village/plains/plains_florist"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/plains/houses"),
@@ -59,7 +59,7 @@ public class MoreVillagers {
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/taiga/houses"),
                 new ResourceLocation("morevillagers:village/taiga/taiga_woodworker"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/taiga/houses"),
-                new ResourceLocation("morevillagers:village/taiga/taiga_oceanographer"), 20);
+                new ResourceLocation("morevillagers:village/taiga/taiga_oceanographer"), 12);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/taiga/houses"),
                 new ResourceLocation("morevillagers:village/taiga/taiga_florist"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/taiga/houses"),
@@ -71,7 +71,7 @@ public class MoreVillagers {
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/savanna/houses"),
                 new ResourceLocation("morevillagers:village/savanna/savanna_woodworker"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/savanna/houses"),
-                new ResourceLocation("morevillagers:village/savanna/savanna_oceanographer"), 20);
+                new ResourceLocation("morevillagers:village/savanna/savanna_oceanographer"), 12);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/savanna/houses"),
                 new ResourceLocation("morevillagers:village/savanna/savanna_florist"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/savanna/houses"),
@@ -83,7 +83,7 @@ public class MoreVillagers {
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/snowy/houses"),
                 new ResourceLocation("morevillagers:village/snowy/snowy_woodworker"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/snowy/houses"),
-                new ResourceLocation("morevillagers:village/snowy/snowy_oceanographer"), 20);
+                new ResourceLocation("morevillagers:village/snowy/snowy_oceanographer"), 12);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/snowy/houses"),
                 new ResourceLocation("morevillagers:village/snowy/snowy_florist"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/snowy/houses"),
@@ -95,7 +95,7 @@ public class MoreVillagers {
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
                 new ResourceLocation("morevillagers:village/desert/desert_woodworker"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
-                new ResourceLocation("morevillagers:village/desert/desert_oceanographer"), 20);
+                new ResourceLocation("morevillagers:village/desert/desert_oceanographer"), 12);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
                 new ResourceLocation("morevillagers:village/desert/desert_florist"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
