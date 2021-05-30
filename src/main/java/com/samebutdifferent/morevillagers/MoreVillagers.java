@@ -43,9 +43,28 @@ public class MoreVillagers {
 
     @SubscribeEvent
     public void onServerAboutToStartEvent(FMLServerAboutToStartEvent event) {
+        // PLAINS VILLAGE HOUSES
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/plains/houses"),
-                new ResourceLocation("morevillagers:village/plains/plains_woodworker"), 6);
+                new ResourceLocation("morevillagers:village/plains/plains_woodworker"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/plains/houses"),
-                new ResourceLocation("morevillagers:village/plains/plains_oceanographer"), 3);
+                new ResourceLocation("morevillagers:village/plains/plains_oceanographer"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/plains/houses"),
+                new ResourceLocation("morevillagers:village/plains/plains_florist"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/plains/houses"),
+                new ResourceLocation("morevillagers:village/plains/plains_hunter"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/plains/houses"),
+                new ResourceLocation("morevillagers:village/plains/plains_engineer"), 20);
+
+        // TAIGA VILLAGE HOUSES
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/taiga/houses"),
+                new ResourceLocation("morevillagers:village/taiga/taiga_woodworker"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/taiga/houses"),
+                new ResourceLocation("morevillagers:village/taiga/taiga_oceanographer"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/taiga/houses"),
+                new ResourceLocation("morevillagers:village/taiga/taiga_florist"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/taiga/houses"),
+                new ResourceLocation("morevillagers:village/taiga/taiga_hunter"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/taiga/houses"),
+                new ResourceLocation("morevillagers:village/taiga/taiga_engineer"), 20);
     }
 }
