@@ -66,5 +66,40 @@ public class MoreVillagers {
                 new ResourceLocation("morevillagers:village/taiga/taiga_hunter"), 20);
         JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/taiga/houses"),
                 new ResourceLocation("morevillagers:village/taiga/taiga_engineer"), 20);
+
+        // SAVANNA VILLAGE HOUSES
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/savanna/houses"),
+                new ResourceLocation("morevillagers:village/savanna/savanna_woodworker"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/savanna/houses"),
+                new ResourceLocation("morevillagers:village/savanna/savanna_oceanographer"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/savanna/houses"),
+                new ResourceLocation("morevillagers:village/savanna/savanna_florist"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/savanna/houses"),
+                new ResourceLocation("morevillagers:village/savanna/savanna_hunter"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/savanna/houses"),
+                new ResourceLocation("morevillagers:village/savanna/savanna_engineer"), 20);
+
+        // SNOWY VILLAGE HOUSES
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/snowy/houses"),
+                new ResourceLocation("morevillagers:village/snowy/snowy_woodworker"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/snowy/houses"),
+                new ResourceLocation("morevillagers:village/snowy/snowy_oceanographer"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/snowy/houses"),
+                new ResourceLocation("morevillagers:village/snowy/snowy_florist"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/snowy/houses"),
+                new ResourceLocation("morevillagers:village/snowy/snowy_hunter"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/snowy/houses"),
+                new ResourceLocation("morevillagers:village/snowy/snowy_engineer"), 20);
+
+        // DESERT VILLAGE HOUSES
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
+                new ResourceLocation("morevillagers:village/desert/desert_woodworker"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
+                new ResourceLocation("morevillagers:village/desert/desert_oceanographer"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
+                new ResourceLocation("morevillagers:village/desert/desert_florist"), 20);
+        JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
+                new ResourceLocation("morevillagers:village/desert/desert_hunter_hunter_engineer"), 20);
+        
     }
 }
