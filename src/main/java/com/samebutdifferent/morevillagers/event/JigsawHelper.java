@@ -10,7 +10,6 @@ import net.minecraft.world.gen.feature.jigsaw.JigsawPattern;
 import net.minecraft.world.gen.feature.jigsaw.JigsawPiece;
 import net.minecraft.world.gen.feature.template.ProcessorLists;
 import net.minecraft.world.gen.feature.template.StructureProcessorList;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,19 +21,19 @@ public class JigsawHelper {
         JigsawPattern pool = pools.get(poolLocation);
 
         StructureProcessorList processorList = manager.registryOrThrow(Registry.PROCESSOR_LIST_REGISTRY).getOptional(poolLocation).orElse(ProcessorLists.EMPTY);
-        List<JigsawPiece> elements = (ObfuscationReflectionHelper.getPrivateValue(JigsawPattern.class, pool, "templates"));
+        List<JigsawPiece> elements = pool.templates;
 
         JigsawPiece element = JigsawPiece.legacy(nbtLocation.toString(), processorList).apply(JigsawPattern.PlacementBehaviour.RIGID);
         for (int i = 0; i < weight; i++) {
             elements.add(element);
         }
 
-        List<Pair<JigsawPiece, Integer>> elementCounts = new ArrayList(ObfuscationReflectionHelper.getPrivateValue(JigsawPattern.class, pool, "rawTemplates"));
+        List<Pair<JigsawPiece, Integer>> elementCounts = new ArrayList(pool.rawTemplates);
 
-        elements.addAll(ObfuscationReflectionHelper.getPrivateValue(JigsawPattern.class, pool, "templates"));
-        elementCounts.addAll(ObfuscationReflectionHelper.getPrivateValue(JigsawPattern.class, pool, "rawTemplates"));
+        elements.addAll(pool.templates);
+        elementCounts.addAll(pool.rawTemplates);
 
-        ObfuscationReflectionHelper.setPrivateValue(JigsawPattern.class, pool, elements, "templates");
-        ObfuscationReflectionHelper.setPrivateValue(JigsawPattern.class, pool, elementCounts, "rawTemplates");
+        pool.templates = elements;
+        pool.rawTemplates = elementCounts;
     }
 }
