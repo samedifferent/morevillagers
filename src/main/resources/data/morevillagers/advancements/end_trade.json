@@ -1,0 +1,35 @@
+{
+  "parent": "morevillagers:first_trade",
+  "display": {
+    "icon": {
+      "item": "minecraft:end_stone"
+    },
+    "title": {
+      "translate": "Emeralds to the Moon!"
+    },
+    "description": {
+      "translate": "Trade with the Enderologist in the End dimension."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "enderian": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "type": "minecraft:villager",
+          "nbt": "{VillagerData:{profession:\"morevillagers:enderian\"}}",
+          "location": {
+            "dimension": "minecraft:the_end"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}
