@@ -1,0 +1,31 @@
+{
+  "parent": "morevillagers:root",
+  "display": {
+    "icon": {
+      "item": "minecraft:map"
+    },
+    "title": {
+      "translate": "First Village"
+    },
+    "description": {
+      "translate": "Find a village."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "village"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 25
+  }
+}

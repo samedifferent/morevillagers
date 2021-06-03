@@ -1,0 +1,68 @@
+{
+  "parent": "morevillagers:first_village",
+  "display": {
+    "icon": {
+      "item": "minecraft:filled_map"
+    },
+    "title": {
+      "translate": "Town Tourist"
+    },
+    "description": {
+      "translate": "Visit all 5 village types!"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "desert_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "village",
+          "biome" : "desert"
+        }
+      }
+    },
+    "plains_village" : {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "village",
+          "biome" : "plains"
+        }
+      }
+    },
+    "taiga_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "village",
+          "biome" : "taiga"
+        }
+      }
+    },
+    "savanna_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "village",
+          "biome" : "savanna"
+        }
+      }
+    },
+    "snowy_village": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "village",
+          "biome" : "snowy_tundra"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 200
+  }
+}
