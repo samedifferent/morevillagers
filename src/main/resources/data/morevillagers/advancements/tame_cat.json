@@ -8,7 +8,7 @@
       "translate": "Town Pet"
     },
     "description": {
-      "translate": "Tame a cat in a village"
+      "translate": "Tame a cat in a village."
     },
     "frame": "task",
     "show_toast": true,
