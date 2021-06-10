@@ -34,10 +34,10 @@ public class MoreVillagersFabric implements ModInitializer {
 
     public static void registerJigsaw(MinecraftServer server, Identifier poolLocation, Identifier nbtLocation, int weight) {
         DynamicRegistryManager manager = server.getRegistryManager();
-        MutableRegistry<StructurePool> pools = manager.get(Registry.TEMPLATE_POOL_WORLDGEN);
+        Registry<StructurePool> pools = manager.get(Registry.STRUCTURE_POOL_KEY);
         StructurePool pool = pools.get(poolLocation);
 
-        StructureProcessorList processorList = manager.get(Registry.PROCESSOR_LIST_WORLDGEN).getOrEmpty(poolLocation).orElse(StructureProcessorLists.EMPTY);
+        StructureProcessorList processorList = manager.get(Registry.STRUCTURE_PROCESSOR_LIST_KEY).getOrEmpty(poolLocation).orElse(StructureProcessorLists.EMPTY);
         List<StructurePoolElement> elements = ((StructurePoolAccessor) pool).getElements();
 
         StructurePoolElement element = StructurePoolElement.method_30426(nbtLocation.toString(), processorList).apply(StructurePool.Projection.RIGID);
