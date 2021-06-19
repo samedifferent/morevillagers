@@ -21,7 +21,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:netherian\"}}",
+          "nbt": "{VillagerData:{career:\"morevillagers:netherian\"}}",
           "location": {
             "dimension": "minecraft:the_nether"
           }

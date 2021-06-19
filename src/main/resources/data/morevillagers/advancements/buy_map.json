@@ -19,9 +19,11 @@
     "trade": {
       "trigger": "minecraft:villager_trade",
       "conditions": {
-        "item": {
-          "item": "minecraft:filled_map"
-        }
+        "item": [
+          {
+            "items": ["minecraft:filled_map"]
+          }
+        ]
       }
     }
   },

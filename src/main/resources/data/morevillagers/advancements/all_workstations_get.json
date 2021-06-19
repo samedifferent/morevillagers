@@ -19,9 +19,9 @@
     "blastfurnace": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:blast_furnace"
+            "items": ["minecraft:blast_furnace"]
           }
         ]
       }
@@ -29,9 +29,9 @@
     "smoker": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:smoker"
+            "items": ["minecraft:smoker"]
           }
         ]
       }
@@ -39,9 +39,9 @@
     "cartographytable": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:cartography_table"
+            "items": ["minecraft:cartography_table"]
           }
         ]
       }
@@ -49,9 +49,9 @@
     "brewingstand": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:brewing_stand"
+            "items": ["minecraft:brewing_stand"]
           }
         ]
       }
@@ -59,9 +59,9 @@
     "composter": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:composter"
+            "items": ["minecraft:composter"]
           }
         ]
       }
@@ -69,9 +69,9 @@
     "barrel": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:barrel"
+            "items": ["minecraft:barrel"]
           }
         ]
       }
@@ -79,9 +79,9 @@
     "fletchingtable": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:fletching_table"
+            "items": ["minecraft:fletching_table"]
           }
         ]
       }
@@ -89,9 +89,9 @@
     "cauldron": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:cauldron"
+            "items": ["minecraft:cauldron"]
           }
         ]
       }
@@ -99,9 +99,9 @@
     "lectern": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:lectern"
+            "items": ["minecraft:lectern"]
           }
         ]
       }
@@ -109,9 +109,9 @@
     "stonecutter": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:stonecutter"
+            "items": ["minecraft:stonecutter"]
           }
         ]
       }
@@ -119,9 +119,9 @@
     "loom": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:loom"
+            "items": ["minecraft:loom"]
           }
         ]
       }
@@ -129,9 +129,9 @@
     "smithingtable": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:smithing_table"
+            "items": ["minecraft:smithing_table"]
           }
         ]
       }
@@ -139,9 +139,9 @@
     "grindstone": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "minecraft:grindstone"
+            "items": ["minecraft:grindstone"]
           }
         ]
       }
@@ -149,9 +149,9 @@
     "oceanographytable": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "morevillagers:oceanography_table"
+            "items": ["morevillagers:oceanography_table"]
           }
         ]
       }
@@ -159,9 +159,9 @@
     "decayedworkbench": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "morevillagers:decayed_workbench"
+            "items": ["morevillagers:decayed_workbench"]
           }
         ]
       }
@@ -169,9 +169,9 @@
     "woodworkingtable": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "morevillagers:woodworking_table"
+            "items": ["morevillagers:woodworking_table"]
           }
         ]
       }
@@ -179,9 +179,9 @@
     "purpuraltar": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "morevillagers:purpur_altar"
+            "items": ["morevillagers:purpur_altar"]
           }
         ]
       }
@@ -189,9 +189,9 @@
     "blueprinttable": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "morevillagers:blueprint_table"
+            "items": ["morevillagers:blueprint_table"]
           }
         ]
       }
@@ -199,9 +199,9 @@
     "gardeningtable": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "morevillagers:gardening_table"
+            "items": ["morevillagers:gardening_table"]
           }
         ]
       }
@@ -209,9 +209,9 @@
     "huntingpost": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "items": [
+        "item": [
           {
-            "item": "morevillagers:hunting_post"
+            "items": ["morevillagers:hunting_post"]
           }
         ]
       }

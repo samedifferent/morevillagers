@@ -21,7 +21,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:armorer\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:armorer\"}}"
         }
       }
     },
@@ -30,7 +30,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:butcher\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:butcher\"}}"
         }
       }
     },
@@ -39,7 +39,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:cartographer\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:cartographer\"}}"
         }
       }
     },
@@ -48,7 +48,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:cleric\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:cleric\"}}"
         }
       }
     },
@@ -57,7 +57,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:farmer\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:farmer\"}}"
         }
       }
     },
@@ -66,7 +66,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:fisherman\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:fisherman\"}}"
         }
       }
     },
@@ -75,7 +75,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:fletcher\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:fletcher\"}}"
         }
       }
     },
@@ -84,7 +84,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:leatherworker\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:leatherworker\"}}"
         }
       }
     },
@@ -93,7 +93,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:librarian\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:librarian\"}}"
         }
       }
     },
@@ -102,7 +102,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:mason\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:mason\"}}"
         }
       }
     },
@@ -111,7 +111,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:shepherd\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:shepherd\"}}"
         }
       }
     },
@@ -120,7 +120,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:toolsmith\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:toolsmith\"}}"
         }
       }
     },
@@ -129,7 +129,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:weaponsmith\"}}"
+          "nbt": "{VillagerData:{career:\"minecraft:weaponsmith\"}}"
         }
       }
     },
@@ -138,7 +138,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:oceanographer\"}}"
+          "nbt": "{VillagerData:{career:\"morevillagers:oceanographer\"}}"
         }
       }
     },
@@ -147,7 +147,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:netherian\"}}"
+          "nbt": "{VillagerData:{career:\"morevillagers:netherian\"}}"
         }
       }
     },
@@ -156,7 +156,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:woodworker\"}}"
+          "nbt": "{VillagerData:{career:\"morevillagers:woodworker\"}}"
         }
       }
     },
@@ -165,7 +165,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:enderian\"}}"
+          "nbt": "{VillagerData:{career:\"morevillagers:enderian\"}}"
         }
       }
     },
@@ -174,7 +174,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:engineer\"}}"
+          "nbt": "{VillagerData:{career:\"morevillagers:engineer\"}}"
         }
       }
     },
@@ -183,7 +183,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:florist\"}}"
+          "nbt": "{VillagerData:{career:\"morevillagers:florist\"}}"
         }
       }
     },
@@ -192,7 +192,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:hunter\"}}"
+          "nbt": "{VillagerData:{career:\"morevillagers:hunter\"}}"
         }
       }
     }

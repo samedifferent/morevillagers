@@ -21,7 +21,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:enderian\"}}",
+          "nbt": "{VillagerData:{career:\"morevillagers:enderian\"}}",
           "location": {
             "dimension": "minecraft:the_end"
           }
