@@ -19,11 +19,11 @@
     "hasmap": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": [
-          {
-            "items": ["minecraft:filled_map"]
-          }
-        ]
+        "item": {
+          "items": [
+            "minecraft:filled_map"
+          ]
+        }
       }
     },
     "endcity": {

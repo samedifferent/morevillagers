@@ -19,11 +19,9 @@
     "hasmap": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": [
-          {
+        "item": {
             "items": ["minecraft:filled_map"]
-          }
-        ]
+        }
       }
     },
     "bastion": {
