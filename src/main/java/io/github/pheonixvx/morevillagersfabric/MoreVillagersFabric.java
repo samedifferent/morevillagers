@@ -18,7 +18,6 @@ import net.minecraft.structure.processor.StructureProcessorList;
 import net.minecraft.structure.processor.StructureProcessorLists;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.DynamicRegistryManager;
-import net.minecraft.util.registry.MutableRegistry;
 import net.minecraft.util.registry.Registry;
 
 import java.util.ArrayList;
@@ -40,7 +39,7 @@ public class MoreVillagersFabric implements ModInitializer {
         StructureProcessorList processorList = manager.get(Registry.STRUCTURE_PROCESSOR_LIST_KEY).getOrEmpty(poolLocation).orElse(StructureProcessorLists.EMPTY);
         List<StructurePoolElement> elements = ((StructurePoolAccessor) pool).getElements();
 
-        StructurePoolElement element = StructurePoolElement.method_30426(nbtLocation.toString(), processorList).apply(StructurePool.Projection.RIGID);
+        StructurePoolElement element = StructurePoolElement.ofProcessedLegacySingle(nbtLocation.toString(), processorList).apply(StructurePool.Projection.RIGID);
         for (int i = 0; i < weight; i++) {
             elements.add(element);
         }
