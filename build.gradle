@@ -10,6 +10,11 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
+repositories {
+    maven { url "https://maven.terraformersmc.com/releases" }
+    maven { url "https://maven.shedaniel.me/" }
+}
+
 dependencies {
     //to change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -18,6 +23,12 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    modApi include("me.shedaniel.cloth:cloth-config-lite-fabric:2.0.6")
+
+    modImplementation "com.terraformersmc:modmenu:2.0.2", {
+        exclude module: "fabric-api"
+    }
 
     // PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
     // You may need to force-disable transitiveness on them.

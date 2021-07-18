@@ -12,6 +12,9 @@
   "entrypoints": {
     "main": [
       "io.github.pheonixvx.morevillagersfabric.MoreVillagersFabric"
+    ],
+    "modmenu": [
+      "io.github.pheonixvx.morevillagersfabric.config.ModMenuIntegration"
     ]
   },
   "mixins": [
