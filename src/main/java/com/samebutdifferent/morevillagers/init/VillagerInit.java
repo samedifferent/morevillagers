@@ -242,27 +242,26 @@ public class VillagerInit {
 
         // FLORIST TRADES
         VillagerTrades.ITrade[] floristLevel1 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.DANDELION, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.POPPY, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.BLUE_ORCHID, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.ALLIUM, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.AZURE_BLUET, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.RED_TULIP, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.ORANGE_TULIP, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.WHITE_TULIP, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.PINK_TULIP, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.OXEYE_DAISY, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.CORNFLOWER, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.LILY_OF_THE_VALLEY, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.SUNFLOWER, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.LILAC, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.ROSE_BUSH, 1, 8, 16, 1),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.PEONY, 1, 8, 16, 1)
-
+                new VillagerTrades.EmeraldForItemsTrade(Items.LILY_PAD,24,16,2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.HONEYCOMB, 3, 1, 16, 1)
         };
         VillagerTrades.ITrade[] floristLevel2 = new VillagerTrades.ITrade[]{
-                new VillagerTrades.EmeraldForItemsTrade(Items.LILY_PAD,24,16,10),
-                new VillagerTrades.ItemsForEmeraldsTrade(Items.HONEYCOMB, 3, 1, 16, 5)
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.DANDELION, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.POPPY, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.BLUE_ORCHID, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.ALLIUM, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.AZURE_BLUET, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.RED_TULIP, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.ORANGE_TULIP, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.WHITE_TULIP, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.PINK_TULIP, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.OXEYE_DAISY, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.CORNFLOWER, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.LILY_OF_THE_VALLEY, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.SUNFLOWER, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.LILAC, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.ROSE_BUSH, 1, 8, 16, 5),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.PEONY, 1, 8, 16, 5)
         };
         VillagerTrades.ITrade[] floristLevel3 = new VillagerTrades.ITrade[]{
                 new VillagerTrades.EmeraldForItemsTrade(Items.VINE,24,16,20),
