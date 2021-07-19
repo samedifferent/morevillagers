@@ -1,4 +1,11 @@
 {
+  "text.morevillagers.config.title": "MoreVillagers Config",
+  "text.morevillagers.generate_plains_houses": "Generate Plains Houses",
+  "text.morevillagers.generate_taiga_houses": "Generate Taiga Houses",
+  "text.morevillagers.generate_savanna_houses": "Generate Savanna Houses",
+  "text.morevillagers.generate_snowy_houses": "Generate Snowy Houses",
+  "text.morevillagers.generate_desert_houses": "Generate Desert Houses",
+
   "block.morevillagers.oceanography_table": "Oceanography Table",
   "block.morevillagers.woodworking_table": "Forestry Bench",
   "block.morevillagers.decayed_workbench": "Decayed Workbench",
