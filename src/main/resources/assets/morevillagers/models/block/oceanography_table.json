@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "morevillagers:block/oceanography_table_side",
+    "north": "morevillagers:block/oceanography_table_back",
+    "south": "morevillagers:block/oceanography_table_front",
+    "east": "morevillagers:block/oceanography_table_side",
+    "west": "morevillagers:block/oceanography_table_side",
+    "up": "morevillagers:block/oceanography_table_top",
+    "down": "minecraft:block/barrel_bottom"
+  }
+}

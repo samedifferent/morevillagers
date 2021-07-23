@@ -1,0 +1,37 @@
+{
+  "parent": "morevillagers:nether_trade",
+  "display": {
+    "icon": {
+      "item": "minecraft:polished_blackstone_bricks"
+    },
+    "title": {
+      "translate": "Bastion Explorer Map"
+    },
+    "description": {
+      "translate": "Use a Bastion Explorer Map from the Netherologist to find a Bastion Remnant."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hasmap": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "item": {
+            "items": ["minecraft:filled_map"]
+        }
+      }
+    },
+    "bastion": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "feature": "bastion_remnant"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 200
+  }
+}

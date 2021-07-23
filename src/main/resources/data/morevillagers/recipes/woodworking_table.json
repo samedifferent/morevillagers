@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "$$",
+    "##",
+    "@@"
+  ],
+  "key": {
+    "$": {
+      "tag": "minecraft:leaves"
+    },
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "@": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "item": "morevillagers:woodworking_table"
+  }
+}

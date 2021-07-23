@@ -1,0 +1,32 @@
+{
+  "parent": "morevillagers:first_trade",
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond"
+    },
+    "title": {
+      "translate": "Ace Trainer"
+    },
+    "description": {
+      "translate": "Level up a villager to Master and make a grand purchase."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "villagertrade": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "type": "minecraft:villager",
+          "nbt": "{VillagerData:{level:5}}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}

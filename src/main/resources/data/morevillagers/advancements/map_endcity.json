@@ -1,0 +1,39 @@
+{
+  "parent": "morevillagers:end_trade",
+  "display": {
+    "icon": {
+      "item": "minecraft:purpur_block"
+    },
+    "title": {
+      "translate": "End City Explorer Map"
+    },
+    "description": {
+      "translate": "Use an End City Explorer Map from the Enderologist to find an End City."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hasmap": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:filled_map"
+          ]
+        }
+      }
+    },
+    "endcity": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "feature": "endcity"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 200
+  }
+}
