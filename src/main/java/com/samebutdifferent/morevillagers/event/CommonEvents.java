@@ -19,6 +19,7 @@ public class CommonEvents {
             VillagerInit.registerEngineerPOI();
             VillagerInit.registerFloristPOI();
             VillagerInit.registerHunterPOI();
+            VillagerInit.registerMinerPOI();
         });
     }
 }

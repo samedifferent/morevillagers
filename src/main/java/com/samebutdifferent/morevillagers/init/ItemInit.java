@@ -33,4 +33,6 @@ public class ItemInit {
     public static final RegistryObject<BlockItem> HUNTING_POST = ITEMS.register("hunting_post",
             () -> new BlockItem(BlockInit.HUNTING_POST.get(), new Item.Properties().tab(MoreVillagers.GROUP)));
 
+    public static final RegistryObject<BlockItem> MINING_BENCH = ITEMS.register("mining_bench",
+            () -> new BlockItem(BlockInit.MINING_BENCH.get(), new Item.Properties().tab(MoreVillagers.GROUP)));
 }

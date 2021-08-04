@@ -81,7 +81,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.17.1-37.0.1'
+    minecraft 'net.minecraftforge:forge:1.17.1-37.0.22'
     implementation('cpw.mods:securejarhandler') { version { strictly '0.9.45' } }
 }
 

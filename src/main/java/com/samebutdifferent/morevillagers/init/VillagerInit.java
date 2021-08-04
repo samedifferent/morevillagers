@@ -115,6 +115,19 @@ public class VillagerInit {
         }
     }
 
+    // CREATE MINER WORKSTATION AND PROFESSION
+    public static final RegistryObject<PoiType> MINER_POI = POINT_OF_INTEREST_TYPES.register("miner",
+            () -> new PoiType("miner", PoiType.getBlockStates(BlockInit.MINING_BENCH.get()), 1, 1));
+    public static final RegistryObject<VillagerProfession> MINER = VILLAGER_PROFESSIONS.register("miner",
+            () -> new VillagerProfession("miner", MINER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_ARMORER));
+    public static void registerMinerPOI() {
+        try {
+            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, MINER_POI.get());
+        } catch (InvocationTargetException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
     // TRADE LISTS
     public static void fillTradeData() {
         // OCEANOGRAPHER TRADES
@@ -241,33 +254,19 @@ public class VillagerInit {
 
         // FLORIST TRADES
         VillagerTrades.ItemListing[] floristLevel1 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.EmeraldForItems(Items.LILY_PAD,24,16,2),
+                new VillagerTrades.EmeraldForItems(Items.FLOWER_POT,3,16,2),
                 new VillagerTrades.ItemsForEmeralds(Items.HONEYCOMB, 3, 1, 16, 1)
         };
         VillagerTrades.ItemListing[] floristLevel2 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.ItemsForEmeralds(Items.DANDELION, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.POPPY, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.BLUE_ORCHID, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.ALLIUM, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.AZURE_BLUET, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.RED_TULIP, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.ORANGE_TULIP, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.WHITE_TULIP, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.PINK_TULIP, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.OXEYE_DAISY, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.CORNFLOWER, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.LILY_OF_THE_VALLEY, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.SUNFLOWER, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.LILAC, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.ROSE_BUSH, 1, 8, 16, 5),
-                new VillagerTrades.ItemsForEmeralds(Items.PEONY, 1, 8, 16, 5)
+                new VillagerTrades.EmeraldForItems(Items.VINE,24,16,10),
+                new VillagerTrades.ItemsForEmeralds(Items.GLOW_BERRIES, 1, 2, 16, 5)
         };
         VillagerTrades.ItemListing[] floristLevel3 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.EmeraldForItems(Items.VINE,24,16,20),
+                new VillagerTrades.ItemsForEmeralds(Items.SMALL_DRIPLEAF, 1, 2, 16, 10),
                 new VillagerTrades.ItemsForEmeralds(Items.HONEY_BOTTLE, 6, 1, 16, 10)
         };
         VillagerTrades.ItemListing[] floristLevel4 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.EmeraldForItems(Items.FLOWER_POT,3,16,30),
+                new VillagerTrades.EmeraldForItems(Items.MOSS_BLOCK,32,16,30),
                 new VillagerTrades.TreasureMapForEmeralds(13, StructureFeature.SWAMP_HUT, MapDecoration.Type.BANNER_GREEN, 12, 15)
         };
         VillagerTrades.ItemListing[] floristLevel5 = new VillagerTrades.ItemListing[]{
@@ -298,6 +297,28 @@ public class VillagerInit {
                 new VillagerTrades.ItemsForEmeralds(Items.RABBIT_FOOT, 8, 1, 12, 30)
         };
         VillagerTrades.TRADES.put(HUNTER.get(),toIntMap(ImmutableMap.of(1,hunterLevel1,2,hunterLevel2,3,hunterLevel3,4,hunterLevel4,5,hunterLevel5)));
+
+        // MINER TRADES
+        VillagerTrades.ItemListing[] minerLevel1 = new VillagerTrades.ItemListing[]{
+                new VillagerTrades.EmeraldForItems(Items.DEEPSLATE,20,16,2),
+                new VillagerTrades.ItemsForEmeralds(Items.CALCITE, 1, 16, 16, 1)
+        };
+        VillagerTrades.ItemListing[] minerLevel2 = new VillagerTrades.ItemListing[]{
+                new VillagerTrades.EmeraldForItems(Items.RAW_COPPER,15,16,10),
+                new VillagerTrades.EmeraldForItems(Items.RAW_IRON,12,16,10),
+        };
+        VillagerTrades.ItemListing[] minerLevel3 = new VillagerTrades.ItemListing[]{
+                new VillagerTrades.EmeraldForItems(Items.RAW_GOLD,10,16,20),
+                new VillagerTrades.ItemsForEmeralds(Items.AMETHYST_SHARD, 1, 2, 12, 10)
+        };
+        VillagerTrades.ItemListing[] minerLevel4 = new VillagerTrades.ItemListing[]{
+                new VillagerTrades.EmeraldForItems(Items.TORCH,50,12,30),
+                new VillagerTrades.TreasureMapForEmeralds(13, StructureFeature.MINESHAFT, MapDecoration.Type.BANNER_BROWN, 12, 15)
+        };
+        VillagerTrades.ItemListing[] minerLevel5 = new VillagerTrades.ItemListing[]{
+                new VillagerTrades.EnchantedItemForEmeralds(Items.DIAMOND_PICKAXE, 12, 3, 15, 0.2F)
+        };
+        VillagerTrades.TRADES.put(MINER.get(),toIntMap(ImmutableMap.of(1,minerLevel1,2,minerLevel2,3,minerLevel3,4,minerLevel4,5,minerLevel5)));
     }
 
     private static Int2ObjectMap<VillagerTrades.ItemListing[]> toIntMap(ImmutableMap<Integer, VillagerTrades.ItemListing[]> p_221238_0_) {
