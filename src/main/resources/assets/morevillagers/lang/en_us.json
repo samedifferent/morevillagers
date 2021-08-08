@@ -6,6 +6,7 @@
   "block.morevillagers.blueprint_table": "Blueprint Table",
   "block.morevillagers.gardening_table": "Gardening Table",
   "block.morevillagers.hunting_post": "Hunting Post",
+  "block.morevillagers.mining_bench": "Mining Bench",
 
   "filled_map.bastion_remnant": "Bastion Explorer Map",
   "filled_map.fortress": "Fortress Explorer Map",
@@ -13,6 +14,7 @@
   "filled_map.swamp_hut": "Swamp Explorer Map",
   "filled_map.jungle_pyramid": "Jungle Explorer Map",
   "filled_map.pillager_outpost": "Outpost Explorer Map",
+  "filled_map.mineshaft": "Mineshaft Explorer Map",
 
   "itemGroup.morevillagers": "More Villagers",
 
@@ -23,6 +25,7 @@
   "entity.minecraft.villager.morevillagers.engineer": "Engineer",
   "entity.minecraft.villager.morevillagers.florist": "Florist",
   "entity.minecraft.villager.morevillagers.hunter": "Hunter",
+  "entity.minecraft.villager.morevillagers.miner": "Miner",
 
   "Frequent Customer": "Frequent Customer",
   "Trade with every villager profession": "Trade with every villager profession",

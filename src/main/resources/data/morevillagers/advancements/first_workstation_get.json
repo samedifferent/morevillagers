@@ -253,6 +253,18 @@
           }
         ]
       }
+    },
+    "miningbench": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "morevillagers:mining_bench"
+            ]
+          }
+        ]
+      }
     }
   },
   "requirements": [
@@ -276,7 +288,8 @@
       "purpuraltar",
       "blueprinttable",
       "gardeningtable",
-      "huntingpost"
+      "huntingpost",
+      "miningbench"
     ]
   ]
 }

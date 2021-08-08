@@ -34,5 +34,5 @@ public class BlockInit {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.CARTOGRAPHY_TABLE)));
 
     public static final RegistryObject<Block> MINING_BENCH = BLOCKS.register("mining_bench",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 }
