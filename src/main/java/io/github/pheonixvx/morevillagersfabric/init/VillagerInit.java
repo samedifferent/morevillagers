@@ -20,6 +20,7 @@ public class VillagerInit {
     public static final PointOfInterestType ENGINEER_POI = PointOfInterestType.register("engineer", PointOfInterestType.getAllStatesOf(BlockInit.BLUEPRINT_TABLE), 1, 1);
     public static final PointOfInterestType FLORIST_POI = PointOfInterestType.register("florist", PointOfInterestType.getAllStatesOf(BlockInit.GARDENING_TABLE), 1, 1);
     public static final PointOfInterestType HUNTER_POI = PointOfInterestType.register("hunter", PointOfInterestType.getAllStatesOf(BlockInit.HUNTING_POST), 1, 1);
+    public static final PointOfInterestType MINER_POI = PointOfInterestType.register("miner", PointOfInterestType.getAllStatesOf(BlockInit.MINING_BENCH), 1, 1);
 
     // Villager Professions
     public static final VillagerProfession OCEANOGRAPHER = VillagerProfession.register("oceanographer", OCEANOGRAPHER_POI, SoundEvents.ENTITY_VILLAGER_WORK_CARTOGRAPHER);
@@ -29,6 +30,7 @@ public class VillagerInit {
     public static final VillagerProfession ENGINEER = VillagerProfession.register("engineer", ENGINEER_POI, SoundEvents.ENTITY_VILLAGER_WORK_TOOLSMITH);
     public static final VillagerProfession FLORIST = VillagerProfession.register("florist", FLORIST_POI, SoundEvents.ENTITY_VILLAGER_WORK_FARMER);
     public static final VillagerProfession HUNTER = VillagerProfession.register("hunter", HUNTER_POI, SoundEvents.ENTITY_VILLAGER_WORK_FLETCHER);
+    public static final VillagerProfession MINER = VillagerProfession.register("miner", MINER_POI, SoundEvents.ENTITY_VILLAGER_WORK_ARMORER);
 
     public static void fillTradeData() {
         // Oceanographer trades
@@ -68,12 +70,12 @@ public class VillagerInit {
         TradeOffers.Factory[] engineerLevel5 = new TradeOffers.Factory[]{new TradeOffers.SellItemFactory(Items.DAYLIGHT_DETECTOR, 5, 2, 16, 30), new TradeOffers.SellItemFactory(Items.HOPPER, 7, 1, 16, 30)};
         TradeOffers.PROFESSION_TO_LEVELED_TRADE.put(ENGINEER, VillagerInit.toIntMap(ImmutableMap.of(1, engineerLevel1, 2, engineerLevel2, 3, engineerLevel3, 4, engineerLevel4, 5, engineerLevel5)));
         // Florist trades
-        TradeOffers.Factory[] floristLevel1 = new TradeOffers.Factory[]{new TradeOffers.SellItemFactory(Items.DANDELION, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.POPPY, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.BLUE_ORCHID, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.ALLIUM, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.AZURE_BLUET, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.RED_TULIP, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.ORANGE_TULIP, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.WHITE_TULIP, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.PINK_TULIP, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.OXEYE_DAISY, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.CORNFLOWER, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.LILY_OF_THE_VALLEY, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.SUNFLOWER, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.LILAC, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.ROSE_BUSH, 1, 8, 16, 1), new TradeOffers.SellItemFactory(Items.PEONY, 1, 8, 16, 1)};
-        TradeOffers.Factory[] floristLevel2 = new TradeOffers.Factory[]{new TradeOffers.SellItemFactory(Items.DANDELION, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.POPPY, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.BLUE_ORCHID, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.ALLIUM, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.AZURE_BLUET, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.RED_TULIP, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.ORANGE_TULIP, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.WHITE_TULIP, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.PINK_TULIP, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.OXEYE_DAISY, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.CORNFLOWER, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.LILY_OF_THE_VALLEY, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.SUNFLOWER, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.LILAC, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.ROSE_BUSH, 1, 8, 16, 5), new TradeOffers.SellItemFactory(Items.PEONY, 1, 8, 16, 5)};
-        TradeOffers.Factory[] floristLevel3 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.VINE, 30, 16, 20), new TradeOffers.SellItemFactory(Items.HONEY_BOTTLE, 6, 1, 16, 10)};
-        TradeOffers.Factory[] floristLevel4 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.FLOWER_POT,3,16,30), new TradeOffers.SellMapFactory(13, StructureFeature.SWAMP_HUT, MapIcon.Type.BANNER_GREEN, 12, 15)};
-        TradeOffers.Factory[] floristLevel5 = new TradeOffers.Factory[]{new TradeOffers.SellItemFactory(Items.BEE_NEST, 6, 1, 12, 30), new TradeOffers.SellMapFactory(15, StructureFeature.JUNGLE_PYRAMID, MapIcon.Type.BANNER_LIME, 12, 30)};
-        TradeOffers.PROFESSION_TO_LEVELED_TRADE.put(FLORIST, VillagerInit.toIntMap(ImmutableMap.of(1, floristLevel1, 2, floristLevel2, 3, floristLevel3, 4, floristLevel4, 5, floristLevel5)));
+        TradeOffers.Factory[] floristLevel1 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.FLOWER_POT,3,16,2), new TradeOffers.SellItemFactory(Items.HONEYCOMB, 3, 1, 16, 1)};
+        TradeOffers.Factory[] floristLevel2 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.VINE,24,16,10), new TradeOffers.SellItemFactory(Items.GLOW_BERRIES, 1, 2, 16, 5)};
+        TradeOffers.Factory[] floristLevel3 = new TradeOffers.Factory[]{new TradeOffers.SellItemFactory(Items.SMALL_DRIPLEAF, 1, 2, 16, 10),new TradeOffers.SellItemFactory(Items.HONEY_BOTTLE, 6, 1, 16, 10)};
+        TradeOffers.Factory[] floristLevel4 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.MOSS_BLOCK,32,16,30), new TradeOffers.SellMapFactory(13, StructureFeature.SWAMP_HUT, MapIcon.Type.BANNER_GREEN, 12, 15)};
+        TradeOffers.Factory[] floristLevel5 = new TradeOffers.Factory[]{new TradeOffers.SellItemFactory(Items.BEE_NEST, 6, 1, 12, 30), new TradeOffers.SellMapFactory(15, StructureFeature.JUNGLE_TEMPLE, MapIcon.Type.BANNER_LIME, 12, 30)};
+        TradeOffers.PROFESSION_TO_LEVELED_TRADE.put(FLORIST, toIntMap(ImmutableMap.of(1,floristLevel1,2,floristLevel2,3,floristLevel3,4,floristLevel4,5,floristLevel5)));
         // Hunter trades
         TradeOffers.Factory[] hunterLevel1 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.BONE, 32, 16, 2), new TradeOffers.SellItemFactory(Items.SLIME_BALL, 5, 2, 16, 1)};
         TradeOffers.Factory[] hunterLevel2 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.SPIDER_EYE, 24, 16, 10), new TradeOffers.SellItemFactory(Items.FERMENTED_SPIDER_EYE, 5, 1, 16, 5)};
@@ -81,6 +83,13 @@ public class VillagerInit {
         TradeOffers.Factory[] hunterLevel4 = new TradeOffers.Factory[]{new TradeOffers.SellItemFactory(Items.BLAZE_ROD, 5, 1, 12, 15), new TradeOffers.SellMapFactory(13, StructureFeature.PILLAGER_OUTPOST, MapIcon.Type.BANNER_BLACK, 12, 15)};
         TradeOffers.Factory[] hunterLevel5 = new TradeOffers.Factory[]{new TradeOffers.SellItemFactory(Items.GHAST_TEAR, 8, 1, 12, 30), new TradeOffers.SellItemFactory(Items.RABBIT_FOOT, 8, 1, 12, 30)};
         TradeOffers.PROFESSION_TO_LEVELED_TRADE.put(HUNTER, VillagerInit.toIntMap(ImmutableMap.of(1, hunterLevel1, 2, hunterLevel2, 3, hunterLevel3, 4, hunterLevel4, 5, hunterLevel5)));
+        // Miner trades
+        TradeOffers.Factory[] minerLevel1 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.DEEPSLATE,20,16,2), new TradeOffers.SellItemFactory(Items.CALCITE, 1, 16, 16, 1)};
+        TradeOffers.Factory[] minerLevel2 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.RAW_COPPER,15,16,10), new TradeOffers.BuyForOneEmeraldFactory(Items.RAW_IRON,12,16,10),};
+        TradeOffers.Factory[] minerLevel3 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.RAW_GOLD,10,16,20), new TradeOffers.SellItemFactory(Items.AMETHYST_SHARD, 1, 2, 12, 10)};
+        TradeOffers.Factory[] minerLevel4 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.TORCH,50,12,30), new TradeOffers.SellMapFactory(13, StructureFeature.MINESHAFT, MapIcon.Type.BANNER_BROWN, 12, 15)};
+        TradeOffers.Factory[] minerLevel5 = new TradeOffers.Factory[]{new TradeOffers.SellEnchantedToolFactory(Items.DIAMOND_PICKAXE, 12, 3, 15, 0.2F)};
+        TradeOffers.PROFESSION_TO_LEVELED_TRADE.put(MINER, toIntMap(ImmutableMap.of(1,minerLevel1,2,minerLevel2,3,minerLevel3,4,minerLevel4,5,minerLevel5)));
     }
 
     private static Int2ObjectMap<TradeOffers.Factory[]> toIntMap(ImmutableMap<Integer, TradeOffers.Factory[]> trades) {
