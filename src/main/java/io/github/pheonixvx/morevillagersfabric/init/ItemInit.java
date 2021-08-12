@@ -15,6 +15,7 @@ public class ItemInit {
     public static final Item BLUEPRINT_TABLE = new BlockItem(BlockInit.BLUEPRINT_TABLE, new Item.Settings().group(MoreVillagersFabric.ITEM_GROUP));
     public static final Item GARDENING_TABLE = new BlockItem(BlockInit.GARDENING_TABLE, new Item.Settings().group(MoreVillagersFabric.ITEM_GROUP));
     public static final Item HUNTING_POST = new BlockItem(BlockInit.HUNTING_POST, new Item.Settings().group(MoreVillagersFabric.ITEM_GROUP));
+    public static final Item MINING_BENCH = new BlockItem(BlockInit.MINING_BENCH, new Item.Settings().group(MoreVillagersFabric.ITEM_GROUP));
 
     public static void initItems() {
         Registry.register(Registry.ITEM, new Identifier(MoreVillagersFabric.MOD_ID, "oceanography_table"), OCEANOGRAPHY_TABLE);
@@ -24,5 +25,6 @@ public class ItemInit {
         Registry.register(Registry.ITEM, new Identifier(MoreVillagersFabric.MOD_ID, "blueprint_table"), BLUEPRINT_TABLE);
         Registry.register(Registry.ITEM, new Identifier(MoreVillagersFabric.MOD_ID, "gardening_table"), GARDENING_TABLE);
         Registry.register(Registry.ITEM, new Identifier(MoreVillagersFabric.MOD_ID, "hunting_post"), HUNTING_POST);
+        Registry.register(Registry.ITEM, new Identifier(MoreVillagersFabric.MOD_ID, "mining_bench"), MINING_BENCH);
     }
 }
