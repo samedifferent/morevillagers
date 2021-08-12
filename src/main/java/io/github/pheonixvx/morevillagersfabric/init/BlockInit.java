@@ -16,7 +16,7 @@ public class BlockInit {
     public static final Block BLUEPRINT_TABLE = new Block(AbstractBlock.Settings.copy(Blocks.CARTOGRAPHY_TABLE));
     public static final Block GARDENING_TABLE = new Block(AbstractBlock.Settings.copy(Blocks.CARTOGRAPHY_TABLE));
     public static final Block HUNTING_POST = new Block(AbstractBlock.Settings.copy(Blocks.CARTOGRAPHY_TABLE));
-    public static final Block MINING_BENCH = new Block(AbstractBlock.Settings.copy(Blocks.STONE_BRICKS));
+    public static final Block MINING_BENCH = new Block(AbstractBlock.Settings.copy(Blocks.STONE));
 
     public static void initBlocks() {
         Registry.register(Registry.BLOCK, new Identifier(MoreVillagersFabric.MOD_ID, "oceanography_table"), OCEANOGRAPHY_TABLE);
