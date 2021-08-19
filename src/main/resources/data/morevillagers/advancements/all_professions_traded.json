@@ -195,10 +195,19 @@
           "nbt": "{VillagerData:{profession:\"minecraft:hunter\"}}"
         }
       }
+    },
+    "miner": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "type": "minecraft:villager",
+          "nbt": "{VillagerData:{profession:\"morevillagers:miner\"}}"
+        }
+      }
     }
   },
   "requirements": [
-    ["armorer"], ["butcher"], ["cartographer"], ["cleric"], ["farmer"], ["fisherman"], ["fletcher"], ["leatherworker"], ["librarian"], ["mason"], ["shepherd"], ["toolsmith"], ["weaponsmith"], ["oceanographer"], ["netherian"], ["woodworker"], ["enderian"], ["engineer"], ["florist"], ["hunter"]
+    ["armorer"], ["butcher"], ["cartographer"], ["cleric"], ["farmer"], ["fisherman"], ["fletcher"], ["leatherworker"], ["librarian"], ["mason"], ["shepherd"], ["toolsmith"], ["weaponsmith"], ["oceanographer"], ["netherian"], ["woodworker"], ["enderian"], ["engineer"], ["florist"], ["hunter"], ["miner"]
   ],
   "rewards": {
     "experience": 200

@@ -74,7 +74,7 @@ public class VillagerInit {
         TradeOffers.Factory[] floristLevel2 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.VINE,24,16,10), new TradeOffers.SellItemFactory(Items.GLOW_BERRIES, 1, 2, 16, 5)};
         TradeOffers.Factory[] floristLevel3 = new TradeOffers.Factory[]{new TradeOffers.SellItemFactory(Items.SMALL_DRIPLEAF, 1, 2, 16, 10),new TradeOffers.SellItemFactory(Items.HONEY_BOTTLE, 6, 1, 16, 10)};
         TradeOffers.Factory[] floristLevel4 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.MOSS_BLOCK,32,16,30), new TradeOffers.SellMapFactory(13, StructureFeature.SWAMP_HUT, MapIcon.Type.BANNER_GREEN, 12, 15)};
-        TradeOffers.Factory[] floristLevel5 = new TradeOffers.Factory[]{new TradeOffers.SellItemFactory(Items.BEE_NEST, 6, 1, 12, 30), new TradeOffers.SellMapFactory(15, StructureFeature.JUNGLE_TEMPLE, MapIcon.Type.BANNER_LIME, 12, 30)};
+        TradeOffers.Factory[] floristLevel5 = new TradeOffers.Factory[]{new TradeOffers.SellItemFactory(Items.BEE_NEST, 6, 1, 12, 30), new TradeOffers.SellMapFactory(15, StructureFeature.JUNGLE_PYRAMID, MapIcon.Type.BANNER_LIME, 12, 30)};
         TradeOffers.PROFESSION_TO_LEVELED_TRADE.put(FLORIST, toIntMap(ImmutableMap.of(1,floristLevel1,2,floristLevel2,3,floristLevel3,4,floristLevel4,5,floristLevel5)));
         // Hunter trades
         TradeOffers.Factory[] hunterLevel1 = new TradeOffers.Factory[]{new TradeOffers.BuyForOneEmeraldFactory(Items.BONE, 32, 16, 2), new TradeOffers.SellItemFactory(Items.SLIME_BALL, 5, 2, 16, 1)};

@@ -254,11 +254,23 @@
             ]
           }
         ]
+      },
+      "miningbench": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "morevillagers:mining_bench"
+              ]
+            }
+          ]
+        }
       }
     }
   },
   "requirements": [
-    ["blastfurnace"], ["smoker"], ["cartographytable"], ["brewingstand"], ["composter"], ["barrel"], ["fletchingtable"], ["cauldron"], ["lectern"], ["stonecutter"], ["loom"], ["smithingtable"], ["grindstone"], ["oceanographytable"], ["decayedworkbench"], ["woodworkingtable"], ["purpuraltar"], ["blueprinttable"], ["gardeningtable"], ["huntingpost"]
+    ["blastfurnace"], ["smoker"], ["cartographytable"], ["brewingstand"], ["composter"], ["barrel"], ["fletchingtable"], ["cauldron"], ["lectern"], ["stonecutter"], ["loom"], ["smithingtable"], ["grindstone"], ["oceanographytable"], ["decayedworkbench"], ["woodworkingtable"], ["purpuraltar"], ["blueprinttable"], ["gardeningtable"], ["huntingpost"], ["miningbench"]
   ],
   "rewards": {
     "experience": 200
