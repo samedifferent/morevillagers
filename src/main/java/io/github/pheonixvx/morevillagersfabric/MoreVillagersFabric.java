@@ -5,6 +5,8 @@ import io.github.pheonixvx.morevillagersfabric.init.BlockInit;
 import io.github.pheonixvx.morevillagersfabric.init.ItemInit;
 import io.github.pheonixvx.morevillagersfabric.init.JigsawHelper;
 import io.github.pheonixvx.morevillagersfabric.init.VillagerInit;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.loader.api.FabricLoader;
@@ -27,15 +29,12 @@ public class MoreVillagersFabric implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        config = MoreVillagersConfig.loadConfig(configFile);
+        AutoConfig.register(MoreVillagersConfig.class, Toml4jConfigSerializer::new);
+        config = AutoConfig.getConfigHolder(MoreVillagersConfig.class).getConfig();
 
         BlockInit.initBlocks();
         ItemInit.initItems();
         VillagerInit.fillTradeData();
         JigsawHelper.registerAll();
-    }
-
-    public static void saveConfig () {
-        config.saveConfig(configFile);
     }
 }

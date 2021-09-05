@@ -1,10 +1,10 @@
 {
-  "text.morevillagers.config.title": "MoreVillagers Config",
-  "text.morevillagers.generate_plains_houses": "Generate Plains Houses",
-  "text.morevillagers.generate_taiga_houses": "Generate Taiga Houses",
-  "text.morevillagers.generate_savanna_houses": "Generate Savanna Houses",
-  "text.morevillagers.generate_snowy_houses": "Generate Snowy Houses",
-  "text.morevillagers.generate_desert_houses": "Generate Desert Houses",
+  "text.autoconfig.morevillagers.title": "MoreVillagers Config",
+  "text.autoconfig.morevillagers.option.GENERATE_PLAINS_HOUSES": "Generate Plains Houses",
+  "text.autoconfig.morevillagers.option.GENERATE_TAIGA_HOUSES": "Generate Taiga Houses",
+  "text.autoconfig.morevillagers.option.GENERATE_SAVANNA_HOUSES": "Generate Savanna Houses",
+  "text.autoconfig.morevillagers.option.GENERATE_SNOWY_HOUSES": "Generate Snowy Houses",
+  "text.autoconfig.morevillagers.option.GENERATE_DESERT_HOUSES": "Generate Desert Houses",
 
   "block.morevillagers.oceanography_table": "Oceanography Table",
   "block.morevillagers.woodworking_table": "Forestry Bench",
