@@ -89,7 +89,7 @@ public class JigsawHelper {
                 registerJigsaw(server, desertPoolLocation, new Identifier("morevillagers:village/desert/desert_woodworker"), 12);
                 registerJigsaw(server, desertPoolLocation, new Identifier("morevillagers:village/desert/desert_oceanographer"), 12);
                 registerJigsaw(server, desertPoolLocation, new Identifier("morevillagers:village/desert/desert_florist"), 13);
-                registerJigsaw(server, desertPoolLocation, new Identifier("morevillagers:village/desert/desert_hunter_hunter_engineer"), 25);
+                registerJigsaw(server, desertPoolLocation, new Identifier("morevillagers:village/desert/desert_hunter_engineer"), 15);
             }
 
         });
