@@ -109,7 +109,9 @@ public class MoreVillagers {
             JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
                     new ResourceLocation("morevillagers:village/desert/desert_florist"), 13);
             JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
-                    new ResourceLocation("morevillagers:village/desert/desert_hunter_engineer"), 15);
+                    new ResourceLocation("morevillagers:village/desert/desert_hunter"), 13);
+            JigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
+                    new ResourceLocation("morevillagers:village/desert/desert_engineer"), 15);
         }
     }
 }
