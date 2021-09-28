@@ -255,17 +255,17 @@
           }
         ]
       },
-      "miningbench": {
-        "trigger": "minecraft:inventory_changed",
-        "conditions": {
-          "items": [
-            {
-              "items": [
-                "morevillagers:mining_bench"
-              ]
-            }
-          ]
-        }
+    },
+    "miningbench": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "morevillagers:mining_bench"
+            ]
+          }
+        ]
       }
     }
   },
