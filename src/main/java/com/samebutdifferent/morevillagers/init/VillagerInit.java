@@ -13,9 +13,9 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.levelgen.feature.StructureFeature;
 import net.minecraft.world.level.saveddata.maps.MapDecoration;
 import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.lang.reflect.InvocationTargetException;
 
