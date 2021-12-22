@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
-public class BlockInit {
+public class ModBlocks {
 
     public static final Block OCEANOGRAPHY_TABLE = new Block(BlockBehaviour.Properties.copy(Blocks.CARTOGRAPHY_TABLE));
     public static final Block WOODWORKING_TABLE = new Block(BlockBehaviour.Properties.copy(Blocks.CARTOGRAPHY_TABLE));

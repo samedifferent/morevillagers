@@ -11,16 +11,16 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.levelgen.feature.StructureFeature;
 import net.minecraft.world.level.saveddata.maps.MapDecoration;
 
-public class VillagerInit {
+public class ModProfessions {
     // Points of Interest
-    public static final PoiType OCEANOGRAPHER_POI = PoiType.register("oceanographer", PoiType.getBlockStates(BlockInit.OCEANOGRAPHY_TABLE), 1, 1);
-    public static final PoiType NETHERIAN_POI = PoiType.register("netherian", PoiType.getBlockStates(BlockInit.DECAYED_WORKBRENCH), 1, 1);
-    public static final PoiType WOODWORKER_POI = PoiType.register("woodworker", PoiType.getBlockStates(BlockInit.WOODWORKING_TABLE), 1, 1);
-    public static final PoiType ENDERIAN_POI = PoiType.register("enderian", PoiType.getBlockStates(BlockInit.PURPUR_ALTAR), 1, 1);
-    public static final PoiType ENGINEER_POI = PoiType.register("engineer", PoiType.getBlockStates(BlockInit.BLUEPRINT_TABLE), 1, 1);
-    public static final PoiType FLORIST_POI = PoiType.register("florist", PoiType.getBlockStates(BlockInit.GARDENING_TABLE), 1, 1);
-    public static final PoiType HUNTER_POI = PoiType.register("hunter", PoiType.getBlockStates(BlockInit.HUNTING_POST), 1, 1);
-    public static final PoiType MINER_POI = PoiType.register("miner", PoiType.getBlockStates(BlockInit.MINING_BENCH), 1, 1);
+    public static final PoiType OCEANOGRAPHER_POI = PoiType.register("oceanographer", PoiType.getBlockStates(ModBlocks.OCEANOGRAPHY_TABLE), 1, 1);
+    public static final PoiType NETHERIAN_POI = PoiType.register("netherian", PoiType.getBlockStates(ModBlocks.DECAYED_WORKBRENCH), 1, 1);
+    public static final PoiType WOODWORKER_POI = PoiType.register("woodworker", PoiType.getBlockStates(ModBlocks.WOODWORKING_TABLE), 1, 1);
+    public static final PoiType ENDERIAN_POI = PoiType.register("enderian", PoiType.getBlockStates(ModBlocks.PURPUR_ALTAR), 1, 1);
+    public static final PoiType ENGINEER_POI = PoiType.register("engineer", PoiType.getBlockStates(ModBlocks.BLUEPRINT_TABLE), 1, 1);
+    public static final PoiType FLORIST_POI = PoiType.register("florist", PoiType.getBlockStates(ModBlocks.GARDENING_TABLE), 1, 1);
+    public static final PoiType HUNTER_POI = PoiType.register("hunter", PoiType.getBlockStates(ModBlocks.HUNTING_POST), 1, 1);
+    public static final PoiType MINER_POI = PoiType.register("miner", PoiType.getBlockStates(ModBlocks.MINING_BENCH), 1, 1);
 
     // Villager Professions
     public static final VillagerProfession OCEANOGRAPHER = VillagerProfession.register("oceanographer", OCEANOGRAPHER_POI, SoundEvents.VILLAGER_WORK_CARTOGRAPHER);

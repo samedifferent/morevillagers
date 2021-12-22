@@ -1,10 +1,10 @@
 package io.github.pheonixvx.morevillagersfabric;
 
 import io.github.pheonixvx.morevillagersfabric.config.MoreVillagersConfig;
-import io.github.pheonixvx.morevillagersfabric.init.BlockInit;
-import io.github.pheonixvx.morevillagersfabric.init.ItemInit;
+import io.github.pheonixvx.morevillagersfabric.init.ModBlocks;
+import io.github.pheonixvx.morevillagersfabric.init.ModItems;
 import io.github.pheonixvx.morevillagersfabric.init.JigsawHelper;
-import io.github.pheonixvx.morevillagersfabric.init.VillagerInit;
+import io.github.pheonixvx.morevillagersfabric.init.ModProfessions;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
@@ -28,9 +28,9 @@ public class MoreVillagersFabric implements ModInitializer {
         AutoConfig.register(MoreVillagersConfig.class, Toml4jConfigSerializer::new);
         config = AutoConfig.getConfigHolder(MoreVillagersConfig.class).getConfig();
 
-        BlockInit.initBlocks();
-        ItemInit.initItems();
-        VillagerInit.fillTradeData();
+        ModBlocks.initBlocks();
+        ModItems.initItems();
+        ModProfessions.fillTradeData();
         JigsawHelper.registerAll();
     }
 }

@@ -6,16 +6,16 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 
-public class ItemInit {
+public class ModItems {
 
-    public static final Item OCEANOGRAPHY_TABLE = new BlockItem(BlockInit.OCEANOGRAPHY_TABLE, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
-    public static final Item WOODWORKING_TABLE = new BlockItem(BlockInit.WOODWORKING_TABLE, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
-    public static final Item DECAYED_WORKBENCH = new BlockItem(BlockInit.DECAYED_WORKBRENCH, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
-    public static final Item PURPUR_ALTAR = new BlockItem(BlockInit.PURPUR_ALTAR, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
-    public static final Item BLUEPRINT_TABLE = new BlockItem(BlockInit.BLUEPRINT_TABLE, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
-    public static final Item GARDENING_TABLE = new BlockItem(BlockInit.GARDENING_TABLE, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
-    public static final Item HUNTING_POST = new BlockItem(BlockInit.HUNTING_POST, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
-    public static final Item MINING_BENCH = new BlockItem(BlockInit.MINING_BENCH, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
+    public static final Item OCEANOGRAPHY_TABLE = new BlockItem(ModBlocks.OCEANOGRAPHY_TABLE, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
+    public static final Item WOODWORKING_TABLE = new BlockItem(ModBlocks.WOODWORKING_TABLE, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
+    public static final Item DECAYED_WORKBENCH = new BlockItem(ModBlocks.DECAYED_WORKBRENCH, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
+    public static final Item PURPUR_ALTAR = new BlockItem(ModBlocks.PURPUR_ALTAR, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
+    public static final Item BLUEPRINT_TABLE = new BlockItem(ModBlocks.BLUEPRINT_TABLE, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
+    public static final Item GARDENING_TABLE = new BlockItem(ModBlocks.GARDENING_TABLE, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
+    public static final Item HUNTING_POST = new BlockItem(ModBlocks.HUNTING_POST, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
+    public static final Item MINING_BENCH = new BlockItem(ModBlocks.MINING_BENCH, new Item.Properties().tab(MoreVillagersFabric.ITEM_GROUP));
 
     public static void initItems() {
         Registry.register(Registry.ITEM, new ResourceLocation(MoreVillagersFabric.MOD_ID, "oceanography_table"), OCEANOGRAPHY_TABLE);
