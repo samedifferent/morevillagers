@@ -6,127 +6,34 @@ import com.samebutdifferent.morevillagers.MoreVillagers;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.levelgen.feature.StructureFeature;
 import net.minecraft.world.level.saveddata.maps.MapDecoration;
-import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.lang.reflect.InvocationTargetException;
+public class ModProfessions {
+    public static final DeferredRegister<VillagerProfession> PROFESSIONS = DeferredRegister.create(ForgeRegistries.PROFESSIONS, MoreVillagers.MOD_ID);
 
-public class VillagerInit {
-    // REGISTER WORKSTATIONS AND PROFESSIONS
-    public static final DeferredRegister<PoiType> POINT_OF_INTEREST_TYPES = DeferredRegister.create(ForgeRegistries.POI_TYPES, MoreVillagers.MOD_ID);
-    public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = DeferredRegister.create(ForgeRegistries.PROFESSIONS, MoreVillagers.MOD_ID);
-
-    // CREATE OCEANOGRAPHER WORKSTATION AND PROFESSION
-    public static final RegistryObject<PoiType> OCEANOGRAPHER_POI = POINT_OF_INTEREST_TYPES.register("oceanographer",
-            () -> new PoiType("oceanographer", PoiType.getBlockStates(BlockInit.OCEANOGRAPHY_TABLE.get()), 1, 1));
-    public static final RegistryObject<VillagerProfession> OCEANOGRAPHER = VILLAGER_PROFESSIONS.register("oceanographer",
-            () -> new VillagerProfession("oceanographer", OCEANOGRAPHER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_CARTOGRAPHER));
-    public static void registerOceanographerPOI() {
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, OCEANOGRAPHER_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // CREATE NETHERIAN WORKSTATION AND PROFESSION
-    public static final RegistryObject<PoiType> NETHERIAN_POI = POINT_OF_INTEREST_TYPES.register("netherian",
-            () -> new PoiType("netherian", PoiType.getBlockStates(BlockInit.DECAYED_WORKBENCH.get()), 1, 1));
-    public static final RegistryObject<VillagerProfession> NETHERIAN = VILLAGER_PROFESSIONS.register("netherian",
-            () -> new VillagerProfession("netherian", NETHERIAN_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER));
-    public static void registerNetherianPOI() {
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, NETHERIAN_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // CREATE WOODWORKER WORKSTATION AND PROFESSION
-    public static final RegistryObject<PoiType> WOODWORKER_POI = POINT_OF_INTEREST_TYPES.register("woodworker",
-            () -> new PoiType("woodworker", PoiType.getBlockStates(BlockInit.WOODWORKING_TABLE.get()), 1, 1));
-    public static final RegistryObject<VillagerProfession> WOODWORKER = VILLAGER_PROFESSIONS.register("woodworker",
-            () -> new VillagerProfession("woodworker", WOODWORKER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LEATHERWORKER));
-    public static void registerWoodworkerPOI() {
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, WOODWORKER_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // CREATE ENDERIAN WORKSTATION AND PROFESSION
-    public static final RegistryObject<PoiType> ENDERIAN_POI = POINT_OF_INTEREST_TYPES.register("enderian",
-            () -> new PoiType("enderian", PoiType.getBlockStates(BlockInit.PURPUR_ALTAR.get()), 1, 1));
-    public static final RegistryObject<VillagerProfession> ENDERIAN = VILLAGER_PROFESSIONS.register("enderian",
-            () -> new VillagerProfession("enderian", ENDERIAN_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER));
-    public static void registerEnderianPOI() {
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, ENDERIAN_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // CREATE ENGINEER WORKSTATION AND PROFESSION
-    public static final RegistryObject<PoiType> ENGINEER_POI = POINT_OF_INTEREST_TYPES.register("engineer",
-            () -> new PoiType("engineer", PoiType.getBlockStates(BlockInit.BLUEPRINT_TABLE.get()), 1, 1));
-    public static final RegistryObject<VillagerProfession> ENGINEER = VILLAGER_PROFESSIONS.register("engineer",
-            () -> new VillagerProfession("engineer", ENGINEER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_TOOLSMITH));
-    public static void registerEngineerPOI() {
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, ENGINEER_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // CREATE FLORIST WORKSTATION AND PROFESSION
-    public static final RegistryObject<PoiType> FLORIST_POI = POINT_OF_INTEREST_TYPES.register("florist",
-            () -> new PoiType("florist", PoiType.getBlockStates(BlockInit.GARDENING_TABLE.get()), 1, 1));
-    public static final RegistryObject<VillagerProfession> FLORIST = VILLAGER_PROFESSIONS.register("florist",
-            () -> new VillagerProfession("florist", FLORIST_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FARMER));
-    public static void registerFloristPOI() {
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, FLORIST_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // CREATE HUNTER WORKSTATION AND PROFESSION
-    public static final RegistryObject<PoiType> HUNTER_POI = POINT_OF_INTEREST_TYPES.register("hunter",
-            () -> new PoiType("hunter", PoiType.getBlockStates(BlockInit.HUNTING_POST.get()), 1, 1));
-    public static final RegistryObject<VillagerProfession> HUNTER = VILLAGER_PROFESSIONS.register("hunter",
-            () -> new VillagerProfession("hunter", HUNTER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FLETCHER));
-    public static void registerHunterPOI() {
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, HUNTER_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // CREATE MINER WORKSTATION AND PROFESSION
-    public static final RegistryObject<PoiType> MINER_POI = POINT_OF_INTEREST_TYPES.register("miner",
-            () -> new PoiType("miner", PoiType.getBlockStates(BlockInit.MINING_BENCH.get()), 1, 1));
-    public static final RegistryObject<VillagerProfession> MINER = VILLAGER_PROFESSIONS.register("miner",
-            () -> new VillagerProfession("miner", MINER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_ARMORER));
-    public static void registerMinerPOI() {
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, MINER_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
+    public static final RegistryObject<VillagerProfession> OCEANOGRAPHER = PROFESSIONS.register("oceanographer",
+            () -> new VillagerProfession("oceanographer", ModPoiTypes.OCEANOGRAPHER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_CARTOGRAPHER));
+    public static final RegistryObject<VillagerProfession> NETHERIAN = PROFESSIONS.register("netherian",
+            () -> new VillagerProfession("netherian", ModPoiTypes.NETHERIAN_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER));
+    public static final RegistryObject<VillagerProfession> WOODWORKER = PROFESSIONS.register("woodworker",
+            () -> new VillagerProfession("woodworker", ModPoiTypes.WOODWORKER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LEATHERWORKER));
+    public static final RegistryObject<VillagerProfession> ENDERIAN = PROFESSIONS.register("enderian",
+            () -> new VillagerProfession("enderian", ModPoiTypes.ENDERIAN_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER));
+    public static final RegistryObject<VillagerProfession> ENGINEER = PROFESSIONS.register("engineer",
+            () -> new VillagerProfession("engineer", ModPoiTypes.ENGINEER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_TOOLSMITH));
+    public static final RegistryObject<VillagerProfession> FLORIST = PROFESSIONS.register("florist",
+            () -> new VillagerProfession("florist", ModPoiTypes.FLORIST_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FARMER));
+    public static final RegistryObject<VillagerProfession> HUNTER = PROFESSIONS.register("hunter",
+            () -> new VillagerProfession("hunter", ModPoiTypes.HUNTER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FLETCHER));
+    public static final RegistryObject<VillagerProfession> MINER = PROFESSIONS.register("miner",
+            () -> new VillagerProfession("miner", ModPoiTypes.MINER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_ARMORER));
 
     // TRADE LISTS
     public static void fillTradeData() {

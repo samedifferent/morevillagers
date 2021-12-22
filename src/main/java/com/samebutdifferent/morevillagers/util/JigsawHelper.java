@@ -1,4 +1,4 @@
-package com.samebutdifferent.morevillagers.event;
+package com.samebutdifferent.morevillagers.util;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;
