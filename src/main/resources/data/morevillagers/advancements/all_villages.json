@@ -57,7 +57,7 @@
       "conditions": {
         "location": {
           "feature": "village",
-          "biome" : "snowy_tundra"
+          "biome" : "snowy_plains"
         }
       }
     }
