@@ -20,4 +20,12 @@
   "entity.minecraft.villager.morevillagers.engineer": "工程學家",
   "entity.minecraft.villager.morevillagers.florist": "園藝匠",
   "entity.minecraft.villager.morevillagers.hunter": "捕獵人"
+
+  "entity.minecraft.villager.oceanographer": "海洋學家",
+  "entity.minecraft.villager.netherian": "地獄旅者",
+  "entity.minecraft.villager.woodworker": "木匠",
+  "entity.minecraft.villager.enderian": "終界旅者",
+  "entity.minecraft.villager.engineer": "工程學家",
+  "entity.minecraft.villager.florist": "園藝匠",
+  "entity.minecraft.villager.hunter": "捕獵人"
 }
