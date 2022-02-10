@@ -27,6 +27,15 @@
   "entity.minecraft.villager.morevillagers.hunter": "Hunter",
   "entity.minecraft.villager.morevillagers.miner": "Miner",
 
+  "entity.minecraft.villager.oceanographer": "Oceanographer",
+  "entity.minecraft.villager.netherian": "Netherologist",
+  "entity.minecraft.villager.woodworker": "Forester",
+  "entity.minecraft.villager.enderian": "Enderologist",
+  "entity.minecraft.villager.engineer": "Engineer",
+  "entity.minecraft.villager.florist": "Florist",
+  "entity.minecraft.villager.hunter": "Hunter",
+  "entity.minecraft.villager.miner": "Miner",
+
   "Frequent Customer": "Frequent Customer",
   "Trade with every villager profession": "Trade with every villager profession",
   "Town Tourist": "Town Tourist",

@@ -24,6 +24,14 @@
   "entity.minecraft.villager.morevillagers.florist": "Садовник",
   "entity.minecraft.villager.morevillagers.hunter": "Охотник",
 
+  "entity.minecraft.villager.oceanographer": "Океанограф",
+  "entity.minecraft.villager.netherian": "Незеролог",
+  "entity.minecraft.villager.woodworker": "Лесник",
+  "entity.minecraft.villager.enderian": "Эндолог",
+  "entity.minecraft.villager.engineer": "Инженер",
+  "entity.minecraft.villager.florist": "Садовник",
+  "entity.minecraft.villager.hunter": "Охотник",
+
   "Frequent Customer": "Постоянный клиент",
   "Trade with every villager profession": "Поторгуйтесь с крестьянином каждой профессии",
   "Town Tourist": "Городской турист",

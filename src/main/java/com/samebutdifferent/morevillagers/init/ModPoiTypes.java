@@ -22,45 +22,12 @@ public class ModPoiTypes {
     public static final RegistryObject<PoiType> MINER_POI = POI_TYPES.register("miner", () -> new PoiType("miner", PoiType.getBlockStates(ModBlocks.MINING_BENCH.get()), 1, 1));
 
     public static void registerPOIs() {
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, OCEANOGRAPHER_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, NETHERIAN_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, WOODWORKER_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, ENDERIAN_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, ENGINEER_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, FLORIST_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, HUNTER_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, MINER_POI.get());
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
+        for (RegistryObject<PoiType> poi : POI_TYPES.getEntries()) {
+            try {
+                ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, poi.get());
+            } catch (InvocationTargetException | IllegalAccessException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

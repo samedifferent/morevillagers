@@ -19,9 +19,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(MoreVillagers.MOD_ID)
 public class MoreVillagers {
     private static final Logger LOGGER = LogManager.getLogger();
-    // MOD ID
     public static final String MOD_ID = "morevillagers";
-    // CREATE CREATIVE TAB
     public static final CreativeModeTab GROUP = new CreativeModeTab(MoreVillagers.MOD_ID) {
         @Override
         public ItemStack makeIcon() {

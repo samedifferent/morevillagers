@@ -23,7 +23,16 @@
   "filled_map.pillager_outpost": "前哨站探险家地图",
   "filled_map.mineshaft": "废弃矿井探险家地图",
 
-  "itemGroup.morevillagers.item_group": "更多村民",
+  "itemGroup.morevillagers": "更多村民",
+
+  "entity.minecraft.villager.morevillagers.oceanographer": "海洋学家",
+  "entity.minecraft.villager.morevillagers.netherian": "下界学家",
+  "entity.minecraft.villager.morevillagers.woodworker": "林业员",
+  "entity.minecraft.villager.morevillagers.enderian": "末地学家",
+  "entity.minecraft.villager.morevillagers.engineer": "工程师",
+  "entity.minecraft.villager.morevillagers.florist": "花匠",
+  "entity.minecraft.villager.morevillagers.hunter": "猎人",
+  "entity.minecraft.villager.morevillagers.miner": "矿工",
 
   "entity.minecraft.villager.oceanographer": "海洋学家",
   "entity.minecraft.villager.netherian": "下界学家",

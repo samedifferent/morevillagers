@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "morevillagers:mining_bench"
+    ]
+  },
+  "criteria": {
+    "has_iron_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_pickaxe"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "morevillagers:mining_bench"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_pickaxe",
+      "has_the_recipe"
+    ]
+  ]
+}
