@@ -17,17 +17,32 @@
   },
   "criteria": {
     "hasmap": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:villager_trade",
       "conditions": {
+        "villager": {
+          "type": "minecraft:villager",
+          "nbt": "{VillagerData:{profession:\"minecraft:netherian\"}}"
+        },
         "item": {
-            "items": ["minecraft:filled_map"]
+          "items": [
+            "minecraft:filled_map"
+          ]
         }
       }
     },
-    "bastion": {
+    "endcity": {
       "trigger": "minecraft:location",
       "conditions": {
-        "feature": "bastion_remnant"
+        "feature": "bastion_remnant",
+        "player": {
+          "player": {
+            "advancements": {
+              "morevillagers:map_bastion": {
+                "hasmap": true
+              }
+            }
+          }
+        }
       }
     }
   },

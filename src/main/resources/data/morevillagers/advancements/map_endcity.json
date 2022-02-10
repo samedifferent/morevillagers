@@ -17,8 +17,12 @@
   },
   "criteria": {
     "hasmap": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:villager_trade",
       "conditions": {
+        "villager": {
+          "type": "minecraft:villager",
+          "nbt": "{VillagerData:{profession:\"minecraft:enderian\"}}"
+        },
         "item": {
           "items": [
             "minecraft:filled_map"
@@ -29,7 +33,16 @@
     "endcity": {
       "trigger": "minecraft:location",
       "conditions": {
-        "feature": "endcity"
+        "feature": "endcity",
+        "player": {
+          "player": {
+            "advancements": {
+              "morevillagers:map_endcity": {
+                "hasmap": true
+              }
+            }
+          }
+        }
       }
     }
   },

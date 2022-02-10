@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "morevillagers:hunting_post"
+    ]
+  },
+  "criteria": {
+    "has_arrow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:arrow"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "morevillagers:hunting_post"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_arrow",
+      "has_the_recipe"
+    ]
+  ]
+}
