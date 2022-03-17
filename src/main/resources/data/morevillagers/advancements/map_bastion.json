@@ -21,7 +21,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:netherian\"}}"
+          "nbt": "{VillagerData:{profession:\"morevillagers:netherian\"}}"
         },
         "item": {
           "items": [
@@ -33,7 +33,9 @@
     "endcity": {
       "trigger": "minecraft:location",
       "conditions": {
-        "feature": "bastion_remnant",
+        "location": {
+          "feature": "minecraft:bastion_remnant"
+        },
         "player": {
           "player": {
             "advancements": {

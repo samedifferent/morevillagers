@@ -21,7 +21,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"minecraft:enderian\"}}"
+          "nbt": "{VillagerData:{profession:\"morevillagers:enderian\"}}"
         },
         "item": {
           "items": [
@@ -33,7 +33,9 @@
     "endcity": {
       "trigger": "minecraft:location",
       "conditions": {
-        "feature": "endcity",
+        "location": {
+          "feature": "minecraft:end_city"
+        },
         "player": {
           "player": {
             "advancements": {
