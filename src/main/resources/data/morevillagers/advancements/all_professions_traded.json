@@ -201,7 +201,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:miner\"}}"
+          "nbt": "{VillagerData:{profession:\"minecraft:miner\"}}"
         }
       }
     }
