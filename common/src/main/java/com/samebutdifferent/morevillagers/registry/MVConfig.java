@@ -17,35 +17,35 @@ public class MVConfig implements ConfigData {
 
     public static class Houses {
         @Comment("Should More Villagers houses generate in plains biome villages?")
-        public boolean GENERATE_PLAINS_HOUSES = true;
+        public boolean generatePlainsHouses = true;
 
         @Comment("Should More Villagers houses generate in taiga biome villages?")
-        public boolean GENERATE_TAIGA_HOUSES = true;
+        public boolean generateTaigaHouses = true;
 
         @Comment("Should More Villagers houses generate in savanna biome villages?")
-        public boolean GENERATE_SAVANNA_HOUSES = true;
+        public boolean generateSavannaHouses = true;
 
         @Comment("Should More Villagers houses generate in snowy biome villages?")
-        public boolean GENERATE_SNOWY_HOUSES = true;
+        public boolean generateSnowyHouses = true;
 
         @Comment("Should More Villagers houses generate in desert biome villages?")
-        public boolean GENERATE_DESERT_HOUSES = true;
+        public boolean generateDesertHouses = true;
     }
 
     public static class Weights {
         @Comment("Woodworker house spawn chance")
-        public int WOODWORKER_HOUSE_WEIGHT = 10;
+        public int woodworkerHouseWeight = 10;
 
         @Comment("Oceanographer house spawn chance")
-        public int OCEANOGRAPHER_HOUSE_WEIGHT = 10;
+        public int oceanographerHouseWeight = 10;
 
         @Comment("Oceanographer house spawn chance")
-        public int FLORIST_HOUSE_WEIGHT = 10;
+        public int floristHouseWeight = 10;
 
         @Comment("Hunter house spawn chance")
-        public int HUNTER_HOUSE_WEIGHT = 10;
+        public int hunterHouseWeight = 10;
 
         @Comment("Engineer house spawn chance")
-        public int ENGINEER_HOUSE_WEIGHT = 10;
+        public int engineerHouseWeight = 10;
     }
 }

@@ -27,7 +27,7 @@ public class CommonPlatformHelper {
     }
 
     @ExpectPlatform
-    public static Supplier<VillagerProfession> registerProfession(String name, Supplier<PoiType> poiType, @Nullable SoundEvent workSound) {
+    public static Supplier<VillagerProfession> registerProfession(String name, Supplier<VillagerProfession> profession) {
         throw new AssertionError();
     }
 

@@ -36,48 +36,48 @@ public class MoreVillagers
 		ResourceLocation taigaPoolLocation = new ResourceLocation("minecraft:village/taiga/houses");
 
 		// PLAINS VILLAGE HOUSES
-		if (config.houses.GENERATE_PLAINS_HOUSES) {
-			JigsawHelper.registerJigsaw(server, plainsPoolLocation, new ResourceLocation("morevillagers:village/plains/plains_woodworker"), config.weights.WOODWORKER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, plainsPoolLocation, new ResourceLocation("morevillagers:village/plains/plains_oceanographer"), config.weights.OCEANOGRAPHER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, plainsPoolLocation, new ResourceLocation("morevillagers:village/plains/plains_florist"), config.weights.FLORIST_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, plainsPoolLocation, new ResourceLocation("morevillagers:village/plains/plains_hunter"), config.weights.HUNTER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, plainsPoolLocation, new ResourceLocation("morevillagers:village/plains/plains_engineer"), config.weights.ENGINEER_HOUSE_WEIGHT);
+		if (config.houses.generatePlainsHouses) {
+			JigsawHelper.registerJigsaw(server, plainsPoolLocation, new ResourceLocation("morevillagers:village/plains/plains_woodworker"), config.weights.woodworkerHouseWeight);
+			JigsawHelper.registerJigsaw(server, plainsPoolLocation, new ResourceLocation("morevillagers:village/plains/plains_oceanographer"), config.weights.oceanographerHouseWeight);
+			JigsawHelper.registerJigsaw(server, plainsPoolLocation, new ResourceLocation("morevillagers:village/plains/plains_florist"), config.weights.floristHouseWeight);
+			JigsawHelper.registerJigsaw(server, plainsPoolLocation, new ResourceLocation("morevillagers:village/plains/plains_hunter"), config.weights.hunterHouseWeight);
+			JigsawHelper.registerJigsaw(server, plainsPoolLocation, new ResourceLocation("morevillagers:village/plains/plains_engineer"), config.weights.engineerHouseWeight);
 		}
 
 		// TAIGA VILLAGE HOUSES
-		if (config.houses.GENERATE_TAIGA_HOUSES) {
-			JigsawHelper.registerJigsaw(server, taigaPoolLocation, new ResourceLocation("morevillagers:village/taiga/taiga_woodworker"), config.weights.WOODWORKER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, taigaPoolLocation, new ResourceLocation("morevillagers:village/taiga/taiga_oceanographer"), config.weights.OCEANOGRAPHER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, taigaPoolLocation, new ResourceLocation("morevillagers:village/taiga/taiga_florist"), config.weights.FLORIST_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, taigaPoolLocation, new ResourceLocation("morevillagers:village/taiga/taiga_hunter"), config.weights.HUNTER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, taigaPoolLocation, new ResourceLocation("morevillagers:village/taiga/taiga_engineer"), config.weights.ENGINEER_HOUSE_WEIGHT);
+		if (config.houses.generateTaigaHouses) {
+			JigsawHelper.registerJigsaw(server, taigaPoolLocation, new ResourceLocation("morevillagers:village/taiga/taiga_woodworker"), config.weights.woodworkerHouseWeight);
+			JigsawHelper.registerJigsaw(server, taigaPoolLocation, new ResourceLocation("morevillagers:village/taiga/taiga_oceanographer"), config.weights.oceanographerHouseWeight);
+			JigsawHelper.registerJigsaw(server, taigaPoolLocation, new ResourceLocation("morevillagers:village/taiga/taiga_florist"), config.weights.floristHouseWeight);
+			JigsawHelper.registerJigsaw(server, taigaPoolLocation, new ResourceLocation("morevillagers:village/taiga/taiga_hunter"), config.weights.hunterHouseWeight);
+			JigsawHelper.registerJigsaw(server, taigaPoolLocation, new ResourceLocation("morevillagers:village/taiga/taiga_engineer"), config.weights.engineerHouseWeight);
 		}
 
 		// SAVANNA VILLAGE HOUSES
-		if (config.houses.GENERATE_SAVANNA_HOUSES) {
-			JigsawHelper.registerJigsaw(server, savannaPoolLocation, new ResourceLocation("morevillagers:village/savanna/savanna_woodworker"), config.weights.WOODWORKER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, savannaPoolLocation, new ResourceLocation("morevillagers:village/savanna/savanna_oceanographer"), config.weights.OCEANOGRAPHER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, savannaPoolLocation, new ResourceLocation("morevillagers:village/savanna/savanna_florist"), config.weights.FLORIST_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, savannaPoolLocation, new ResourceLocation("morevillagers:village/savanna/savanna_hunter"), config.weights.HUNTER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, savannaPoolLocation, new ResourceLocation("morevillagers:village/savanna/savanna_engineer"), config.weights.ENGINEER_HOUSE_WEIGHT);
+		if (config.houses.generateSavannaHouses) {
+			JigsawHelper.registerJigsaw(server, savannaPoolLocation, new ResourceLocation("morevillagers:village/savanna/savanna_woodworker"), config.weights.woodworkerHouseWeight);
+			JigsawHelper.registerJigsaw(server, savannaPoolLocation, new ResourceLocation("morevillagers:village/savanna/savanna_oceanographer"), config.weights.oceanographerHouseWeight);
+			JigsawHelper.registerJigsaw(server, savannaPoolLocation, new ResourceLocation("morevillagers:village/savanna/savanna_florist"), config.weights.floristHouseWeight);
+			JigsawHelper.registerJigsaw(server, savannaPoolLocation, new ResourceLocation("morevillagers:village/savanna/savanna_hunter"), config.weights.hunterHouseWeight);
+			JigsawHelper.registerJigsaw(server, savannaPoolLocation, new ResourceLocation("morevillagers:village/savanna/savanna_engineer"), config.weights.engineerHouseWeight);
 		}
 
 		// SNOWY VILLAGE HOUSES
-		if (config.houses.GENERATE_SNOWY_HOUSES) {
-			JigsawHelper.registerJigsaw(server, snowyPoolLocation, new ResourceLocation("morevillagers:village/snowy/snowy_woodworker"), config.weights.WOODWORKER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, snowyPoolLocation, new ResourceLocation("morevillagers:village/snowy/snowy_oceanographer"), config.weights.OCEANOGRAPHER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, snowyPoolLocation, new ResourceLocation("morevillagers:village/snowy/snowy_florist"), config.weights.FLORIST_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, snowyPoolLocation, new ResourceLocation("morevillagers:village/snowy/snowy_hunter"), config.weights.HUNTER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, snowyPoolLocation, new ResourceLocation("morevillagers:village/snowy/snowy_engineer"), config.weights.ENGINEER_HOUSE_WEIGHT);
+		if (config.houses.generateSnowyHouses) {
+			JigsawHelper.registerJigsaw(server, snowyPoolLocation, new ResourceLocation("morevillagers:village/snowy/snowy_woodworker"), config.weights.woodworkerHouseWeight);
+			JigsawHelper.registerJigsaw(server, snowyPoolLocation, new ResourceLocation("morevillagers:village/snowy/snowy_oceanographer"), config.weights.oceanographerHouseWeight);
+			JigsawHelper.registerJigsaw(server, snowyPoolLocation, new ResourceLocation("morevillagers:village/snowy/snowy_florist"), config.weights.floristHouseWeight);
+			JigsawHelper.registerJigsaw(server, snowyPoolLocation, new ResourceLocation("morevillagers:village/snowy/snowy_hunter"), config.weights.hunterHouseWeight);
+			JigsawHelper.registerJigsaw(server, snowyPoolLocation, new ResourceLocation("morevillagers:village/snowy/snowy_engineer"), config.weights.engineerHouseWeight);
 		}
 
 		// DESERT VILLAGE HOUSES
-		if (config.houses.GENERATE_DESERT_HOUSES) {
-			JigsawHelper.registerJigsaw(server, desertPoolLocation, new ResourceLocation("morevillagers:village/desert/desert_woodworker"), config.weights.WOODWORKER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, desertPoolLocation, new ResourceLocation("morevillagers:village/desert/desert_oceanographer"), config.weights.OCEANOGRAPHER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, desertPoolLocation, new ResourceLocation("morevillagers:village/desert/desert_florist"), config.weights.FLORIST_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, desertPoolLocation, new ResourceLocation("morevillagers:village/desert/desert_hunter"), config.weights.HUNTER_HOUSE_WEIGHT);
-			JigsawHelper.registerJigsaw(server, desertPoolLocation, new ResourceLocation("morevillagers:village/desert/desert_hunter_engineer"), config.weights.ENGINEER_HOUSE_WEIGHT);
+		if (config.houses.generateDesertHouses) {
+			JigsawHelper.registerJigsaw(server, desertPoolLocation, new ResourceLocation("morevillagers:village/desert/desert_woodworker"), config.weights.woodworkerHouseWeight);
+			JigsawHelper.registerJigsaw(server, desertPoolLocation, new ResourceLocation("morevillagers:village/desert/desert_oceanographer"), config.weights.oceanographerHouseWeight);
+			JigsawHelper.registerJigsaw(server, desertPoolLocation, new ResourceLocation("morevillagers:village/desert/desert_florist"), config.weights.floristHouseWeight);
+			JigsawHelper.registerJigsaw(server, desertPoolLocation, new ResourceLocation("morevillagers:village/desert/desert_hunter"), config.weights.hunterHouseWeight);
+			JigsawHelper.registerJigsaw(server, desertPoolLocation, new ResourceLocation("morevillagers:village/desert/desert_hunter_engineer"), config.weights.engineerHouseWeight);
 		}
 	}
 }

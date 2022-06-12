@@ -9,7 +9,7 @@
     "Zero_DSRS_VX"
   ],
   "contact": {
-    "website": "https://www.curseforge.com/minecraft/mc-mods/more-villagers",
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/more-villagers",
     "repo": "https://github.com/samedifferent/morevillagers",
     "issues": "https://github.com/samedifferent/morevillagers/issues"
   },
@@ -19,6 +19,9 @@
   "entrypoints": {
     "main": [
       "com.samebutdifferent.morevillagers.fabric.MoreVillagersFabric"
+    ],
+    "modmenu": [
+      "com.samebutdifferent.morevillagers.integration.fabric.ModMenuIntegration"
     ]
   },
   "mixins": [

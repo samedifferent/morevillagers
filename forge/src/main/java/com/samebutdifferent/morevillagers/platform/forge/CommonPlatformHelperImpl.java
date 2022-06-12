@@ -33,8 +33,8 @@ public class CommonPlatformHelperImpl {
         return ITEMS.register(name, item);
     }
 
-    public static Supplier<VillagerProfession> registerProfession(String name, Supplier<PoiType> poiType, @Nullable SoundEvent workSound) {
-        return PROFESSIONS.register(name, () -> new VillagerProfession(name, poiType.get(), ImmutableSet.of(), ImmutableSet.of(), workSound));
+    public static Supplier<VillagerProfession> registerProfession(String name, Supplier<VillagerProfession> profession) {
+        return PROFESSIONS.register(name, profession);
     }
 
     public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
