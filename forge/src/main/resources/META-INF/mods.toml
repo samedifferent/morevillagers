@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="MIT"
+issueTrackerURL="https://github.com/samedifferent/morevillagers/issues"
+
+[[mods]]
+modId="morevillagers"
+version="${version}"
+displayName="More Villagers"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/more-villagers"
+logoFile="icon.png"
+authors="SameButDifferent, Zero_DSRS_VX"
+description='''
+Adds new villager jobs, trades, and workstations!
+'''
+
+[[dependencies.morevillagers]]
+   modId="forge"
+   mandatory=true
+   versionRange="[40,)"
+   ordering="NONE"
+   side="BOTH"
+
+[[dependencies.morevillagers]]
+   modId="minecraft"
+   mandatory=true
+   versionRange="[1.18.2,1.19)"
+   ordering="NONE"
+   side="BOTH"

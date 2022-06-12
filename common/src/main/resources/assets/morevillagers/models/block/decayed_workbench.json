@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "morevillagers:block/decayed_workbench_side",
+    "bottom": "morevillagers:block/decayed_workbench_bottom",
+    "top": "morevillagers:block/decayed_workbench_top"
+  }
+}

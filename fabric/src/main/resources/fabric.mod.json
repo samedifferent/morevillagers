@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "morevillagers",
+  "version": "${version}",
+  "name": "More Villagers",
+  "description": "Adds new villager jobs, trades, and workstations!",
+  "authors": [
+    "SameButDifferent",
+    "Zero_DSRS_VX"
+  ],
+  "contact": {
+    "website": "https://www.curseforge.com/minecraft/mc-mods/more-villagers",
+    "repo": "https://github.com/samedifferent/morevillagers",
+    "issues": "https://github.com/samedifferent/morevillagers/issues"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.samebutdifferent.morevillagers.fabric.MoreVillagersFabric"
+    ]
+  },
+  "mixins": [
+    "morevillagers.mixins.json",
+    "morevillagers-common.mixins.json"
+  ],
+  "accessWidener": "morevillagers.accesswidener",
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": ">=1.18.2"
+  }
+}

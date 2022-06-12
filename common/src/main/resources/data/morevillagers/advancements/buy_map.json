@@ -1,0 +1,31 @@
+{
+  "parent": "morevillagers:first_trade",
+  "display": {
+    "icon": {
+      "item": "minecraft:compass"
+    },
+    "title": {
+      "translate": "Sponsored Voyage"
+    },
+    "description": {
+      "translate": "Buy an Explorer Map from a villager."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "trade": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:filled_map"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}
