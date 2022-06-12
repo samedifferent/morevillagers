@@ -36,8 +36,8 @@ public class CommonPlatformHelperImpl {
         return () -> registry;
     }
 
-    public static Supplier<PoiType> registerPoiType(String name, Set<BlockState> matchingStates, int maxTickets, int validRange) {
-         var registry = Registry.register(Registry.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, name), PoiTypeInvoker.invokeRegisterBlockStates(PoiTypeInvoker.invokeConstructor(name, matchingStates, maxTickets, validRange)));
+    public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
+         var registry = Registry.register(Registry.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, name), poiType.get());
         return () -> registry;
     }
 

@@ -32,7 +32,7 @@ public class CommonPlatformHelper {
     }
 
     @ExpectPlatform
-    public static Supplier<PoiType> registerPoiType(String name, Set<BlockState> matchingStates, int maxTickets, int validRange) {
+    public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
         throw new AssertionError();
     }
 

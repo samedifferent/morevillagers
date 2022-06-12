@@ -37,8 +37,8 @@ public class CommonPlatformHelperImpl {
         return PROFESSIONS.register(name, () -> new VillagerProfession(name, poiType.get(), ImmutableSet.of(), ImmutableSet.of(), workSound));
     }
 
-    public static Supplier<PoiType> registerPoiType(String name, Set<BlockState> matchingStates, int maxTickets, int validRange) {
-        return POI_TYPES.register(name, () -> PoiTypeInvoker.invokeRegisterBlockStates(new PoiType(name, matchingStates, maxTickets, validRange)));
+    public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
+        return POI_TYPES.register(name, poiType);
     }
 
     public static CreativeModeTab registerCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
