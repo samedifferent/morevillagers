@@ -7,7 +7,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.levelgen.feature.ConfiguredStructureFeature;
 
 public class MVTags {
-    public static final TagKey<ConfiguredStructureFeature<?, ?>> ON_BURIED_TREASURE_EXPLORER_MAPS = createConfiguredStructureFeatureTag("on_buried_treasure_explorer_maps");
     public static final TagKey<ConfiguredStructureFeature<?, ?>> ON_FORTRESS_EXPLORER_MAPS = createConfiguredStructureFeatureTag("on_fortress_explorer_maps");
     public static final TagKey<ConfiguredStructureFeature<?, ?>> ON_BASTION_REMNANT_EXPLORER_MAPS = createConfiguredStructureFeatureTag("on_bastion_remnant_explorer_maps");
     public static final TagKey<ConfiguredStructureFeature<?, ?>> ON_END_CITY_EXPLORER_MAPS = createConfiguredStructureFeatureTag("on_end_city_explorer_maps");
