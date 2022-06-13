@@ -16,18 +16,71 @@
     "hidden": false
   },
   "criteria": {
-    "tamedcat": {
+    "plains": {
       "trigger": "minecraft:tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:cat",
           "location": {
-            "feature": "village"
+            "feature": "minecraft:village_plains"
+          }
+        }
+      }
+    },
+    "desert": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:cat",
+          "location": {
+            "feature": "minecraft:village_desert"
+          }
+        }
+      }
+    },
+    "savanna": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:cat",
+          "location": {
+            "feature": "minecraft:village_savanna"
+          }
+        }
+      }
+    },
+    "snowy": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:cat",
+          "location": {
+            "feature": "minecraft:village_snowy"
+          }
+        }
+      }
+    },
+    "taiga": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:cat",
+          "location": {
+            "feature": "minecraft:village_taiga"
           }
         }
       }
     }
   },
+  "requirements": [
+    [
+      "plains",
+      "desert",
+      "savanna",
+      "snowy",
+      "taiga"
+    ]
+  ],
   "rewards": {
     "experience": 20
   }
