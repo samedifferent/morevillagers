@@ -2,20 +2,18 @@ plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
 }
 
+archivesBaseName = "${rootProject.archives_base_name}-${project.name}"
+
 architectury {
     platformSetupLoomIde()
     fabric()
 }
 
-def generatedResources = file("src/generated/resources")
-def accessWidenerFile = project(":common").file("src/main/resources/morevillagers.accesswidener")
+var commonAW = project(":common").file("src/main/resources/morevillagers.accesswidener")
+var generatedResources = file("src/generated/resources")
 
 loom {
-    accessWidenerPath.set(accessWidenerFile)
-}
-
-sourceSets.main.resources {
-    srcDir generatedResources
+    accessWidenerPath.set(commonAW)
 }
 
 configurations {
@@ -39,18 +37,26 @@ dependencies {
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 }
 
-task copyAccessWidener(type: Copy) {
-    from(accessWidenerFile)
-    into(generatedResources)
+sourceSets {
+    main {
+        resources {
+            srcDir generatedResources
+        }
+    }
+}
+
+task copyAW(type: Copy) {
+    from commonAW
+    into generatedResources
 }
 
 processResources {
-    dependsOn(copyAccessWidener)
+    dependsOn copyAW
 
-    inputs.property "version", project.version
+    inputs.property "version", rootProject.mod_version
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version
+        expand "version": rootProject.mod_version
     }
 }
 
@@ -74,6 +80,7 @@ sourcesJar {
     def commonSources = project(":common").sourcesJar
     dependsOn commonSources
     from commonSources.archiveFile.map { zipTree(it) }
+    exclude "morevillagers.accesswidener"
 }
 
 components.java {

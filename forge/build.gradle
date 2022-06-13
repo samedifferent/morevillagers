@@ -1,19 +1,21 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
 }
+
+archivesBaseName = "${rootProject.archives_base_name}-${project.name}"
+
 architectury {
     platformSetupLoomIde()
     forge()
 }
 
 loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
+    accessWidenerPath.set(project(":common").file("src/main/resources/morevillagers.accesswidener"))
 
     forge {
-        convertAccessWideners = true
-        extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
         mixinConfig "morevillagers-common.mixins.json"
         mixinConfig "morevillagers.mixins.json"
+        convertAccessWideners.set(true)
     }
 }
 
@@ -33,10 +35,10 @@ dependencies {
 }
 
 processResources {
-    inputs.property "version", project.version
+    inputs.property "version", rootProject.mod_version
 
     filesMatching("META-INF/mods.toml") {
-        expand "version": project.version
+        expand "version": rootProject.mod_version
     }
 }
 

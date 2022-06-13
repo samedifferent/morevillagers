@@ -12,7 +12,7 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/morevillagers.accesswidener")
+    accessWidenerPath.set(file("src/main/resources/morevillagers.accesswidener"))
 }
 
 publishing {
