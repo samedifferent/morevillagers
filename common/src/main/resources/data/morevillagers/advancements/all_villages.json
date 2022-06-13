@@ -16,48 +16,43 @@
     "hidden": false
   },
   "criteria": {
-    "desert_village": {
+    "plains": {
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "feature": "village",
-          "biome" : "desert"
+          "feature": "minecraft:village_plains"
         }
       }
     },
-    "plains_village" : {
+    "desert": {
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "feature": "village",
-          "biome" : "plains"
+          "feature": "minecraft:village_desert"
         }
       }
     },
-    "taiga_village": {
+    "savanna": {
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "feature": "village",
-          "biome" : "taiga"
+          "feature": "minecraft:village_savanna"
         }
       }
     },
-    "savanna_village": {
+    "snowy": {
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "feature": "village",
-          "biome" : "savanna"
+          "feature": "minecraft:village_snowy"
         }
       }
     },
-    "snowy_village": {
+    "taiga": {
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "feature": "village",
-          "biome" : "snowy_plains"
+          "feature": "minecraft:village_taiga"
         }
       }
     }

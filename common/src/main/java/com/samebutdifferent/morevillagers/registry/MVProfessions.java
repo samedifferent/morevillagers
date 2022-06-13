@@ -7,6 +7,7 @@ import com.samebutdifferent.morevillagers.platform.CommonPlatformHelper;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.ConfiguredStructureTags;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.Items;
@@ -46,7 +47,7 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] oceanographerLevel3 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.DARK_PRISMARINE,12,16,20),
-                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_BURIED_TREASURE_EXPLORER_MAPS, "filled_map.buried_treasure", MapDecoration.Type.RED_X, 12, 10)
+                new VillagerTrades.TreasureMapForEmeralds(13, ConfiguredStructureTags.ON_TREASURE_MAPS, "filled_map.buried_treasure", MapDecoration.Type.RED_X, 12, 10)
         };
         VillagerTrades.ItemListing[] oceanographerLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.NAUTILUS_SHELL, 3, 1, 12, 15),

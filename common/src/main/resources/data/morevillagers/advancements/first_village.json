@@ -16,15 +16,56 @@
     "hidden": false
   },
   "criteria": {
-    "village": {
+    "plains": {
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "feature": "village"
+          "feature": "minecraft:village_plains"
+        }
+      }
+    },
+    "desert": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "minecraft:village_desert"
+        }
+      }
+    },
+    "savanna": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "minecraft:village_savanna"
+        }
+      }
+    },
+    "snowy": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "minecraft:village_snowy"
+        }
+      }
+    },
+    "taiga": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "minecraft:village_taiga"
         }
       }
     }
   },
+  "requirements": [
+    [
+      "plains",
+      "desert",
+      "savanna",
+      "snowy",
+      "taiga"
+    ]
+  ],
   "rewards": {
     "experience": 25
   }
