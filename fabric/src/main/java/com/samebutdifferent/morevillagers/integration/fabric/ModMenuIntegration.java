@@ -1,6 +1,6 @@
 package com.samebutdifferent.morevillagers.integration.fabric;
 
-import com.samebutdifferent.morevillagers.registry.MVConfig;
+import com.samebutdifferent.morevillagers.registry.fabric.MVConfigFabric;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -11,6 +11,6 @@ import net.fabricmc.api.Environment;
 public class ModMenuIntegration implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return parent -> AutoConfig.getConfigScreen(MVConfig.class, parent).get();
+        return parent -> AutoConfig.getConfigScreen(MVConfigFabric.class, parent).get();
     }
 }

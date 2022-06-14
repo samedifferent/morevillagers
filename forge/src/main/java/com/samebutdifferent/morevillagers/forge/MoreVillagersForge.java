@@ -3,12 +3,15 @@ package com.samebutdifferent.morevillagers.forge;
 import com.samebutdifferent.morevillagers.MoreVillagers;
 import com.samebutdifferent.morevillagers.platform.forge.CommonPlatformHelperImpl;
 import com.samebutdifferent.morevillagers.registry.MVProfessions;
+import com.samebutdifferent.morevillagers.registry.forge.MVConfigForge;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
@@ -21,8 +24,9 @@ public class MoreVillagersForge {
     public MoreVillagersForge() {
         MoreVillagers.init();
 
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MVConfigForge.COMMON_CONFIG);
 
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         CommonPlatformHelperImpl.BLOCKS.register(bus);
         CommonPlatformHelperImpl.ITEMS.register(bus);
         CommonPlatformHelperImpl.POI_TYPES.register(bus);

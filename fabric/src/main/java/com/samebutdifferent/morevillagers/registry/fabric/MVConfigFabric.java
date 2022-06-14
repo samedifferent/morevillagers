@@ -1,4 +1,4 @@
-package com.samebutdifferent.morevillagers.registry;
+package com.samebutdifferent.morevillagers.registry.fabric;
 
 import blue.endless.jankson.Comment;
 import com.samebutdifferent.morevillagers.MoreVillagers;
@@ -7,7 +7,7 @@ import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = MoreVillagers.MOD_ID)
-public class MVConfig implements ConfigData {
+public class MVConfigFabric implements ConfigData {
     // Settings
     @ConfigEntry.Gui.CollapsibleObject
     public Houses houses = new Houses();
