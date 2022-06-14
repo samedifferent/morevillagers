@@ -6,8 +6,10 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.data.worldgen.ProcessorLists;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.level.levelgen.structure.pools.SinglePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList;
@@ -16,25 +18,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JigsawHelper {
-    public static void registerJigsaw(MinecraftServer server, ResourceLocation poolLocation, ResourceLocation nbtLocation, int weight) {
-        RegistryAccess manager = server.registryAccess();
-        Registry<StructureTemplatePool> pools = manager.registryOrThrow(Registry.TEMPLATE_POOL_REGISTRY);
-        StructureTemplatePool pool = pools.get(poolLocation);
+    private static final ResourceKey<StructureProcessorList> EMPTY_PROCESSOR_LIST_KEY = ResourceKey.create(Registry.PROCESSOR_LIST_REGISTRY, new ResourceLocation("minecraft", "empty"));
 
-        StructureProcessorList processorList = manager.registryOrThrow(Registry.PROCESSOR_LIST_REGISTRY).getOptional(poolLocation).orElse(ProcessorLists.EMPTY.value());
-        List<StructurePoolElement> templates = ((StructureTemplatePoolAccessor) pool).getTemplates();
+    public static void addBuildingToPool(Registry<StructureTemplatePool> templatePoolRegistry, Registry<StructureProcessorList> processorListRegistry, ResourceLocation poolRL, String nbtPieceRL, int weight) {
+        Holder<StructureProcessorList> emptyProcessorList = processorListRegistry.getHolderOrThrow(EMPTY_PROCESSOR_LIST_KEY);
 
-        StructurePoolElement template = StructurePoolElement.legacy(nbtLocation.toString(), Holder.direct(processorList)).apply(StructureTemplatePool.Projection.RIGID);
+        StructureTemplatePool pool = templatePoolRegistry.get(poolRL);
+        if (pool == null) return;
+
+        SinglePoolElement piece = SinglePoolElement.single(nbtPieceRL, emptyProcessorList).apply(StructureTemplatePool.Projection.RIGID);
+
         for (int i = 0; i < weight; i++) {
-            templates.add(template);
+            ((StructureTemplatePoolAccessor) pool).getTemplates().add(piece);
         }
 
-        List<Pair<StructurePoolElement, Integer>> rawTemplates = new ArrayList<>(((StructureTemplatePoolAccessor) pool).getRawTemplates());
-
-        templates.addAll(((StructureTemplatePoolAccessor) pool).getTemplates());
-        rawTemplates.addAll(((StructureTemplatePoolAccessor) pool).getRawTemplates());
-
-        ((StructureTemplatePoolAccessor) pool).setTemplates(templates);
-        ((StructureTemplatePoolAccessor) pool).setRawTemplates(rawTemplates);
+        List<Pair<StructurePoolElement, Integer>> listOfPieceEntries = new ArrayList<>(((StructureTemplatePoolAccessor) pool).getRawTemplates());
+        listOfPieceEntries.add(new Pair<>(piece, weight));
+        ((StructureTemplatePoolAccessor) pool).setRawTemplates(listOfPieceEntries);
     }
 }
