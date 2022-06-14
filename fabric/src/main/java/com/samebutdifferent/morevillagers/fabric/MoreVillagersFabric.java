@@ -1,6 +1,7 @@
 package com.samebutdifferent.morevillagers.fabric;
 
 import com.samebutdifferent.morevillagers.MoreVillagers;
+import com.samebutdifferent.morevillagers.registry.MVPoiTypes;
 import com.samebutdifferent.morevillagers.registry.MVProfessions;
 import com.samebutdifferent.morevillagers.registry.fabric.MVConfigFabric;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -14,6 +15,7 @@ public class MoreVillagersFabric implements ModInitializer {
         AutoConfig.register(MVConfigFabric.class, GsonConfigSerializer::new);
         MoreVillagers.init();
         MVProfessions.fillTradeData();
+        MVPoiTypes.registerBlockStates();
         ServerLifecycleEvents.SERVER_STARTING.register(MoreVillagers::registerJigsaws);
     }
 }

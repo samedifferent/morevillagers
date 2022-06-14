@@ -2,6 +2,7 @@ package com.samebutdifferent.morevillagers.forge;
 
 import com.samebutdifferent.morevillagers.MoreVillagers;
 import com.samebutdifferent.morevillagers.platform.forge.CommonPlatformHelperImpl;
+import com.samebutdifferent.morevillagers.registry.MVPoiTypes;
 import com.samebutdifferent.morevillagers.registry.MVProfessions;
 import com.samebutdifferent.morevillagers.registry.forge.MVConfigForge;
 import net.minecraftforge.common.MinecraftForge;
@@ -40,6 +41,7 @@ public class MoreVillagersForge {
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             MVProfessions.fillTradeData();
+            MVPoiTypes.registerBlockStates();
         });
     }
 }

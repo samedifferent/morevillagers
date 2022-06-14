@@ -30,7 +30,7 @@ public class CommonPlatformHelperImpl {
     }
 
     public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
-         var registry = Registry.register(Registry.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, name), poiType.get());
+        var registry = Registry.register(Registry.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, name), poiType.get());
         return () -> registry;
     }
 

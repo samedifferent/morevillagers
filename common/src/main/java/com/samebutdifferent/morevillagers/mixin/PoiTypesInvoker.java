@@ -1,6 +1,8 @@
 package com.samebutdifferent.morevillagers.mixin;
 
 import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.ai.village.poi.PoiTypes;
 import net.minecraft.world.level.block.Block;
@@ -21,6 +23,11 @@ public interface PoiTypesInvoker {
 
     @Invoker("getBlockStates")
     static Set<BlockState> invokeGetBlockStates(Block block) {
+        throw new AssertionError();
+    }
+
+    @Invoker("register")
+    static PoiType invokeRegister(Registry<PoiType> registry, ResourceKey<PoiType> resourceKey, Set<BlockState> matchingStates, int maxTickets, int validRange) {
         throw new AssertionError();
     }
 }

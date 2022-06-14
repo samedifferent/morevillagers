@@ -11,9 +11,7 @@ import net.minecraft.world.entity.ai.village.poi.PoiType;
 import java.util.function.Supplier;
 
 public class MVPoiTypes {
-    public static void init() {
-        registerBlockStates();
-    }
+    public static void init() {}
 
     public static final Supplier<PoiType> OCEANOGRAPHER_POI = CommonPlatformHelper.registerPoiType("oceanographer", () -> new PoiType(PoiTypesInvoker.invokeGetBlockStates(MVBlocks.OCEANOGRAPHY_TABLE.get()), 1, 1));
     public static final Supplier<PoiType> NETHERIAN_POI = CommonPlatformHelper.registerPoiType("netherian", () -> new PoiType(PoiTypesInvoker.invokeGetBlockStates(MVBlocks.DECAYED_WORKBENCH.get()), 1, 1));
@@ -24,7 +22,7 @@ public class MVPoiTypes {
     public static final Supplier<PoiType> HUNTER_POI = CommonPlatformHelper.registerPoiType("hunter", () -> new PoiType(PoiTypesInvoker.invokeGetBlockStates(MVBlocks.HUNTING_POST.get()), 1, 1));
     public static final Supplier<PoiType> MINER_POI = CommonPlatformHelper.registerPoiType("miner", () -> new PoiType(PoiTypesInvoker.invokeGetBlockStates(MVBlocks.MINING_BENCH.get()), 1, 1));
 
-    private static void registerBlockStates() {
+    public static void registerBlockStates() {
         PoiTypesInvoker.invokeGetBlockStates(MVBlocks.OCEANOGRAPHY_TABLE.get()).forEach((state) -> PoiTypesInvoker.getTypeByState().put(state, Registry.POINT_OF_INTEREST_TYPE.getHolder(ResourceKey.create(Registry.POINT_OF_INTEREST_TYPE_REGISTRY, new ResourceLocation(MoreVillagers.MOD_ID, "oceanography_table"))).get()));
         PoiTypesInvoker.invokeGetBlockStates(MVBlocks.WOODWORKING_TABLE.get()).forEach((state) -> PoiTypesInvoker.getTypeByState().put(state, Registry.POINT_OF_INTEREST_TYPE.getHolder(ResourceKey.create(Registry.POINT_OF_INTEREST_TYPE_REGISTRY, new ResourceLocation(MoreVillagers.MOD_ID, "woodworking_table"))).get()));
         PoiTypesInvoker.invokeGetBlockStates(MVBlocks.DECAYED_WORKBENCH.get()).forEach((state) -> PoiTypesInvoker.getTypeByState().put(state, Registry.POINT_OF_INTEREST_TYPE.getHolder(ResourceKey.create(Registry.POINT_OF_INTEREST_TYPE_REGISTRY, new ResourceLocation(MoreVillagers.MOD_ID, "decayed_workbench"))).get()));
