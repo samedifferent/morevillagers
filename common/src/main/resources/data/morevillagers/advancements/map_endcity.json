@@ -5,10 +5,10 @@
       "item": "minecraft:purpur_block"
     },
     "title": {
-      "translate": "End City Explorer Map"
+      "translate": "advancements.map_endcity.title"
     },
     "description": {
-      "translate": "Use an End City Explorer Map from the Enderologist to find an End City."
+      "translate": "advancements.map_endcity.description"
     },
     "frame": "goal",
     "show_toast": true,
@@ -16,13 +16,18 @@
     "hidden": false
   },
   "criteria": {
-    "hasmap": {
+    "has_map": {
       "trigger": "minecraft:villager_trade",
       "conditions": {
-        "villager": {
-          "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:enderian\"}}"
-        },
+        "villager": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:villager",
+              "nbt": "{VillagerData:{profession:\"morevillagers:enderian\"}}"
+            }
+          }
+        ],
         "item": {
           "items": [
             "minecraft:filled_map"
@@ -30,21 +35,27 @@
         }
       }
     },
-    "endcity": {
+    "end_city": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "minecraft:end_city"
-        },
-        "player": {
-          "player": {
-            "advancements": {
-              "morevillagers:map_endcity": {
-                "hasmap": true
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "morevillagers:map_endcity": {
+                    "has_map": true
+                  }
+                }
+              },
+              "location": {
+                "structure": "minecraft:end_city"
               }
             }
           }
-        }
+        ]
       }
     }
   },

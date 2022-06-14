@@ -5,10 +5,10 @@
       "item": "minecraft:compass"
     },
     "title": {
-      "translate": "Sponsored Voyage"
+      "translate": "advancements.buy_map.title"
     },
     "description": {
-      "translate": "Buy an Explorer Map from a villager."
+      "translate": "advancements.buy_map.description"
     },
     "frame": "task",
     "show_toast": true,
@@ -20,7 +20,9 @@
       "trigger": "minecraft:villager_trade",
       "conditions": {
         "item": {
-          "items": ["minecraft:filled_map"]
+          "items": [
+            "minecraft:filled_map"
+          ]
         }
       }
     }

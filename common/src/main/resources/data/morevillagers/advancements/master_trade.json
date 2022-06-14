@@ -5,10 +5,10 @@
       "item": "minecraft:diamond"
     },
     "title": {
-      "translate": "Ace Trainer"
+      "translate": "advancements.master_trade.title"
     },
     "description": {
-      "translate": "Level up a villager to Master and make a grand purchase."
+      "translate": "advancements.master_trade.description"
     },
     "frame": "task",
     "show_toast": true,

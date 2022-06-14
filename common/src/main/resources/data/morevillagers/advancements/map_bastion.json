@@ -5,10 +5,10 @@
       "item": "minecraft:polished_blackstone_bricks"
     },
     "title": {
-      "translate": "Bastion Explorer Map"
+      "translate": "advancements.map_bastion.title"
     },
     "description": {
-      "translate": "Use a Bastion Explorer Map from the Netherologist to find a Bastion Remnant."
+      "translate": "advancements.map_bastion.description"
     },
     "frame": "goal",
     "show_toast": true,
@@ -16,13 +16,18 @@
     "hidden": false
   },
   "criteria": {
-    "hasmap": {
+    "has_map": {
       "trigger": "minecraft:villager_trade",
       "conditions": {
-        "villager": {
-          "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:netherian\"}}"
-        },
+        "villager": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "minecraft:villager",
+              "nbt": "{VillagerData:{profession:\"morevillagers:netherian\"}}"
+            }
+          }
+        ],
         "item": {
           "items": [
             "minecraft:filled_map"
@@ -30,21 +35,27 @@
         }
       }
     },
-    "endcity": {
+    "bastion": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "minecraft:bastion_remnant"
-        },
-        "player": {
-          "player": {
-            "advancements": {
-              "morevillagers:map_bastion": {
-                "hasmap": true
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "morevillagers:map_bastion": {
+                    "has_map": true
+                  }
+                }
+              },
+              "location": {
+                "structure": "minecraft:bastion_remnant"
               }
             }
           }
-        }
+        ]
       }
     }
   },

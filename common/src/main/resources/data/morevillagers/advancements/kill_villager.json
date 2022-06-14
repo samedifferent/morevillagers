@@ -5,10 +5,10 @@
       "item": "minecraft:iron_sword"
     },
     "title": {
-      "translate": "Bad Deal"
+      "translate": "advancements.kill_villager.title"
     },
     "description": {
-      "translate": "Kill a villager..."
+      "translate": "advancements.kill_villager.description"
     },
     "frame": "task",
     "show_toast": true,

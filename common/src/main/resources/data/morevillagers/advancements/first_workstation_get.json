@@ -5,10 +5,10 @@
       "item": "minecraft:stonecutter"
     },
     "title": {
-      "translate": "Let's Get To Work"
+      "translate": "advancements.first_workstation_get.title"
     },
     "description": {
-      "translate": "Find or craft a villager workstation."
+      "translate": "advancements.first_workstation_get.description"
     },
     "frame": "task",
     "show_toast": true,

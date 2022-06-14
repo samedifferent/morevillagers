@@ -5,10 +5,10 @@
       "item": "minecraft:map"
     },
     "title": {
-      "translate": "First Village"
+      "translate": "advancements.first_village.title"
     },
     "description": {
-      "translate": "Find a village."
+      "translate": "advancements.first_village.description"
     },
     "frame": "task",
     "show_toast": true,
@@ -19,41 +19,81 @@
     "plains": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "minecraft:village_plains"
-        }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "minecraft:village_plains"
+              }
+            }
+          }
+        ]
       }
     },
     "desert": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "minecraft:village_desert"
-        }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "minecraft:village_desert"
+              }
+            }
+          }
+        ]
       }
     },
     "savanna": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "minecraft:village_savanna"
-        }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "minecraft:village_savanna"
+              }
+            }
+          }
+        ]
       }
     },
     "snowy": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "minecraft:village_snowy"
-        }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "minecraft:village_snowy"
+              }
+            }
+          }
+        ]
       }
     },
     "taiga": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "minecraft:village_taiga"
-        }
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "minecraft:village_taiga"
+              }
+            }
+          }
+        ]
       }
     }
   },
