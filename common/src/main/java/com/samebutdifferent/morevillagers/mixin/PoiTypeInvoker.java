@@ -10,12 +10,7 @@ import java.util.Set;
 @Mixin(PoiType.class)
 public interface PoiTypeInvoker {
     @Invoker("<init>")
-    static PoiType invokeConstructor(String name, Set<BlockState> matchingStates, int maxTickets, int validRange) {
-        throw new AssertionError();
-    }
-
-    @Invoker("registerBlockStates")
-    static PoiType invokeRegisterBlockStates(PoiType poiType) {
+    static PoiType invokeConstructor(Set<BlockState> matchingStates, int maxTickets, int validRange) {
         throw new AssertionError();
     }
 }

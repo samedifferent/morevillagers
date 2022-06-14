@@ -6,8 +6,9 @@ import com.samebutdifferent.morevillagers.mixin.VillagerProfessionInvoker;
 import com.samebutdifferent.morevillagers.platform.CommonPlatformHelper;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import net.minecraft.core.Registry;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.tags.ConfiguredStructureTags;
+import net.minecraft.tags.StructureTags;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.Items;
@@ -18,22 +19,38 @@ import java.util.function.Supplier;
 public class MVProfessions {
     public static void init() {}
 
-    public static final Supplier<VillagerProfession> OCEANOGRAPHER = CommonPlatformHelper.registerProfession("oceanographer",
-            () -> VillagerProfessionInvoker.invokeConstructor("oceanographer", MVPoiTypes.OCEANOGRAPHER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_CARTOGRAPHER));
-    public static final Supplier<VillagerProfession> NETHERIAN = CommonPlatformHelper.registerProfession("netherian",
-            () -> VillagerProfessionInvoker.invokeConstructor("netherian", MVPoiTypes.NETHERIAN_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER));
-    public static final Supplier<VillagerProfession> WOODWORKER = CommonPlatformHelper.registerProfession("woodworker",
-            () -> VillagerProfessionInvoker.invokeConstructor("woodworker", MVPoiTypes.WOODWORKER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LEATHERWORKER));
-    public static final Supplier<VillagerProfession> ENDERIAN = CommonPlatformHelper.registerProfession("enderian",
-            () -> VillagerProfessionInvoker.invokeConstructor("enderian", MVPoiTypes.ENDERIAN_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER));
-    public static final Supplier<VillagerProfession> ENGINEER = CommonPlatformHelper.registerProfession("engineer",
-            () -> VillagerProfessionInvoker.invokeConstructor("engineer", MVPoiTypes.ENGINEER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_TOOLSMITH));
-    public static final Supplier<VillagerProfession> FLORIST = CommonPlatformHelper.registerProfession("florist",
-            () -> VillagerProfessionInvoker.invokeConstructor("florist", MVPoiTypes.FLORIST_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FARMER));
-    public static final Supplier<VillagerProfession> HUNTER = CommonPlatformHelper.registerProfession("hunter",
-            () -> VillagerProfessionInvoker.invokeConstructor("hunter", MVPoiTypes.HUNTER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FLETCHER));
-    public static final Supplier<VillagerProfession> MINER = CommonPlatformHelper.registerProfession("miner",
-            () -> VillagerProfessionInvoker.invokeConstructor("miner", MVPoiTypes.MINER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_ARMORER));
+    public static final Supplier<VillagerProfession> OCEANOGRAPHER = CommonPlatformHelper.registerProfession("oceanographer", () -> {
+        var key = Registry.POINT_OF_INTEREST_TYPE.getResourceKey(MVPoiTypes.OCEANOGRAPHER_POI.get()).orElseThrow();
+        return VillagerProfessionInvoker.invokeConstructor("oceanographer", holder -> holder.is(key), holder -> holder.is(key), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_CARTOGRAPHER);
+    });
+    public static final Supplier<VillagerProfession> NETHERIAN = CommonPlatformHelper.registerProfession("netherian", () -> {
+        var key = Registry.POINT_OF_INTEREST_TYPE.getResourceKey(MVPoiTypes.NETHERIAN_POI.get()).orElseThrow();
+        return VillagerProfessionInvoker.invokeConstructor("netherian", holder -> holder.is(key), holder -> holder.is(key), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER);
+    });
+    public static final Supplier<VillagerProfession> WOODWORKER = CommonPlatformHelper.registerProfession("woodworker", () -> {
+        var key = Registry.POINT_OF_INTEREST_TYPE.getResourceKey(MVPoiTypes.WOODWORKER_POI.get()).orElseThrow();
+        return VillagerProfessionInvoker.invokeConstructor("woodworker", holder -> holder.is(key), holder -> holder.is(key), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LEATHERWORKER);
+    });
+    public static final Supplier<VillagerProfession> ENDERIAN = CommonPlatformHelper.registerProfession("enderian", () -> {
+        var key = Registry.POINT_OF_INTEREST_TYPE.getResourceKey(MVPoiTypes.ENDERIAN_POI.get()).orElseThrow();
+        return VillagerProfessionInvoker.invokeConstructor("enderian", holder -> holder.is(key), holder -> holder.is(key), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER);
+    });
+    public static final Supplier<VillagerProfession> ENGINEER = CommonPlatformHelper.registerProfession("engineer", () -> {
+        var key = Registry.POINT_OF_INTEREST_TYPE.getResourceKey(MVPoiTypes.ENGINEER_POI.get()).orElseThrow();
+        return VillagerProfessionInvoker.invokeConstructor("engineer", holder -> holder.is(key), holder -> holder.is(key), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_TOOLSMITH);
+    });
+    public static final Supplier<VillagerProfession> FLORIST = CommonPlatformHelper.registerProfession("florist", () -> {
+        var key = Registry.POINT_OF_INTEREST_TYPE.getResourceKey(MVPoiTypes.FLORIST_POI.get()).orElseThrow();
+        return VillagerProfessionInvoker.invokeConstructor("florist", holder -> holder.is(key), holder -> holder.is(key), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FARMER);
+    });
+    public static final Supplier<VillagerProfession> HUNTER = CommonPlatformHelper.registerProfession("hunter", () -> {
+        var key = Registry.POINT_OF_INTEREST_TYPE.getResourceKey(MVPoiTypes.HUNTER_POI.get()).orElseThrow();
+        return VillagerProfessionInvoker.invokeConstructor("hunter", holder -> holder.is(key), holder -> holder.is(key), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FLETCHER);
+    });
+    public static final Supplier<VillagerProfession> MINER = CommonPlatformHelper.registerProfession("miner", () -> {
+        var key = Registry.POINT_OF_INTEREST_TYPE.getResourceKey(MVPoiTypes.MINER_POI.get()).orElseThrow();
+        return VillagerProfessionInvoker.invokeConstructor("miner", holder -> holder.is(key), holder -> holder.is(key), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_ARMORER);
+    });
 
     public static void fillTradeData() {
         // OCEANOGRAPHER TRADES
@@ -47,7 +64,7 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] oceanographerLevel3 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.DARK_PRISMARINE,12,16,20),
-                new VillagerTrades.TreasureMapForEmeralds(13, ConfiguredStructureTags.ON_TREASURE_MAPS, "filled_map.buried_treasure", MapDecoration.Type.RED_X, 12, 10)
+                new VillagerTrades.TreasureMapForEmeralds(13, StructureTags.ON_TREASURE_MAPS, "filled_map.buried_treasure", MapDecoration.Type.RED_X, 12, 10)
         };
         VillagerTrades.ItemListing[] oceanographerLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.NAUTILUS_SHELL, 3, 1, 12, 15),

@@ -20,9 +20,9 @@ public interface StructureTemplatePoolAccessor {
     void setRawTemplates(List<Pair<StructurePoolElement, Integer>> elementCounts);
 
     @Accessor("templates")
-    List<StructurePoolElement> getTemplates();
+    ObjectArrayList<StructurePoolElement> getTemplates();
 
     @Mutable
     @Accessor("templates")
-    void setTemplates(List<StructurePoolElement> elements);
+    void setTemplates(ObjectArrayList<StructurePoolElement> elements);
 }
