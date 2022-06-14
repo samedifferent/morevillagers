@@ -4,6 +4,7 @@
   "package": "com.samebutdifferent.morevillagers.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "PoiTypesInvoker",
     "StructureTemplatePoolAccessor"
   ],
   "client": [
