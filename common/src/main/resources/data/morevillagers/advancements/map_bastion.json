@@ -21,7 +21,7 @@
       "conditions": {
         "villager": {
           "type": "minecraft:villager",
-          "nbt": "{VillagerData:{profession:\"morevillagers:enderian\"}}"
+          "nbt": "{VillagerData:{profession:\"morevillagers:netherian\"}}"
         },
         "item": {
           "items": [
