@@ -19,18 +19,13 @@
     "enderian": {
       "trigger": "minecraft:villager_trade",
       "conditions": {
-        "villager": [
-          {
-            "condition": "minecraft:entity_properties",
-            "predicate": {
-              "type": "minecraft:villager",
-              "nbt": "{VillagerData:{profession:\"morevillagers:enderian\"}}",
-              "location": {
-                "dimension": "minecraft:the_end"
-              }
-            }
+        "villager": {
+          "type": "minecraft:villager",
+          "nbt": "{VillagerData:{profession:\"morevillagers:enderian\"}}",
+          "location": {
+            "dimension": "minecraft:the_end"
           }
-        ]
+        }
       }
     }
   },

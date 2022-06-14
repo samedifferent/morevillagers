@@ -19,81 +19,56 @@
     "plains": {
       "trigger": "minecraft:tame_animal",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "predicate": {
-              "type": "minecraft:cat",
-              "location": {
-                "structure": "minecraft:village_plains"
-              }
-            }
+        "entity": {
+          "type": "minecraft:cat",
+          "location": {
+            "structure": "minecraft:village_plains"
           }
-        ]
+        }
       }
     },
     "desert": {
       "trigger": "minecraft:tame_animal",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "predicate": {
-              "type": "minecraft:cat",
-              "location": {
-                "structure": "minecraft:village_desert"
-              }
-            }
+        "entity": {
+          "type": "minecraft:cat",
+          "location": {
+            "structure": "minecraft:village_desert"
           }
-        ]
+        }
       }
     },
     "savanna": {
       "trigger": "minecraft:tame_animal",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "predicate": {
-              "type": "minecraft:cat",
-              "location": {
-                "structure": "minecraft:village_savanna"
-              }
-            }
+        "entity": {
+          "type": "minecraft:cat",
+          "location": {
+            "structure": "minecraft:village_savanna"
           }
-        ]
+        }
       }
     },
     "snowy": {
       "trigger": "minecraft:tame_animal",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "predicate": {
-              "type": "minecraft:cat",
-              "location": {
-                "structure": "minecraft:village_snowy"
-              }
-            }
+        "entity": {
+          "type": "minecraft:cat",
+          "location": {
+            "structure": "minecraft:village_snowy"
           }
-        ]
+        }
       }
     },
     "taiga": {
       "trigger": "minecraft:tame_animal",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "predicate": {
-              "type": "minecraft:cat",
-              "location": {
-                "structure": "minecraft:village_taiga"
-              }
-            }
+        "entity": {
+          "type": "minecraft:cat",
+          "location": {
+            "structure": "minecraft:village_taiga"
           }
-        ]
+        }
       }
     }
   },

@@ -19,15 +19,10 @@
     "has_map": {
       "trigger": "minecraft:villager_trade",
       "conditions": {
-        "villager": [
-          {
-            "condition": "minecraft:entity_properties",
-            "predicate": {
-              "type": "minecraft:villager",
-              "nbt": "{VillagerData:{profession:\"morevillagers:netherian\"}}"
-            }
-          }
-        ],
+        "villager": {
+          "type": "minecraft:villager",
+          "nbt": "{VillagerData:{profession:\"morevillagers:enderian\"}}"
+        },
         "item": {
           "items": [
             "minecraft:filled_map"
@@ -38,24 +33,19 @@
     "bastion": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "morevillagers:map_bastion": {
-                    "has_map": true
-                  }
-                }
-              },
-              "location": {
-                "structure": "minecraft:bastion_remnant"
+        "player": {
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "morevillagers:map_bastion": {
+                "has_map": true
               }
             }
+          },
+          "location": {
+            "structure": "minecraft:bastion_remnant"
           }
-        ]
+        }
       }
     }
   },
