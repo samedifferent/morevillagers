@@ -16,7 +16,7 @@
   "filled_map.pillager_outpost": "Utpostutforskerart",
   "filled_map.mineshaft": "Gruvesjaktutforskerkart",
 
-  "itemGroup.morevillagers": "More Villagers",
+  "itemGroup.morevillagers.tab": "More Villagers",
 
   "entity.minecraft.villager.morevillagers.oceanographer": "Oseanograf",
   "entity.minecraft.villager.morevillagers.netherian": "Netherologist",
@@ -26,6 +26,15 @@
   "entity.minecraft.villager.morevillagers.florist": "Blomsterhandler",
   "entity.minecraft.villager.morevillagers.hunter": "Jeger",
   "entity.minecraft.villager.morevillagers.miner": "Gruvearbeider",
+
+  "entity.minecraft.villager.oceanographer": "Oseanograf",
+  "entity.minecraft.villager.netherian": "Netherologist",
+  "entity.minecraft.villager.woodworker": "Skogsmester",
+  "entity.minecraft.villager.enderian": "Enderologist",
+  "entity.minecraft.villager.engineer": "Ingeniør",
+  "entity.minecraft.villager.florist": "Blomsterhandler",
+  "entity.minecraft.villager.hunter": "Jeger",
+  "entity.minecraft.villager.miner": "Gruvearbeider",
 
   "advancements.all_professions_traded.title": "Stamkunde",
   "advancements.all_professions_traded.description": "Utfør handel med hver eneste proffesjon",

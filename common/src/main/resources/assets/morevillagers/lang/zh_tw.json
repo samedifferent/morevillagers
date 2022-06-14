@@ -16,7 +16,7 @@
   "filled_map.pillager_outpost": "前哨站探險家地圖",
   "filled_map.mineshaft": "廢棄礦坑探險家地圖",
 
-  "itemGroup.morevillagers": "More Villagers",
+  "itemGroup.morevillagers.tab": "More Villagers",
 
   "entity.minecraft.villager.morevillagers.oceanographer": "海洋學家",
   "entity.minecraft.villager.morevillagers.netherian": "地獄旅者",

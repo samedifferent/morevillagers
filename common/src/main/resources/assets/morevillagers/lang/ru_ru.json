@@ -16,7 +16,7 @@
   "filled_map.pillager_outpost": "Карта исследователя аванпоста разбойников",
   "filled_map.mineshaft": "Карта исследователя заброшенных шахт",
 
-  "itemGroup.morevillagers": "More Villagers",
+  "itemGroup.morevillagers.tab": "More Villagers",
 
   "entity.minecraft.villager.morevillagers.oceanographer": "Океанограф",
   "entity.minecraft.villager.morevillagers.netherian": "Незеролог",
@@ -34,6 +34,7 @@
   "entity.minecraft.villager.engineer": "Инженер",
   "entity.minecraft.villager.florist": "Садовник",
   "entity.minecraft.villager.hunter": "Охотник",
+  "entity.minecraft.villager.miner": "Шахтёр",
 
   "advancements.all_professions_traded.title": "Постоянный клиент",
   "advancements.all_professions_traded.description": "Поторгуйтесь с крестьянином каждой профессии",
