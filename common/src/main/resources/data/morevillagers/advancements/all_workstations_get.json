@@ -5,10 +5,10 @@
       "item": "minecraft:smithing_table"
     },
     "title": {
-      "translate": "Jack Of All Trades"
+      "translate": "advancements.all_workstations_get.title"
     },
     "description": {
-      "translate": "Obtain every villager workstation."
+      "translate": "advancements.all_workstations_get.description"
     },
     "frame": "goal",
     "show_toast": true,

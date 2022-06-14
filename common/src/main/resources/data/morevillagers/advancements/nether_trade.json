@@ -5,10 +5,10 @@
       "item": "minecraft:netherrack"
     },
     "title": {
-      "translate": "Burning Money"
+      "translate": "advancements.nether_trade.title"
     },
     "description": {
-      "translate": "Trade with the Netherologist in the Nether dimension."
+      "translate": "advancements.nether_trade.description"
     },
     "frame": "task",
     "show_toast": true,

@@ -5,10 +5,10 @@
       "item": "minecraft:iron_axe"
     },
     "title": {
-      "translate": "Even Badder Deal"
+      "translate": "advancements.kill_babyvillager.title"
     },
     "description": {
-      "translate": "Kill a baby villager..."
+      "translate": "advancements.kill_babyvillager.description"
     },
     "frame": "task",
     "show_toast": true,

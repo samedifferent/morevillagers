@@ -5,10 +5,10 @@
       "item": "minecraft:cod"
     },
     "title": {
-      "translate": "Town Pet"
+      "translate": "advancements.tame_cat.title"
     },
     "description": {
-      "translate": "Tame a cat in a village."
+      "translate": "advancements.tame_cat.description"
     },
     "frame": "task",
     "show_toast": true,

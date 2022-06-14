@@ -5,10 +5,10 @@
       "item": "minecraft:experience_bottle"
     },
     "title": {
-      "translate": "Frequent Customer"
+      "translate": "advancements.all_professions_traded.title"
     },
     "description": {
-      "translate": "Trade with every villager profession"
+      "translate": "advancements.all_professions_traded.description"
     },
     "frame": "goal",
     "show_toast": true,

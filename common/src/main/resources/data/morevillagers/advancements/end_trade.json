@@ -5,10 +5,10 @@
       "item": "minecraft:end_stone"
     },
     "title": {
-      "translate": "Emeralds to the Moon!"
+      "translate": "advancements.end_trade.title"
     },
     "description": {
-      "translate": "Trade with the Enderologist in the End dimension."
+      "translate": "advancements.end_trade.description"
     },
     "frame": "task",
     "show_toast": true,

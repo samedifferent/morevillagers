@@ -5,10 +5,10 @@
       "item": "minecraft:emerald"
     },
     "title": {
-      "translate": "First Trade"
+      "translate": "advancements.first_trade.title"
     },
     "description": {
-      "translate": "Make your first villager trade."
+      "translate": "advancements.first_trade.description"
     },
     "frame": "task",
     "show_toast": true,
