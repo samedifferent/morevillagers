@@ -15,7 +15,6 @@ public class MoreVillagersFabric implements ModInitializer {
         AutoConfig.register(MVConfigFabric.class, GsonConfigSerializer::new);
         MoreVillagers.init();
         MVProfessions.fillTradeData();
-        MVPoiTypes.registerBlockStates();
         ServerLifecycleEvents.SERVER_STARTING.register(MoreVillagers::registerJigsaws);
     }
 }
