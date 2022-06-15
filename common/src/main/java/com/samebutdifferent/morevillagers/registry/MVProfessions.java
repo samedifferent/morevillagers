@@ -221,7 +221,8 @@ public class MVProfessions {
                 new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_MINESHAFT_EXPLORER_MAPS, "filled_map.mineshaft", MapDecoration.Type.BANNER_BROWN, 12, 15)
         };
         VillagerTrades.ItemListing[] minerLevel5 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.EnchantedItemForEmeralds(Items.DIAMOND_PICKAXE, 12, 3, 15, 0.2F)
+                new VillagerTrades.EnchantedItemForEmeralds(Items.DIAMOND_PICKAXE, 12, 3, 15, 0.2F),
+                new VillagerTrades.TreasureMapForEmeralds(15, MVTags.ON_ANCIENT_CITY_EXPLORER_MAPS, "filled_map.ancient_city", MapDecoration.Type.BLUE_MARKER, 12, 15)
         };
         VillagerTrades.TRADES.put(MINER.get(),toIntMap(ImmutableMap.of(1,minerLevel1,2,minerLevel2,3,minerLevel3,4,minerLevel4,5,minerLevel5)));
     }
