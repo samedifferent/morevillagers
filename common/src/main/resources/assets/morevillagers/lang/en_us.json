@@ -68,5 +68,19 @@
   "advancements.root.title": "More Villagers Mod",
   "advancements.root.description": "Your villager journey awaits.",
   "advancements.tame_cat.title": "Town Pet",
-  "advancements.tame_cat.description": "Tame a cat in a village."
+  "advancements.tame_cat.description": "Tame a cat in a village.",
+
+  "text.autoconfig.morevillagers.title": "More Villagers Config",
+  "text.autoconfig.morevillagers.option.houses": "House Generation Settings",
+  "text.autoconfig.morevillagers.option.houses.generatePlainsHouses": "Generate Plains Houses",
+  "text.autoconfig.morevillagers.option.houses.generateTaigaHouses": "Generate Taiga Houses",
+  "text.autoconfig.morevillagers.option.houses.generateSavannaHouses": "Generate Savanna Houses",
+  "text.autoconfig.morevillagers.option.houses.generateSnowyHouses": "Generate Snowy Houses",
+  "text.autoconfig.morevillagers.option.houses.generateDesertHouses": "Generate Desert Houses",
+  "text.autoconfig.morevillagers.option.weights": "House Weights (Spawn Frequency)",
+  "text.autoconfig.morevillagers.option.weights.woodworkerHouseWeight": "Woodworker House Weight",
+  "text.autoconfig.morevillagers.option.weights.oceanographerHouseWeight": "Oceanographer House Weight",
+  "text.autoconfig.morevillagers.option.weights.floristHouseWeight": "Florist House Weight",
+  "text.autoconfig.morevillagers.option.weights.hunterHouseWeight": "Hunter House Weight",
+  "text.autoconfig.morevillagers.option.weights.engineerHouseWeight": "Engineer House Weight"
 }
