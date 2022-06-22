@@ -6,6 +6,7 @@
   "block.morevillagers.blueprint_table": "Stół Schematów",
   "block.morevillagers.gardening_table": "Stół Ogrodniczy",
   "block.morevillagers.hunting_post": "Posterunek Myśliwski",
+  "block.morevillagers.mining_bench": "Mining Bench",
 
   "filled_map.bastion_remnant": "Mapa Badacza Bastionu",
   "filled_map.fortress": "Mapa Badacza Fortecy",
@@ -13,6 +14,8 @@
   "filled_map.swamp_hut": "Mapa Badacza Bagien",
   "filled_map.jungle_pyramid": "Mapa Badacza Dżungli",
   "filled_map.pillager_outpost": "Mapa Badacza Posterunku",
+  "filled_map.mineshaft": "Mineshaft Explorer Map",
+  "filled_map.ancient_city": "Ancient City Explorer Map",
 
   "itemGroup.morevillagers.tab": "More Villagers",
 
@@ -23,6 +26,7 @@
   "entity.minecraft.villager.morevillagers.engineer": "Inżynier",
   "entity.minecraft.villager.morevillagers.florist": "Florysta",
   "entity.minecraft.villager.morevillagers.hunter": "Myśliwy",
+  "entity.minecraft.villager.morevillagers.miner": "Miner",
 
   "entity.minecraft.villager.oceanographer": "Oceanograf",
   "entity.minecraft.villager.netherian": "Netherolog",
@@ -31,6 +35,7 @@
   "entity.minecraft.villager.engineer": "Inżynier",
   "entity.minecraft.villager.florist": "Florysta",
   "entity.minecraft.villager.hunter": "Myśliwy",
+  "entity.minecraft.villager.miner": "Miner",
 
   "advancements.all_professions_traded.title": "Stały Klient",
   "advancements.all_professions_traded.description": "Handluj z Każdą Profesją.",
