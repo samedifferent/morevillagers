@@ -1,10 +1,10 @@
 package com.samebutdifferent.morevillagers.registry.fabric;
 
-import blue.endless.jankson.Comment;
 import com.samebutdifferent.morevillagers.MoreVillagers;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
+import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 
 @Config(name = MoreVillagers.MOD_ID)
 public class MVConfigFabric implements ConfigData {

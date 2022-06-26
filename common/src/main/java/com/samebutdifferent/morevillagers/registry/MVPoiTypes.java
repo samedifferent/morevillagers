@@ -20,7 +20,6 @@ public class MVPoiTypes {
     public static final Supplier<PoiType> ENGINEER_POI = CommonPlatformHelper.registerPoiType("engineer", () -> PoiTypeInvoker.invokeConstructor("engineer", getBlockStates(MVBlocks.BLUEPRINT_TABLE), 1, 1));
     public static final Supplier<PoiType> FLORIST_POI = CommonPlatformHelper.registerPoiType("florist", () -> PoiTypeInvoker.invokeConstructor("florist", getBlockStates(MVBlocks.GARDENING_TABLE), 1, 1));
     public static final Supplier<PoiType> HUNTER_POI = CommonPlatformHelper.registerPoiType("hunter", () -> PoiTypeInvoker.invokeConstructor("hunter", getBlockStates(MVBlocks.HUNTING_POST), 1, 1));
-    public static final Supplier<PoiType> MINER_POI = CommonPlatformHelper.registerPoiType("miner", () -> PoiTypeInvoker.invokeConstructor("miner", getBlockStates(MVBlocks.MINING_BENCH), 1, 1));
 
     private static Set<BlockState> getBlockStates(Supplier<Block> block) {
         return ImmutableSet.copyOf(block.get().getStateDefinition().getPossibleStates());

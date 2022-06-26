@@ -3,7 +3,7 @@ package com.samebutdifferent.morevillagers.registry.forge;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.config.ModConfigEvent;
+import net.minecraftforge.fml.config.ModConfig;
 
 @Mod.EventBusSubscriber
 public class MVConfigForge {
@@ -50,8 +50,8 @@ public class MVConfigForge {
     }
 
     @SubscribeEvent
-    public static void onLoad(final ModConfigEvent.Loading configEvent) { }
+    public static void onLoad(final ModConfig.Loading configEvent) { }
 
     @SubscribeEvent
-    public static void onReload(final ModConfigEvent.Reloading configEvent) { }
+    public static void onReload(final ModConfig.Reloading configEvent) { }
 }

@@ -7,12 +7,20 @@ import com.samebutdifferent.morevillagers.platform.CommonPlatformHelper;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.tags.ConfiguredStructureTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.Tag;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraft.world.level.levelgen.feature.StructureFeature;
 import net.minecraft.world.level.saveddata.maps.MapDecoration;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.Random;
 import java.util.function.Supplier;
 
 public class MVProfessions {
@@ -32,8 +40,6 @@ public class MVProfessions {
             () -> VillagerProfessionInvoker.invokeConstructor("florist", MVPoiTypes.FLORIST_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FARMER));
     public static final Supplier<VillagerProfession> HUNTER = CommonPlatformHelper.registerProfession("hunter",
             () -> VillagerProfessionInvoker.invokeConstructor("hunter", MVPoiTypes.HUNTER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_FLETCHER));
-    public static final Supplier<VillagerProfession> MINER = CommonPlatformHelper.registerProfession("miner",
-            () -> VillagerProfessionInvoker.invokeConstructor("miner", MVPoiTypes.MINER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_ARMORER));
 
     public static void fillTradeData() {
         // OCEANOGRAPHER TRADES
@@ -47,7 +53,7 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] oceanographerLevel3 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.DARK_PRISMARINE,12,16,20),
-                new VillagerTrades.TreasureMapForEmeralds(13, ConfiguredStructureTags.ON_TREASURE_MAPS, "filled_map.buried_treasure", MapDecoration.Type.RED_X, 12, 10)
+                new VillagerTrades.TreasureMapForEmeralds(13, StructureFeature.BURIED_TREASURE, MapDecoration.Type.RED_X, 12, 10)
         };
         VillagerTrades.ItemListing[] oceanographerLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.NAUTILUS_SHELL, 3, 1, 12, 15),
@@ -69,11 +75,11 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] netherianLevel3 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.OBSIDIAN,4,16,20),
-                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_FORTRESS_EXPLORER_MAPS, "filled_map.fortress", MapDecoration.Type.BANNER_RED, 12, 10),
+                new VillagerTrades.TreasureMapForEmeralds(13, StructureFeature.NETHER_BRIDGE, MapDecoration.Type.BANNER_RED, 12, 10),
         };
         VillagerTrades.ItemListing[] netherianLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.GOLD_INGOT,4,16,30),
-                new VillagerTrades.TreasureMapForEmeralds(14, MVTags.ON_BASTION_REMNANT_EXPLORER_MAPS, "filled_map.bastion_remnant", MapDecoration.Type.BANNER_YELLOW, 12, 15),
+                new VillagerTrades.TreasureMapForEmeralds(14, StructureFeature.BASTION_REMNANT, MapDecoration.Type.BANNER_YELLOW, 12, 15),
         };
         VillagerTrades.ItemListing[] netherianLevel5 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.MUSIC_DISC_PIGSTEP, 20, 1, 12, 30),
@@ -125,7 +131,7 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] enderianLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.DRAGON_BREATH, 6, 2, 12, 15),
-                new VillagerTrades.TreasureMapForEmeralds(14, MVTags.ON_END_CITY_EXPLORER_MAPS, "filled_map.endcity", MapDecoration.Type.BANNER_PURPLE, 12, 15)
+                new VillagerTrades.TreasureMapForEmeralds(14, StructureFeature.END_CITY, MapDecoration.Type.BANNER_PURPLE, 12, 15)
         };
         VillagerTrades.ItemListing[] enderianLevel5 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.SHULKER_SHELL, 12, 1, 8, 30),
@@ -161,23 +167,23 @@ public class MVProfessions {
         // FLORIST TRADES
         VillagerTrades.ItemListing[] floristLevel1 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.FLOWER_POT,3,16,2),
-                new VillagerTrades.ItemsForEmeralds(Items.HONEYCOMB, 3, 1, 16, 1)
+                new TagItemForEmeralds(ItemTags.FLOWERS, 8, 1, 16, 1, 0.05F)
         };
         VillagerTrades.ItemListing[] floristLevel2 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.VINE,24,16,10),
-                new VillagerTrades.ItemsForEmeralds(Items.GLOW_BERRIES, 1, 2, 16, 5)
+                new VillagerTrades.ItemsForEmeralds(Items.HONEYCOMB, 3, 1, 16, 5)
         };
         VillagerTrades.ItemListing[] floristLevel3 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.ItemsForEmeralds(Items.SMALL_DRIPLEAF, 1, 2, 16, 10),
+                new VillagerTrades.EmeraldForItems(Items.LILY_PAD,24,16,20),
                 new VillagerTrades.ItemsForEmeralds(Items.HONEY_BOTTLE, 6, 1, 16, 10)
         };
         VillagerTrades.ItemListing[] floristLevel4 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.EmeraldForItems(Items.MOSS_BLOCK,32,16,30),
-                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_SWAMP_HUT_EXPLORER_MAPS, "filled_map.swamp_hut", MapDecoration.Type.BANNER_GREEN, 12, 15)
+                new VillagerTrades.EmeraldForItems(Items.SEA_PICKLE,32, 16,30),
+                new VillagerTrades.TreasureMapForEmeralds(13, StructureFeature.SWAMP_HUT, MapDecoration.Type.BANNER_GREEN, 12, 15)
         };
         VillagerTrades.ItemListing[] floristLevel5 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.BEE_NEST, 6, 1, 12, 30),
-                new VillagerTrades.TreasureMapForEmeralds(15, MVTags.ON_JUNGLE_TEMPLE_EXPLORER_MAPS, "filled_map.jungle_pyramid", MapDecoration.Type.BANNER_LIME, 12, 30)
+                new VillagerTrades.TreasureMapForEmeralds(15, StructureFeature.JUNGLE_TEMPLE, MapDecoration.Type.BANNER_LIME, 12, 30)
         };
         VillagerTrades.TRADES.put(FLORIST.get(),toIntMap(ImmutableMap.of(1,floristLevel1,2,floristLevel2,3,floristLevel3,4,floristLevel4,5,floristLevel5)));
 
@@ -196,38 +202,42 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] hunterLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.BLAZE_ROD, 5, 1, 12, 15),
-                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_PILLAGER_OUTPOST_EXPLORER_MAPS, "filled_map.pillager_outpost", MapDecoration.Type.BANNER_BLACK, 12, 15)
+                new VillagerTrades.TreasureMapForEmeralds(13, StructureFeature.PILLAGER_OUTPOST, MapDecoration.Type.BANNER_BLACK, 12, 15)
         };
         VillagerTrades.ItemListing[] hunterLevel5 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.GHAST_TEAR, 8, 1, 12, 30),
                 new VillagerTrades.ItemsForEmeralds(Items.RABBIT_FOOT, 8, 1, 12, 30)
         };
         VillagerTrades.TRADES.put(HUNTER.get(),toIntMap(ImmutableMap.of(1,hunterLevel1,2,hunterLevel2,3,hunterLevel3,4,hunterLevel4,5,hunterLevel5)));
-
-        // MINER TRADES
-        VillagerTrades.ItemListing[] minerLevel1 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.EmeraldForItems(Items.DEEPSLATE,20,16,2),
-                new VillagerTrades.ItemsForEmeralds(Items.CALCITE, 1, 16, 16, 1)
-        };
-        VillagerTrades.ItemListing[] minerLevel2 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.EmeraldForItems(Items.RAW_COPPER,15,16,10),
-                new VillagerTrades.EmeraldForItems(Items.RAW_IRON,12,16,10),
-        };
-        VillagerTrades.ItemListing[] minerLevel3 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.EmeraldForItems(Items.RAW_GOLD,10,16,20),
-                new VillagerTrades.ItemsForEmeralds(Items.AMETHYST_SHARD, 1, 2, 12, 10)
-        };
-        VillagerTrades.ItemListing[] minerLevel4 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.EmeraldForItems(Items.TORCH,50,12,30),
-                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_MINESHAFT_EXPLORER_MAPS, "filled_map.mineshaft", MapDecoration.Type.BANNER_BROWN, 12, 15)
-        };
-        VillagerTrades.ItemListing[] minerLevel5 = new VillagerTrades.ItemListing[]{
-                new VillagerTrades.EnchantedItemForEmeralds(Items.DIAMOND_PICKAXE, 12, 3, 15, 0.2F)
-        };
-        VillagerTrades.TRADES.put(MINER.get(),toIntMap(ImmutableMap.of(1,minerLevel1,2,minerLevel2,3,minerLevel3,4,minerLevel4,5,minerLevel5)));
     }
 
-    private static Int2ObjectMap<VillagerTrades.ItemListing[]> toIntMap(ImmutableMap<Integer, VillagerTrades.ItemListing[]> p_221238_0_) {
-        return new Int2ObjectOpenHashMap<>(p_221238_0_);
+    private static Int2ObjectMap<VillagerTrades.ItemListing[]> toIntMap(ImmutableMap<Integer, VillagerTrades.ItemListing[]> map) {
+        return new Int2ObjectOpenHashMap<>(map);
+    }
+
+    private static class TagItemForEmeralds implements VillagerTrades.ItemListing {
+        private final Tag<Item> tagSource;
+        private final int quantity;
+        private final int price;
+        private final int maxUses;
+        private final int xp;
+        private final float priceMultiplier;
+
+        private TagItemForEmeralds(Tag<Item> tagSource, int quantity, int price, int maxUses, int xp, float priceMultiplier)
+        {
+            this.tagSource = tagSource;
+            this.quantity = quantity;
+            this.price = price;
+            this.maxUses = maxUses;
+            this.xp = xp;
+            this.priceMultiplier = priceMultiplier;
+        }
+
+        @Nullable
+        @Override
+        public MerchantOffer getOffer(Entity entity, Random random) {
+            Item item = tagSource.getRandomElement(random);
+            return new MerchantOffer(new ItemStack(Items.EMERALD, price), new ItemStack(item, quantity), this.maxUses, this.xp, this.priceMultiplier);
+        }
     }
 }

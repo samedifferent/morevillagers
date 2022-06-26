@@ -28,6 +28,5 @@ public class MoreVillagersFabric implements ModInitializer {
         PoiTypeInvoker.invokeRegisterBlockStates(MVPoiTypes.ENGINEER_POI.get());
         PoiTypeInvoker.invokeRegisterBlockStates(MVPoiTypes.FLORIST_POI.get());
         PoiTypeInvoker.invokeRegisterBlockStates(MVPoiTypes.HUNTER_POI.get());
-        PoiTypeInvoker.invokeRegisterBlockStates(MVPoiTypes.MINER_POI.get());
     }
 }

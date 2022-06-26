@@ -20,7 +20,6 @@ public class MVBlocks {
     public static final Supplier<Block> BLUEPRINT_TABLE = registerBlock("blueprint_table", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CARTOGRAPHY_TABLE)));
     public static final Supplier<Block> GARDENING_TABLE = registerBlock("gardening_table", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CARTOGRAPHY_TABLE)));
     public static final Supplier<Block> HUNTING_POST = registerBlock("hunting_post", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CARTOGRAPHY_TABLE)));
-    public static final Supplier<Block> MINING_BENCH = registerBlock("mining_bench", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         Supplier<T> toReturn = CommonPlatformHelper.registerBlock(name, block);

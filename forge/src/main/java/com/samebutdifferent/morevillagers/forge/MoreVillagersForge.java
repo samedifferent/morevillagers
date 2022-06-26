@@ -6,16 +6,16 @@ import com.samebutdifferent.morevillagers.registry.MVProfessions;
 import com.samebutdifferent.morevillagers.registry.forge.MVConfigForge;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
-import net.minecraftforge.registries.RegistryObject;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -38,7 +38,7 @@ public class MoreVillagersForge {
     }
 
     @SubscribeEvent
-    public void onServerAboutToStartEvent(ServerAboutToStartEvent event) {
+    public void onServerAboutToStartEvent(FMLServerAboutToStartEvent event) {
         MoreVillagers.registerJigsaws(event.getServer());
     }
 
