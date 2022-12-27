@@ -1,7 +1,7 @@
 package com.samebutdifferent.morevillagers.registry;
 
 import com.samebutdifferent.morevillagers.MoreVillagers;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.levelgen.structure.Structure;
@@ -17,6 +17,6 @@ public class MVTags {
     public static final TagKey<Structure> ON_ANCIENT_CITY_EXPLORER_MAPS = createConfiguredStructureFeatureTag("on_ancient_city_explorer_maps");
 
     private static TagKey<Structure> createConfiguredStructureFeatureTag(String name) {
-        return TagKey.create(Registry.STRUCTURE_REGISTRY, new ResourceLocation(MoreVillagers.MOD_ID, name));
+        return TagKey.create(Registries.STRUCTURE, new ResourceLocation(MoreVillagers.MOD_ID, name));
     }
 }

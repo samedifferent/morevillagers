@@ -36,8 +36,8 @@ public class CommonPlatformHelper {
         throw new AssertionError();
     }
 
-    @ExpectPlatform
+    /*@ExpectPlatform
     public static CreativeModeTab registerCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
         throw new AssertionError();
-    }
+    }*/
 }
