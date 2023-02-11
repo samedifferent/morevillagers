@@ -6,6 +6,7 @@
   "block.morevillagers.blueprint_table": "Blueprint Table",
   "block.morevillagers.gardening_table": "Gardening Table",
   "block.morevillagers.hunting_post": "Hunting Post",
+  "block.morevillagers.mining_bench": "Mining Bench",
 
   "filled_map.bastion_remnant": "Bastion Explorer Map",
   "filled_map.fortress": "Fortress Explorer Map",
@@ -23,6 +24,7 @@
   "entity.minecraft.villager.morevillagers.engineer": "Engineer",
   "entity.minecraft.villager.morevillagers.florist": "Florist",
   "entity.minecraft.villager.morevillagers.hunter": "Hunter",
+  "entity.minecraft.villager.morevillagers.miner": "Miner",
 
   "entity.minecraft.villager.oceanographer": "Oceanographer",
   "entity.minecraft.villager.netherian": "Netherologist",
@@ -31,6 +33,7 @@
   "entity.minecraft.villager.engineer": "Engineer",
   "entity.minecraft.villager.florist": "Florist",
   "entity.minecraft.villager.hunter": "Hunter",
+  "entity.minecraft.villager.miner": "Miner",
 
   "Frequent Customer": "Frequent Customer",
   "Trade with every villager profession": "Trade with every villager profession",

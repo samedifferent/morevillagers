@@ -6,6 +6,7 @@
   "block.morevillagers.blueprint_table": "绘图桌",
   "block.morevillagers.gardening_table": "园艺站",
   "block.morevillagers.hunting_post": "狩猎站",
+  "block.morevillagers.mining_bench": "矿业站",
 
   "filled_map.bastion_remnant": "堡垒遗迹探险家地图",
   "filled_map.fortress": "下界要塞探险家地图",
@@ -23,6 +24,7 @@
   "entity.minecraft.villager.morevillagers.engineer": "工程师",
   "entity.minecraft.villager.morevillagers.florist": "花匠",
   "entity.minecraft.villager.morevillagers.hunter": "猎人",
+  "entity.minecraft.villager.morevillagers.miner": "矿工",
 
   "entity.minecraft.villager.oceanographer": "海洋学家",
   "entity.minecraft.villager.netherian": "下界学家",
@@ -31,6 +33,7 @@
   "entity.minecraft.villager.engineer": "工程师",
   "entity.minecraft.villager.florist": "花匠",
   "entity.minecraft.villager.hunter": "猎人",
+  "entity.minecraft.villager.miner": "矿工",
   
   "Frequent Customer": "常客",
   "Trade with every villager profession": "与所有职业的村民进行交易。",
