@@ -6,6 +6,7 @@
   "block.morevillagers.blueprint_table": "藍圖台",
   "block.morevillagers.gardening_table": "園藝台",
   "block.morevillagers.hunting_post": "狩獵台",
+  "block.morevillagers.mining_bench": "礦研台",
   "filled_map.bastion_remnant": "堡壘遺跡探險家地圖",
   "filled_map.fortress": "地獄堡壘探險家地圖",
   "filled_map.endcity": "終界城探險家地圖",
@@ -19,7 +20,8 @@
   "entity.minecraft.villager.morevillagers.enderian": "終界旅者",
   "entity.minecraft.villager.morevillagers.engineer": "工程學家",
   "entity.minecraft.villager.morevillagers.florist": "園藝匠",
-  "entity.minecraft.villager.morevillagers.hunter": "捕獵人"
+  "entity.minecraft.villager.morevillagers.hunter": "捕獵人",
+  "entity.minecraft.villager.morevillagers.miner": "礦工",
 
   "entity.minecraft.villager.oceanographer": "海洋學家",
   "entity.minecraft.villager.netherian": "地獄旅者",
@@ -27,5 +29,6 @@
   "entity.minecraft.villager.enderian": "終界旅者",
   "entity.minecraft.villager.engineer": "工程學家",
   "entity.minecraft.villager.florist": "園藝匠",
-  "entity.minecraft.villager.hunter": "捕獵人"
+  "entity.minecraft.villager.hunter": "捕獵人",
+  "entity.minecraft.villager.miner": "礦工"
 }

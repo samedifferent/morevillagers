@@ -6,6 +6,7 @@
   "block.morevillagers.blueprint_table": "Чертежный стол",
   "block.morevillagers.gardening_table": "Столик садовника",
   "block.morevillagers.hunting_post": "Пост охотника",
+  "block.morevillagers.mining_bench": "Рабочая станция шахтёра",
   
   "filled_map.bastion_remnant": "Карта пути к бастиону",
   "filled_map.fortress": "Карта пути к адской крепости",
@@ -23,6 +24,7 @@
   "entity.minecraft.villager.morevillagers.engineer": "Инженер",
   "entity.minecraft.villager.morevillagers.florist": "Садовник",
   "entity.minecraft.villager.morevillagers.hunter": "Охотник",
+  "entity.minecraft.villager.morevillagers.miner": "Шахтёр",
 
   "entity.minecraft.villager.oceanographer": "Океанограф",
   "entity.minecraft.villager.netherian": "Незеролог",
@@ -31,6 +33,7 @@
   "entity.minecraft.villager.engineer": "Инженер",
   "entity.minecraft.villager.florist": "Садовник",
   "entity.minecraft.villager.hunter": "Охотник",
+  "entity.minecraft.villager.miner": "Шахтёр",
   
   "Frequent Customer": "Постоянный клиент",
   "Trade with every villager profession": "Поторгуйтесь с крестьянином каждой профессии",

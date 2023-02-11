@@ -116,6 +116,19 @@ public class VillagerInit {
         }
     }
 
+    // CREATE MINER WORKSTATION AND PROFESSION
+    public static final RegistryObject<PointOfInterestType> MINER_POI = POINT_OF_INTEREST_TYPES.register("miner",
+            () -> new PointOfInterestType("miner", PointOfInterestType.getBlockStates(BlockInit.MINING_BENCH.get()), 1, 1));
+    public static final RegistryObject<VillagerProfession> MINER = VILLAGER_PROFESSIONS.register("miner",
+            () -> new VillagerProfession("miner", MINER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_ARMORER));
+    public static void registerMinerPOI() {
+        try {
+            ObfuscationReflectionHelper.findMethod(PointOfInterestType.class, "registerBlockStates", PointOfInterestType.class).invoke(null, MINER_POI.get());
+        } catch (InvocationTargetException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
     // TRADE LISTS
     public static void fillTradeData() {
         // OCEANOGRAPHER TRADES
@@ -299,6 +312,28 @@ public class VillagerInit {
                 new VillagerTrades.ItemsForEmeraldsTrade(Items.RABBIT_FOOT, 8, 1, 12, 30)
         };
         VillagerTrades.TRADES.put(HUNTER.get(),toIntMap(ImmutableMap.of(1,hunterLevel1,2,hunterLevel2,3,hunterLevel3,4,hunterLevel4,5,hunterLevel5)));
+
+        // MINER TRADES
+        VillagerTrades.ITrade[] minerLevel1 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.EmeraldForItemsTrade(Items.COBBLESTONE,20,16,2),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.STONE, 1, 10, 10, 1)
+        };
+        VillagerTrades.ITrade[] minerLevel2 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.EmeraldForItemsTrade(Items.COAL,15,16,10),
+                new VillagerTrades.EmeraldForItemsTrade(Items.IRON_ORE,4,6,10),
+        };
+        VillagerTrades.ITrade[] minerLevel3 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.EmeraldForItemsTrade(Items.GOLD_ORE,3,5,20),
+                new VillagerTrades.ItemsForEmeraldsTrade(Items.LAPIS_LAZULI, 6, 9, 12, 10)
+        };
+        VillagerTrades.ITrade[] minerLevel4 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.EmeraldForItemsTrade(Items.TORCH,50,12,30),
+                new VillagerTrades.EmeraldForMapTrade(13, Structure.MINESHAFT, MapDecoration.Type.BANNER_BROWN, 12, 15)
+        };
+        VillagerTrades.ITrade[] minerLevel5 = new VillagerTrades.ITrade[]{
+                new VillagerTrades.EnchantedItemForEmeraldsTrade(Items.DIAMOND_PICKAXE, 12, 3, 15, 0.2F)
+        };
+        VillagerTrades.TRADES.put(MINER.get(),toIntMap(ImmutableMap.of(1,minerLevel1,2,minerLevel2,3,minerLevel3,4,minerLevel4,5,minerLevel5)));
     }
 
     private static Int2ObjectMap<VillagerTrades.ITrade[]> toIntMap(ImmutableMap<Integer, VillagerTrades.ITrade[]> p_221238_0_) {
