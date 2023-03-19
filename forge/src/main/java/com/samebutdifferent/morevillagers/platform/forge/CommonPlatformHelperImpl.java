@@ -1,6 +1,7 @@
 package com.samebutdifferent.morevillagers.platform.forge;
 
 import com.samebutdifferent.morevillagers.MoreVillagers;
+import com.samebutdifferent.morevillagers.forge.MoreVillagersForge;
 import com.samebutdifferent.morevillagers.mixin.PoiTypesInvoker;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
@@ -40,12 +41,7 @@ public class CommonPlatformHelperImpl {
         return POI_TYPES.register(name, poiType);
     }
 
-    public static CreativeModeTab registerCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
-        return new CreativeModeTab(name.getNamespace() + "." + name.getPath()) {
-            @Override
-            public ItemStack makeIcon() {
-                return icon.get();
-            }
-        };
+    public static CreativeModeTab getCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
+        return MoreVillagersForge.TAB;
     }
 }

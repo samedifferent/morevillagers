@@ -14,14 +14,17 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
 
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
 
 public class CommonPlatformHelperImpl {
+    public static List<Supplier<Block>> REGISTERED_BLOCKS = new ArrayList<>();
+
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         var registry = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(MoreVillagers.MOD_ID, name), block.get());
+        REGISTERED_BLOCKS.add(() -> registry);
         return () -> registry;
     }
 
@@ -42,7 +45,7 @@ public class CommonPlatformHelperImpl {
         return () -> registry;
     }
 
-    public static CreativeModeTab registerCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
+    public static CreativeModeTab getCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
         return FabricItemGroup.builder(name).icon(icon).build();
     }
 }

@@ -7,21 +7,19 @@ import com.samebutdifferent.morevillagers.registry.MVPoiTypes;
 import com.samebutdifferent.morevillagers.registry.MVProfessions;
 import com.samebutdifferent.morevillagers.util.JigsawHelper;
 import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElementType;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList;
 
 public class MoreVillagers
 {
 	public static final String MOD_ID = "morevillagers";
-	public static final CreativeModeTab TAB = CommonPlatformHelper.registerCreativeModeTab(new ResourceLocation(MOD_ID, "tab"), () -> new ItemStack(Items.EMERALD));
+	public static final CreativeModeTab TAB = CommonPlatformHelper.getCreativeModeTab(new ResourceLocation(MOD_ID, "tab"), () -> new ItemStack(Items.EMERALD));
 
 	public static void init() {
 		MVBlocks.init();
