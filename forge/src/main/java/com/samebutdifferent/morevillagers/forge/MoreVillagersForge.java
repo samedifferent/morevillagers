@@ -45,6 +45,7 @@ public class MoreVillagersForge {
         CommonPlatformHelperImpl.POI_TYPES.register(bus);
         CommonPlatformHelperImpl.PROFESSIONS.register(bus);
 
+        bus.addListener(this::addCreativeModeTab);
         bus.addListener(this::setup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -55,8 +56,7 @@ public class MoreVillagersForge {
         MoreVillagers.registerJigsaws(event.getServer());
     }
 
-    @SubscribeEvent
-    public void addCreativeModeTab(CreativeModeTabEvent.Register event) {
+    private void addCreativeModeTab(CreativeModeTabEvent.Register event) {
         List<ItemStack> stacks = new ArrayList<>();
         for (RegistryObject<Block> registeredBlock : CommonPlatformHelperImpl.BLOCKS.getEntries()) {
             Block block = registeredBlock.get();
@@ -66,7 +66,7 @@ public class MoreVillagersForge {
         }
         TAB = event.registerCreativeModeTab(new ResourceLocation(MoreVillagers.MOD_ID, "tab"), builder -> {
             builder
-                    .title(Component.translatable("item_group." + MoreVillagers.MOD_ID + ".tab"))
+                    .title(Component.translatable("itemGroup." + MoreVillagers.MOD_ID + ".tab"))
                     .icon(() -> new ItemStack(Items.EMERALD))
                     .displayItems((enabledFlags, populator, hasPermissions) -> {
                         populator.acceptAll(stacks);

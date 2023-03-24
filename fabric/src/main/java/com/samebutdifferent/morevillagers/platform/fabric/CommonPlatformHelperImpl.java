@@ -1,7 +1,6 @@
 package com.samebutdifferent.morevillagers.platform.fabric;
 
 import com.samebutdifferent.morevillagers.MoreVillagers;
-import com.samebutdifferent.morevillagers.mixin.PoiTypesInvoker;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -41,7 +40,6 @@ public class CommonPlatformHelperImpl {
     public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
         ResourceKey<PoiType> resourceKey = ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, name));
         var registry = Registry.register(BuiltInRegistries.POINT_OF_INTEREST_TYPE, resourceKey, poiType.get());
-        // PoiTypesInvoker.invokeRegisterBlockStates(BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolderOrThrow(resourceKey), workstations);
         return () -> registry;
     }
 
