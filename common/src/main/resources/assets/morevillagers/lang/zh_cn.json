@@ -15,6 +15,7 @@
   "filled_map.jungle_pyramid": "丛林探险家地图",
   "filled_map.pillager_outpost": "前哨站探险家地图",
   "filled_map.mineshaft": "废弃矿井探险家地图",
+  "filled_map.ancient_city": "远古城市探险家地图",
 
   "itemGroup.morevillagers.tab": "更多村民",
 
@@ -67,5 +68,19 @@
   "advancements.root.title": "更多村民",
   "advancements.root.description": "亟待启程的村民之旅。",
   "advancements.tame_cat.title": "小镇之宠",
-  "advancements.tame_cat.description": "驯服一只村庄里的猫。"
+  "advancements.tame_cat.description": "驯服一只村庄里的猫。",
+
+  "text.autoconfig.morevillagers.title": "更多村民配置",
+  "text.autoconfig.morevillagers.option.houses": "房屋生成设置",
+  "text.autoconfig.morevillagers.option.houses.generatePlainsHouses": "生成平原房屋",
+  "text.autoconfig.morevillagers.option.houses.generateTaigaHouses": "生成针叶林房屋",
+  "text.autoconfig.morevillagers.option.houses.generateSavannaHouses": "生成热带草原房屋",
+  "text.autoconfig.morevillagers.option.houses.generateSnowyHouses": "生成雪原房屋",
+  "text.autoconfig.morevillagers.option.houses.generateDesertHouses": "生成沙漠房屋",
+  "text.autoconfig.morevillagers.option.weights": "房屋权重（生成频率）",
+  "text.autoconfig.morevillagers.option.weights.woodworkerHouseWeight": "林业员房屋权重",
+  "text.autoconfig.morevillagers.option.weights.oceanographerHouseWeight": "海洋学家房屋权重",
+  "text.autoconfig.morevillagers.option.weights.floristHouseWeight": "花匠房屋权重",
+  "text.autoconfig.morevillagers.option.weights.hunterHouseWeight": "猎人房屋权重",
+  "text.autoconfig.morevillagers.option.weights.engineerHouseWeight": "工程师房屋权重"
 }
