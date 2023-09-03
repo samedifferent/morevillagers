@@ -1,11 +1,15 @@
 package com.samebutdifferent.morevillagers.forge;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.samebutdifferent.morevillagers.MoreVillagers;
 import com.samebutdifferent.morevillagers.mixin.PoiTypesInvoker;
 import com.samebutdifferent.morevillagers.platform.forge.CommonPlatformHelperImpl;
 import com.samebutdifferent.morevillagers.registry.MVBlocks;
 import com.samebutdifferent.morevillagers.registry.MVProfessions;
 import com.samebutdifferent.morevillagers.registry.forge.MVConfigForge;
+
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -26,9 +30,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Mod(MoreVillagers.MOD_ID)
 public class MoreVillagersForge {
@@ -68,7 +69,7 @@ public class MoreVillagersForge {
             builder
                     .title(Component.translatable("itemGroup." + MoreVillagers.MOD_ID + ".tab"))
                     .icon(() -> new ItemStack(Items.EMERALD))
-                    .displayItems((enabledFlags, populator, hasPermissions) -> {
+                    .displayItems((enabledFlags, populator) -> {
                         populator.acceptAll(stacks);
                     });
         });
