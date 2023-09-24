@@ -47,8 +47,4 @@ public class CommonPlatformHelperImpl {
         PoiTypesInvoker.invokeRegisterBlockStates(BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolderOrThrow(resourceKey), matchingStates.get());
         return () -> registry;
     }
-
-    public static CreativeModeTab getCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
-        return FabricItemGroup.builder(name).icon(icon).build();
-    }
 }

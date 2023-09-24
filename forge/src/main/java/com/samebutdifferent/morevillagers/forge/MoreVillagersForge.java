@@ -16,7 +16,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -25,6 +24,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.ArrayList;
@@ -32,7 +32,6 @@ import java.util.List;
 
 @Mod(MoreVillagers.MOD_ID)
 public class MoreVillagersForge {
-    public static CreativeModeTab TAB = null;
 
     public MoreVillagersForge() {
         MoreVillagers.init();
@@ -56,22 +55,20 @@ public class MoreVillagersForge {
         MoreVillagers.registerJigsaws(event.getServer());
     }
 
-    private void addCreativeModeTab(CreativeModeTabEvent.Register event) {
-        List<ItemStack> stacks = new ArrayList<>();
-        for (RegistryObject<Block> registeredBlock : CommonPlatformHelperImpl.BLOCKS.getEntries()) {
-            Block block = registeredBlock.get();
-            if (block != null) {
+    private void addCreativeModeTab(RegisterEvent event) {
+        event.register(Registries.CREATIVE_MODE_TAB, (helper -> {
+            List<ItemStack> stacks = new ArrayList<>();
+            for (RegistryObject<Block> registeredBlock : CommonPlatformHelperImpl.BLOCKS.getEntries()) {
+                Block block = registeredBlock.get();
                 stacks.add(new ItemStack(block));
             }
-        }
-        TAB = event.registerCreativeModeTab(new ResourceLocation(MoreVillagers.MOD_ID, "tab"), builder -> {
-            builder
+            CreativeModeTab tab = CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + MoreVillagers.MOD_ID + ".tab"))
                     .icon(() -> new ItemStack(Items.EMERALD))
-                    .displayItems((enabledFlags, populator, hasPermissions) -> {
-                        populator.acceptAll(stacks);
-                    });
-        });
+                    .displayItems((CreativeModeTab.ItemDisplayParameters arg, CreativeModeTab.Output populator) -> populator.acceptAll(stacks))
+                    .build();
+            helper.register(MoreVillagers.TAB, tab);
+        }));
     }
 
 
