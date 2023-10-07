@@ -17,13 +17,13 @@ Adds new villager jobs, trades, and workstations!
 [[dependencies.morevillagers]]
    modId="forge"
    mandatory=true
-   versionRange="[41.0.94,)"
+   versionRange="[47,)"
    ordering="NONE"
    side="BOTH"
 
 [[dependencies.morevillagers]]
    modId="minecraft"
    mandatory=true
-   versionRange="[1.19,1.20)"
+   versionRange="[1.20,1.21)"
    ordering="NONE"
    side="BOTH"
