@@ -33,9 +33,4 @@ public class CommonPlatformHelper {
     public static Supplier<PoiType> registerPoiType(String name, Supplier<Set<BlockState>> matchingStates) {
         throw new AssertionError();
     }
-
-    @ExpectPlatform
-    public static CreativeModeTab getCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
-        throw new AssertionError();
-    }
 }
