@@ -75,18 +75,6 @@ public class MoreVillagersForge {
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             MVProfessions.fillTradeData();
-            registerBlockStates();
         });
-    }
-
-    public static void registerBlockStates() {
-        PoiTypesInvoker.invokeGetBlockStates(MVBlocks.OCEANOGRAPHY_TABLE.get()).forEach((state) -> PoiTypesInvoker.getTypeByState().put(state, BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolder(ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, "oceanography_table"))).get()));
-        PoiTypesInvoker.invokeGetBlockStates(MVBlocks.WOODWORKING_TABLE.get()).forEach((state) -> PoiTypesInvoker.getTypeByState().put(state, BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolder(ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, "woodworking_table"))).get()));
-        PoiTypesInvoker.invokeGetBlockStates(MVBlocks.DECAYED_WORKBENCH.get()).forEach((state) -> PoiTypesInvoker.getTypeByState().put(state, BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolder(ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, "decayed_workbench"))).get()));
-        PoiTypesInvoker.invokeGetBlockStates(MVBlocks.PURPUR_ALTAR.get()).forEach((state) -> PoiTypesInvoker.getTypeByState().put(state, BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolder(ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, "purpur_altar"))).get()));
-        PoiTypesInvoker.invokeGetBlockStates(MVBlocks.BLUEPRINT_TABLE.get()).forEach((state) -> PoiTypesInvoker.getTypeByState().put(state, BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolder(ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, "blueprint_table"))).get()));
-        PoiTypesInvoker.invokeGetBlockStates(MVBlocks.GARDENING_TABLE.get()).forEach((state) -> PoiTypesInvoker.getTypeByState().put(state, BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolder(ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, "gardening_table"))).get()));
-        PoiTypesInvoker.invokeGetBlockStates(MVBlocks.HUNTING_POST.get()).forEach((state) -> PoiTypesInvoker.getTypeByState().put(state, BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolder(ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, "hunting_post"))).get()));
-        PoiTypesInvoker.invokeGetBlockStates(MVBlocks.MINING_BENCH.get()).forEach((state) -> PoiTypesInvoker.getTypeByState().put(state, BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolder(ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, "mining_bench"))).get()));
     }
 }
