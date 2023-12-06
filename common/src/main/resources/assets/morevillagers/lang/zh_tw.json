@@ -15,10 +15,11 @@
   "filled_map.jungle_pyramid": "叢林神廟探險家地圖",
   "filled_map.pillager_outpost": "前哨站探險家地圖",
   "filled_map.mineshaft": "廢棄礦坑探險家地圖",
+  "filled_map.ancient_city": "古代城市探險家地圖",
 
   "itemGroup.morevillagers.tab": "More Villagers",
 
-  "entity.minecraft.villager.morevillagers.oceanographer": "遠洋旅者",
+  "entity.minecraft.villager.morevillagers.oceanographer": "海洋旅者",
   "entity.minecraft.villager.morevillagers.netherian": "地獄旅者",
   "entity.minecraft.villager.morevillagers.woodworker": "木匠",
   "entity.minecraft.villager.morevillagers.enderian": "終界旅者",
@@ -27,7 +28,7 @@
   "entity.minecraft.villager.morevillagers.hunter": "追獵人",
   "entity.minecraft.villager.morevillagers.miner": "探礦人",
 
-  "entity.minecraft.villager.oceanographer": "遠洋旅者",
+  "entity.minecraft.villager.oceanographer": "海洋旅者",
   "entity.minecraft.villager.netherian": "地獄旅者",
   "entity.minecraft.villager.woodworker": "木匠",
   "entity.minecraft.villager.enderian": "終界旅者",
@@ -70,16 +71,16 @@
   "advancements.tame_cat.description": "馴服一隻村莊的貓.",
 
   "text.autoconfig.morevillagers.title": "More Villagers Config",
-  "text.autoconfig.morevillagers.option.houses": "生態域房屋生成設置",
+  "text.autoconfig.morevillagers.option.houses": "房屋生態域設置",
   "text.autoconfig.morevillagers.option.houses.generatePlainsHouses": "平原房屋生成",
-  "text.autoconfig.morevillagers.option.houses.generateTaigaHouses": "杉木林自定義房屋生成",
-  "text.autoconfig.morevillagers.option.houses.generateSavannaHouses": "莽原自定義房屋生成",
-  "text.autoconfig.morevillagers.option.houses.generateSnowyHouses": "雪地自定義房屋生成",
-  "text.autoconfig.morevillagers.option.houses.generateDesertHouses": "沙漠自定義房屋生成",
-  "text.autoconfig.morevillagers.option.weights": "房屋生成權重",
+  "text.autoconfig.morevillagers.option.houses.generateTaigaHouses": "針葉林房屋生成",
+  "text.autoconfig.morevillagers.option.houses.generateSavannaHouses": "莽原房屋生成",
+  "text.autoconfig.morevillagers.option.houses.generateSnowyHouses": "雪地房屋生成",
+  "text.autoconfig.morevillagers.option.houses.generateDesertHouses": "沙漠房屋生成",
+  "text.autoconfig.morevillagers.option.weights": "房屋權重 (生成機率)",
   "text.autoconfig.morevillagers.option.weights.woodworkerHouseWeight": "木匠房屋權重",
-  "text.autoconfig.morevillagers.option.weights.oceanographerHouseWeight": "海洋學家房屋權重",
-  "text.autoconfig.morevillagers.option.weights.floristHouseWeight": "園藝匠房屋生成權重",
-  "text.autoconfig.morevillagers.option.weights.hunterHouseWeight": "追獵人房屋生成權重",
-  "text.autoconfig.morevillagers.option.weights.engineerHouseWeight": "工程師房屋生成權重"
+  "text.autoconfig.morevillagers.option.weights.oceanographerHouseWeight": "海洋旅者房屋權重",
+  "text.autoconfig.morevillagers.option.weights.floristHouseWeight": "園藝師房屋權重",
+  "text.autoconfig.morevillagers.option.weights.hunterHouseWeight": "追獵人房屋權重",
+  "text.autoconfig.morevillagers.option.weights.engineerHouseWeight": "工程師房屋權重"
 }
