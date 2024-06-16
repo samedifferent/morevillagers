@@ -6,11 +6,15 @@ import com.samebutdifferent.morevillagers.platform.forge.CommonPlatformHelperImp
 import com.samebutdifferent.morevillagers.registry.MVBlocks;
 import com.samebutdifferent.morevillagers.registry.MVProfessions;
 import com.samebutdifferent.morevillagers.registry.forge.MVConfigForge;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
@@ -21,9 +25,15 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.RegistryObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Mod(MoreVillagers.MOD_ID)
 public class MoreVillagersForge {
+    public static CreativeModeTab TAB = null;
+
     public MoreVillagersForge() {
         MoreVillagers.init();
 
@@ -35,6 +45,7 @@ public class MoreVillagersForge {
         CommonPlatformHelperImpl.POI_TYPES.register(bus);
         CommonPlatformHelperImpl.PROFESSIONS.register(bus);
 
+        bus.addListener(this::addCreativeModeTab);
         bus.addListener(this::setup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -45,9 +56,22 @@ public class MoreVillagersForge {
         MoreVillagers.registerJigsaws(event.getServer());
     }
 
-    @SubscribeEvent
-    public void addCreativeModeTab(CreativeModeTabEvent.BuildContents event) {
-
+    private void addCreativeModeTab(CreativeModeTabEvent.Register event) {
+        List<ItemStack> stacks = new ArrayList<>();
+        for (RegistryObject<Block> registeredBlock : CommonPlatformHelperImpl.BLOCKS.getEntries()) {
+            Block block = registeredBlock.get();
+            if (block != null) {
+                stacks.add(new ItemStack(block));
+            }
+        }
+        TAB = event.registerCreativeModeTab(new ResourceLocation(MoreVillagers.MOD_ID, "tab"), builder -> {
+            builder
+                    .title(Component.translatable("itemGroup." + MoreVillagers.MOD_ID + ".tab"))
+                    .icon(() -> new ItemStack(Items.EMERALD))
+                    .displayItems((enabledFlags, populator, hasPermissions) -> {
+                        populator.acceptAll(stacks);
+                    });
+        });
     }
 
 

@@ -1,6 +1,5 @@
 package com.samebutdifferent.morevillagers.registry;
 
-import com.samebutdifferent.morevillagers.MoreVillagers;
 import com.samebutdifferent.morevillagers.platform.CommonPlatformHelper;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -24,7 +23,7 @@ public class MVBlocks {
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
         Supplier<T> toReturn = CommonPlatformHelper.registerBlock(name, block);
-        CommonPlatformHelper.registerItem(name, () -> new BlockItem(toReturn.get(), new Item.Properties().tab(MoreVillagers.TAB)));
+        CommonPlatformHelper.registerItem(name, () -> new BlockItem(toReturn.get(), new Item.Properties()));
         return toReturn;
     }
 }

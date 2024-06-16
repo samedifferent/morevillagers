@@ -1,7 +1,9 @@
 package com.samebutdifferent.morevillagers.platform.forge;
 
 import com.samebutdifferent.morevillagers.MoreVillagers;
+import com.samebutdifferent.morevillagers.forge.MoreVillagersForge;
 import com.samebutdifferent.morevillagers.mixin.PoiTypesInvoker;
+import com.samebutdifferent.morevillagers.registry.MVBlocks;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -12,7 +14,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
 import java.util.function.Supplier;
@@ -35,17 +36,11 @@ public class CommonPlatformHelperImpl {
         return PROFESSIONS.register(name, profession);
     }
 
-    public static Supplier<PoiType> registerPoiType(String name, Supplier<PoiType> poiType) {
-        // PoiTypesInvoker.invokeRegisterBlockStates(registeredPoiType.getHolder().get(), workstations);
-        return POI_TYPES.register(name, poiType);
+    public static Supplier<PoiType> registerPoiType(String name, Supplier<Set<BlockState>> matchingStates) {
+        return POI_TYPES.register(name, () -> new PoiType(matchingStates.get(), 1, 1));
     }
 
-    public static CreativeModeTab registerCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
-        return new CreativeModeTab(name.getNamespace() + "." + name.getPath()) {
-            @Override
-            public ItemStack makeIcon() {
-                return icon.get();
-            }
-        };
+    public static CreativeModeTab getCreativeModeTab(ResourceLocation name, Supplier<ItemStack> icon) {
+        return MoreVillagersForge.TAB;
     }
 }
