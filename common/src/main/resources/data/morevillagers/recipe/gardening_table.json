@@ -7,13 +7,13 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:end_stone"
+      "tag": "minecraft:planks"
     },
     "@": {
-      "item": "minecraft:purpur_block"
+      "tag": "minecraft:flowers"
     }
   },
   "result": {
-    "item": "morevillagers:purpur_altar"
+    "id": "morevillagers:gardening_table"
   }
 }

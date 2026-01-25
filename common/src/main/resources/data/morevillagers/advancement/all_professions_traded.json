@@ -2,7 +2,7 @@
   "parent": "morevillagers:first_trade",
   "display": {
     "icon": {
-      "item": "minecraft:experience_bottle"
+      "id": "minecraft:experience_bottle"
     },
     "title": {
       "translate": "advancements.all_professions_traded.title"

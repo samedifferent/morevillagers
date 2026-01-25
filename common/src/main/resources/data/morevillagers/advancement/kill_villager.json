@@ -2,7 +2,7 @@
   "parent": "morevillagers:root",
   "display": {
     "icon": {
-      "item": "minecraft:iron_sword"
+      "id": "minecraft:iron_sword"
     },
     "title": {
       "translate": "advancements.kill_villager.title"

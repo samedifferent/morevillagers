@@ -7,13 +7,13 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:warped_planks"
+      "item": "minecraft:end_stone"
     },
     "@": {
-      "item": "minecraft:nether_bricks"
+      "item": "minecraft:purpur_block"
     }
   },
   "result": {
-    "item": "morevillagers:decayed_workbench"
+    "id": "morevillagers:purpur_altar"
   }
 }

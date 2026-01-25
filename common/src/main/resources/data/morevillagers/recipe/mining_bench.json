@@ -6,16 +6,16 @@
   ],
   "key": {
     "#": {
-      "tag": "minecraft:logs"
+      "item": "minecraft:stone"
     },
     "@": {
-      "item": "minecraft:leather"
+      "item": "minecraft:iron_pickaxe"
     },
     "$": {
-      "item": "minecraft:arrow"
+      "item": "minecraft:raw_iron"
     }
   },
   "result": {
-    "item": "morevillagers:hunting_post"
+    "id": "morevillagers:mining_bench"
   }
 }

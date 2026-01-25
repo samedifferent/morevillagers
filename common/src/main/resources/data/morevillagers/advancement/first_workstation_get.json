@@ -2,7 +2,7 @@
   "parent": "morevillagers:root",
   "display": {
     "icon": {
-      "item": "minecraft:stonecutter"
+      "id": "minecraft:stonecutter"
     },
     "title": {
       "translate": "advancements.first_workstation_get.title"

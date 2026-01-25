@@ -2,7 +2,7 @@
   "parent": "morevillagers:root",
   "display": {
     "icon": {
-      "item": "minecraft:emerald"
+      "id": "minecraft:emerald"
     },
     "title": {
       "translate": "advancements.first_trade.title"

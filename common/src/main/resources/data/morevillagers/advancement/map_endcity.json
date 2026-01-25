@@ -2,7 +2,7 @@
   "parent": "morevillagers:end_trade",
   "display": {
     "icon": {
-      "item": "minecraft:purpur_block"
+      "id": "minecraft:purpur_block"
     },
     "title": {
       "translate": "advancements.map_endcity.title"

@@ -2,7 +2,7 @@
   "parent": "morevillagers:first_workstation_get",
   "display": {
     "icon": {
-      "item": "minecraft:smithing_table"
+      "id": "minecraft:smithing_table"
     },
     "title": {
       "translate": "advancements.all_workstations_get.title"

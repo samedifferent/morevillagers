@@ -2,7 +2,7 @@
   "parent": "morevillagers:kill_villager",
   "display": {
     "icon": {
-      "item": "minecraft:iron_axe"
+      "id": "minecraft:iron_axe"
     },
     "title": {
       "translate": "advancements.kill_babyvillager.title"

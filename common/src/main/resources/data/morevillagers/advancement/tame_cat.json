@@ -2,7 +2,7 @@
   "parent": "morevillagers:first_village",
   "display": {
     "icon": {
-      "item": "minecraft:cod"
+      "id": "minecraft:cod"
     },
     "title": {
       "translate": "advancements.tame_cat.title"

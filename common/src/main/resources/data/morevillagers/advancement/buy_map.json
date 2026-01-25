@@ -2,7 +2,7 @@
   "parent": "morevillagers:first_trade",
   "display": {
     "icon": {
-      "item": "minecraft:compass"
+      "id": "minecraft:compass"
     },
     "title": {
       "translate": "advancements.buy_map.title"

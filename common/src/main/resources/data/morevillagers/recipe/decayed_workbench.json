@@ -7,13 +7,13 @@
   ],
   "key": {
     "#": {
-      "tag": "minecraft:planks"
+      "item": "minecraft:warped_planks"
     },
     "@": {
-      "tag": "minecraft:flowers"
+      "item": "minecraft:nether_bricks"
     }
   },
   "result": {
-    "item": "morevillagers:gardening_table"
+    "id": "morevillagers:decayed_workbench"
   }
 }

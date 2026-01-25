@@ -2,7 +2,7 @@
   "parent": "morevillagers:nether_trade",
   "display": {
     "icon": {
-      "item": "minecraft:polished_blackstone_bricks"
+      "id": "minecraft:polished_blackstone_bricks"
     },
     "title": {
       "translate": "advancements.map_bastion.title"

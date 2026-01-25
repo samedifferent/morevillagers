@@ -2,7 +2,7 @@
   "parent": "morevillagers:root",
   "display": {
     "icon": {
-      "item": "minecraft:map"
+      "id": "minecraft:map"
     },
     "title": {
       "translate": "advancements.first_village.title"
@@ -25,7 +25,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "minecraft:village_plains"
+                "structures": "minecraft:village_plains"
               }
             }
           }
@@ -41,7 +41,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "minecraft:village_desert"
+                "structures": "minecraft:village_desert"
               }
             }
           }
@@ -57,7 +57,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "minecraft:village_savanna"
+                "structures": "minecraft:village_savanna"
               }
             }
           }
@@ -73,7 +73,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "minecraft:village_snowy"
+                "structures": "minecraft:village_snowy"
               }
             }
           }
@@ -89,7 +89,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "minecraft:village_taiga"
+                "structures": "minecraft:village_taiga"
               }
             }
           }
