@@ -11,6 +11,7 @@ import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.saveddata.maps.MapDecoration;
+import net.minecraft.world.level.saveddata.maps.MapDecorationTypes;
 
 import java.util.function.Supplier;
 
@@ -46,7 +47,7 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] oceanographerLevel3 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.DARK_PRISMARINE,12,16,20),
-                new VillagerTrades.TreasureMapForEmeralds(13, StructureTags.ON_TREASURE_MAPS, "filled_map.buried_treasure", MapDecoration.Type.RED_X, 12, 10)
+                new VillagerTrades.TreasureMapForEmeralds(13, StructureTags.ON_TREASURE_MAPS, "filled_map.buried_treasure", MapDecorationTypes.RED_X, 12, 10)
         };
         VillagerTrades.ItemListing[] oceanographerLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.NAUTILUS_SHELL, 3, 1, 12, 15),
@@ -68,11 +69,11 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] netherianLevel3 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.OBSIDIAN,4,16,20),
-                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_FORTRESS_EXPLORER_MAPS, "filled_map.fortress", MapDecoration.Type.BANNER_RED, 12, 10),
+                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_FORTRESS_EXPLORER_MAPS, "filled_map.fortress", MapDecorationTypes.RED_BANNER, 12, 10),
         };
         VillagerTrades.ItemListing[] netherianLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.GOLD_INGOT,4,16,30),
-                new VillagerTrades.TreasureMapForEmeralds(14, MVTags.ON_BASTION_REMNANT_EXPLORER_MAPS, "filled_map.bastion_remnant", MapDecoration.Type.BANNER_YELLOW, 12, 15),
+                new VillagerTrades.TreasureMapForEmeralds(14, MVTags.ON_BASTION_REMNANT_EXPLORER_MAPS, "filled_map.bastion_remnant", MapDecorationTypes.YELLOW_BANNER, 12, 15),
         };
         VillagerTrades.ItemListing[] netherianLevel5 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.MUSIC_DISC_PIGSTEP, 20, 1, 12, 30),
@@ -124,7 +125,7 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] enderianLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.DRAGON_BREATH, 6, 2, 12, 15),
-                new VillagerTrades.TreasureMapForEmeralds(14, MVTags.ON_END_CITY_EXPLORER_MAPS, "filled_map.endcity", MapDecoration.Type.BANNER_PURPLE, 12, 15)
+                new VillagerTrades.TreasureMapForEmeralds(14, MVTags.ON_END_CITY_EXPLORER_MAPS, "filled_map.endcity", MapDecorationTypes.PURPLE_BANNER, 12, 15)
         };
         VillagerTrades.ItemListing[] enderianLevel5 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.SHULKER_SHELL, 12, 1, 8, 30),
@@ -172,11 +173,11 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] floristLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.MOSS_BLOCK,32,16,30),
-                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_SWAMP_HUT_EXPLORER_MAPS, "filled_map.swamp_hut", MapDecoration.Type.BANNER_GREEN, 12, 15)
+                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_SWAMP_HUT_EXPLORER_MAPS, "filled_map.swamp_hut", MapDecorationTypes.GREEN_BANNER, 12, 15)
         };
         VillagerTrades.ItemListing[] floristLevel5 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.BEE_NEST, 6, 1, 12, 30),
-                new VillagerTrades.TreasureMapForEmeralds(15, MVTags.ON_JUNGLE_TEMPLE_EXPLORER_MAPS, "filled_map.jungle_pyramid", MapDecoration.Type.BANNER_LIME, 12, 30)
+                new VillagerTrades.TreasureMapForEmeralds(15, MVTags.ON_JUNGLE_TEMPLE_EXPLORER_MAPS, "filled_map.jungle_pyramid", MapDecorationTypes.LIME_BANNER, 12, 30)
         };
         VillagerTrades.TRADES.put(FLORIST.get(),toIntMap(ImmutableMap.of(1,floristLevel1,2,floristLevel2,3,floristLevel3,4,floristLevel4,5,floristLevel5)));
 
@@ -195,7 +196,7 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] hunterLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.BLAZE_ROD, 5, 1, 12, 15),
-                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_PILLAGER_OUTPOST_EXPLORER_MAPS, "filled_map.pillager_outpost", MapDecoration.Type.BANNER_BLACK, 12, 15)
+                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_PILLAGER_OUTPOST_EXPLORER_MAPS, "filled_map.pillager_outpost", MapDecorationTypes.BLACK_BANNER, 12, 15)
         };
         VillagerTrades.ItemListing[] hunterLevel5 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.ItemsForEmeralds(Items.GHAST_TEAR, 8, 1, 12, 30),
@@ -218,11 +219,11 @@ public class MVProfessions {
         };
         VillagerTrades.ItemListing[] minerLevel4 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EmeraldForItems(Items.TORCH,50,12,30),
-                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_MINESHAFT_EXPLORER_MAPS, "filled_map.mineshaft", MapDecoration.Type.BANNER_BROWN, 12, 15)
+                new VillagerTrades.TreasureMapForEmeralds(13, MVTags.ON_MINESHAFT_EXPLORER_MAPS, "filled_map.mineshaft", MapDecorationTypes.BROWN_BANNER, 12, 15)
         };
         VillagerTrades.ItemListing[] minerLevel5 = new VillagerTrades.ItemListing[]{
                 new VillagerTrades.EnchantedItemForEmeralds(Items.DIAMOND_PICKAXE, 12, 3, 15, 0.2F),
-                new VillagerTrades.TreasureMapForEmeralds(15, MVTags.ON_ANCIENT_CITY_EXPLORER_MAPS, "filled_map.ancient_city", MapDecoration.Type.BLUE_MARKER, 12, 15)
+                new VillagerTrades.TreasureMapForEmeralds(15, MVTags.ON_ANCIENT_CITY_EXPLORER_MAPS, "filled_map.ancient_city", MapDecorationTypes.BLUE_BANNER, 12, 15)
         };
         VillagerTrades.TRADES.put(MINER.get(),toIntMap(ImmutableMap.of(1,minerLevel1,2,minerLevel2,3,minerLevel3,4,minerLevel4,5,minerLevel5)));
     }

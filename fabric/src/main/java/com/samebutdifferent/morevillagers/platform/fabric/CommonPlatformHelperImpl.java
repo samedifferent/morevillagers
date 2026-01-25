@@ -26,23 +26,23 @@ public class CommonPlatformHelperImpl {
     public static List<Supplier<Block>> REGISTERED_BLOCKS = new ArrayList<>();
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
-        var registry = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(MoreVillagers.MOD_ID, name), block.get());
+        var registry = Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(MoreVillagers.MOD_ID, name), block.get());
         REGISTERED_BLOCKS.add(() -> registry);
         return () -> registry;
     }
 
     public static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> item) {
-        var registry = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(MoreVillagers.MOD_ID, name), item.get());
+        var registry = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(MoreVillagers.MOD_ID, name), item.get());
         return () -> registry;
     }
 
     public static Supplier<VillagerProfession> registerProfession(String name, Supplier<VillagerProfession> profession) {
-        var registry = Registry.register(BuiltInRegistries.VILLAGER_PROFESSION, new ResourceLocation(MoreVillagers.MOD_ID, name), profession.get());
+        var registry = Registry.register(BuiltInRegistries.VILLAGER_PROFESSION, ResourceLocation.fromNamespaceAndPath(MoreVillagers.MOD_ID, name), profession.get());
         return () -> registry;
     }
 
     public static Supplier<PoiType> registerPoiType(String name, Supplier<Set<BlockState>> matchingStates) {
-        ResourceKey<PoiType> resourceKey = ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, new ResourceLocation(MoreVillagers.MOD_ID, name));
+        ResourceKey<PoiType> resourceKey = ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, ResourceLocation.fromNamespaceAndPath(MoreVillagers.MOD_ID, name));
         var registry = Registry.register(BuiltInRegistries.POINT_OF_INTEREST_TYPE, resourceKey, new PoiType(matchingStates.get(), 1, 1));
         PoiTypesInvoker.invokeRegisterBlockStates(BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolderOrThrow(resourceKey), matchingStates.get());
         return () -> registry;

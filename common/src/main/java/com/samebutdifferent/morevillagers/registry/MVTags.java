@@ -17,6 +17,6 @@ public class MVTags {
     public static final TagKey<Structure> ON_ANCIENT_CITY_EXPLORER_MAPS = createConfiguredStructureFeatureTag("on_ancient_city_explorer_maps");
 
     private static TagKey<Structure> createConfiguredStructureFeatureTag(String name) {
-        return TagKey.create(Registries.STRUCTURE, new ResourceLocation(MoreVillagers.MOD_ID, name));
+        return TagKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath(MoreVillagers.MOD_ID, name));
     }
 }
