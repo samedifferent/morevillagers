@@ -1,29 +1,25 @@
 package com.samebutdifferent.morevillagers.registry.forge;
 
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.config.ModConfigEvent;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
-@Mod.EventBusSubscriber
 public class MVConfigForge {
-    public static ForgeConfigSpec COMMON_CONFIG;
+    public static ModConfigSpec COMMON_CONFIG;
 
     public static final String CATEGORY_HOUSES = "houses";
     public static final String CATEGORY_WEIGHTS = "weights";
-    public static final ForgeConfigSpec.BooleanValue GENERATE_PLAINS_HOUSES;
-    public static final ForgeConfigSpec.BooleanValue GENERATE_TAIGA_HOUSES;
-    public static final ForgeConfigSpec.BooleanValue GENERATE_SAVANNA_HOUSES;
-    public static final ForgeConfigSpec.BooleanValue GENERATE_SNOWY_HOUSES;
-    public static final ForgeConfigSpec.BooleanValue GENERATE_DESERT_HOUSES;
-    public static final ForgeConfigSpec.IntValue WOODWORKER_HOUSE_WEIGHT;
-    public static final ForgeConfigSpec.IntValue OCEANOGRAPHER_HOUSE_WEIGHT;
-    public static final ForgeConfigSpec.IntValue FLORIST_HOUSE_WEIGHT;
-    public static final ForgeConfigSpec.IntValue HUNTER_HOUSE_WEIGHT;
-    public static final ForgeConfigSpec.IntValue ENGINEER_HOUSE_WEIGHT;
+    public static final ModConfigSpec.BooleanValue GENERATE_PLAINS_HOUSES;
+    public static final ModConfigSpec.BooleanValue GENERATE_TAIGA_HOUSES;
+    public static final ModConfigSpec.BooleanValue GENERATE_SAVANNA_HOUSES;
+    public static final ModConfigSpec.BooleanValue GENERATE_SNOWY_HOUSES;
+    public static final ModConfigSpec.BooleanValue GENERATE_DESERT_HOUSES;
+    public static final ModConfigSpec.IntValue WOODWORKER_HOUSE_WEIGHT;
+    public static final ModConfigSpec.IntValue OCEANOGRAPHER_HOUSE_WEIGHT;
+    public static final ModConfigSpec.IntValue FLORIST_HOUSE_WEIGHT;
+    public static final ModConfigSpec.IntValue HUNTER_HOUSE_WEIGHT;
+    public static final ModConfigSpec.IntValue ENGINEER_HOUSE_WEIGHT;
 
     static {
-        ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
+        ModConfigSpec.Builder COMMON_BUILDER = new ModConfigSpec.Builder();
 
         COMMON_BUILDER.comment("House generation settings").push(CATEGORY_HOUSES);
         GENERATE_PLAINS_HOUSES = COMMON_BUILDER.comment("Should More Villagers houses generate in plains biome villages?")
@@ -48,10 +44,4 @@ public class MVConfigForge {
 
         COMMON_CONFIG = COMMON_BUILDER.build();
     }
-
-    @SubscribeEvent
-    public static void onLoad(final ModConfigEvent.Loading configEvent) { }
-
-    @SubscribeEvent
-    public static void onReload(final ModConfigEvent.Reloading configEvent) { }
 }

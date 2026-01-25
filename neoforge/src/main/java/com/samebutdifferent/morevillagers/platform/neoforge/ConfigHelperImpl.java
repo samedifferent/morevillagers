@@ -1,4 +1,4 @@
-package com.samebutdifferent.morevillagers.platform.forge;
+package com.samebutdifferent.morevillagers.platform.neoforge;
 
 import com.samebutdifferent.morevillagers.registry.forge.MVConfigForge;
 
