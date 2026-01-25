@@ -5,15 +5,9 @@
     "##"
   ],
   "key": {
-    "#": {
-      "tag": "minecraft:logs"
-    },
-    "@": {
-      "item": "minecraft:leather"
-    },
-    "$": {
-      "item": "minecraft:arrow"
-    }
+    "#": "#minecraft:logs",
+    "@": "minecraft:leather",
+    "$": "minecraft:arrow"
   },
   "result": {
     "id": "morevillagers:hunting_post"

@@ -6,12 +6,8 @@
     "##"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:warped_planks"
-    },
-    "@": {
-      "item": "minecraft:nether_bricks"
-    }
+    "#": "minecraft:warped_planks",
+    "@": "minecraft:nether_bricks"
   },
   "result": {
     "id": "morevillagers:decayed_workbench"

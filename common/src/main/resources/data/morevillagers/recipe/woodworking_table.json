@@ -6,15 +6,9 @@
     "@@"
   ],
   "key": {
-    "$": {
-      "tag": "minecraft:leaves"
-    },
-    "#": {
-      "tag": "minecraft:planks"
-    },
-    "@": {
-      "tag": "minecraft:logs"
-    }
+    "$": "#minecraft:leaves",
+    "#": "#minecraft:planks",
+    "@": "#minecraft:logs"
   },
   "result": {
     "id": "morevillagers:woodworking_table"

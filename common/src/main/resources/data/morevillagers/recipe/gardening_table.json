@@ -6,12 +6,8 @@
     "##"
   ],
   "key": {
-    "#": {
-      "tag": "minecraft:planks"
-    },
-    "@": {
-      "tag": "minecraft:flowers"
-    }
+    "#": "#minecraft:planks",
+    "@": "#minecraft:flowers"
   },
   "result": {
     "id": "morevillagers:gardening_table"

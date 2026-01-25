@@ -1,19 +1,19 @@
 package com.samebutdifferent.morevillagers.platform.fabric;
 
+import com.google.common.collect.ImmutableSet;
 import com.samebutdifferent.morevillagers.MoreVillagers;
 import com.samebutdifferent.morevillagers.mixin.PoiTypesInvoker;
-import com.samebutdifferent.morevillagers.registry.MVBlocks;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import com.samebutdifferent.morevillagers.registry.MVPoiTypes;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
-import net.minecraft.world.entity.npc.VillagerProfession;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.entity.npc.villager.VillagerProfession;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -26,25 +26,27 @@ public class CommonPlatformHelperImpl {
     public static List<Supplier<Block>> REGISTERED_BLOCKS = new ArrayList<>();
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
-        var registry = Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(MoreVillagers.MOD_ID, name), block.get());
+        var registry = Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(MoreVillagers.MOD_ID, name), block.get());
         REGISTERED_BLOCKS.add(() -> registry);
         return () -> registry;
     }
 
     public static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> item) {
-        var registry = Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(MoreVillagers.MOD_ID, name), item.get());
+        var registry = Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MoreVillagers.MOD_ID, name), item.get());
         return () -> registry;
     }
 
-    public static Supplier<VillagerProfession> registerProfession(String name, Supplier<VillagerProfession> profession) {
-        var registry = Registry.register(BuiltInRegistries.VILLAGER_PROFESSION, ResourceLocation.fromNamespaceAndPath(MoreVillagers.MOD_ID, name), profession.get());
+    public static Supplier<VillagerProfession> registerProfession(ResourceKey<VillagerProfession> villagerProfessionKey, Supplier<PoiType> poiType, SoundEvent soundEvent) {
+        var registry = Registry.register(BuiltInRegistries.VILLAGER_PROFESSION, villagerProfessionKey, new VillagerProfession(
+            Component.translatable("entity.minecraft.villager.morevillagers." + villagerProfessionKey.identifier().getPath()),
+            holder -> holder.value().equals(poiType.get()), holder -> holder.value().equals(poiType.get()), ImmutableSet.of(), ImmutableSet.of(), soundEvent));
         return () -> registry;
     }
 
     public static Supplier<PoiType> registerPoiType(String name, Supplier<Set<BlockState>> matchingStates) {
-        ResourceKey<PoiType> resourceKey = ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, ResourceLocation.fromNamespaceAndPath(MoreVillagers.MOD_ID, name));
+        ResourceKey<PoiType> resourceKey = ResourceKey.create(Registries.POINT_OF_INTEREST_TYPE, Identifier.fromNamespaceAndPath(MoreVillagers.MOD_ID, name));
         var registry = Registry.register(BuiltInRegistries.POINT_OF_INTEREST_TYPE, resourceKey, new PoiType(matchingStates.get(), 1, 1));
-        PoiTypesInvoker.invokeRegisterBlockStates(BuiltInRegistries.POINT_OF_INTEREST_TYPE.getHolderOrThrow(resourceKey), matchingStates.get());
+        PoiTypesInvoker.invokeRegisterBlockStates(BuiltInRegistries.POINT_OF_INTEREST_TYPE.getOrThrow(resourceKey), matchingStates.get());
         return () -> registry;
     }
 }

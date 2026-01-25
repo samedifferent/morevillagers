@@ -17,14 +17,7 @@ Adds new villager jobs, trades, and workstations!
 [[dependencies.morevillagers]]
    modId="neoforge"
    mandatory=true
-   versionRange="[21.1,)"
-   ordering="NONE"
-   side="BOTH"
-
-[[dependencies.morevillagers]]
-   modId="minecraft"
-   mandatory=true
-   versionRange="[1.21.1,1.21.2)"
+   versionRange="[21.11,)"
    ordering="NONE"
    side="BOTH"
 

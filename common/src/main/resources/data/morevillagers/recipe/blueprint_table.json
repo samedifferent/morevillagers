@@ -6,15 +6,9 @@
     "##"
   ],
   "key": {
-    "#": {
-      "tag": "minecraft:planks"
-    },
-    "@": {
-      "item": "minecraft:paper"
-    },
-    "$": {
-      "item": "minecraft:blue_dye"
-    }
+    "#": "#minecraft:planks",
+    "@": "minecraft:paper",
+    "$": "minecraft:blue_dye"
   },
   "result": {
     "id": "morevillagers:blueprint_table"

@@ -6,12 +6,8 @@
     "##"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:end_stone"
-    },
-    "@": {
-      "item": "minecraft:purpur_block"
-    }
+    "#": "minecraft:end_stone",
+    "@": "minecraft:purpur_block"
   },
   "result": {
     "id": "morevillagers:purpur_altar"

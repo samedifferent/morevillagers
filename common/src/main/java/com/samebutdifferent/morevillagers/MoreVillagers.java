@@ -7,8 +7,8 @@ import com.samebutdifferent.morevillagers.registry.MVProfessions;
 import com.samebutdifferent.morevillagers.util.JigsawHelper;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
@@ -17,7 +17,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 public class MoreVillagers
 {
 	public static final String MOD_ID = "morevillagers";
-	public static final ResourceKey<CreativeModeTab> TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MOD_ID, "tab"));
+	public static final ResourceKey<CreativeModeTab> TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(MOD_ID, "tab"));
 
 	public static void init() {
 		MVBlocks.init();
@@ -26,14 +26,14 @@ public class MoreVillagers
 	}
 
 	public static void registerJigsaws(MinecraftServer server) {
-		Registry<StructureTemplatePool> templatePoolRegistry = server.registryAccess().registry(Registries.TEMPLATE_POOL).orElseThrow();
-		Registry<StructureProcessorList> processorListRegistry = server.registryAccess().registry(Registries.PROCESSOR_LIST).orElseThrow();
+		Registry<StructureTemplatePool> templatePoolRegistry = server.registryAccess().lookupOrThrow(Registries.TEMPLATE_POOL);
+		Registry<StructureProcessorList> processorListRegistry = server.registryAccess().lookupOrThrow(Registries.PROCESSOR_LIST);
 
-		ResourceLocation plainsPoolLocation = ResourceLocation.parse("minecraft:village/plains/houses");
-		ResourceLocation desertPoolLocation = ResourceLocation.parse("minecraft:village/desert/houses");
-		ResourceLocation savannaPoolLocation = ResourceLocation.parse("minecraft:village/savanna/houses");
-		ResourceLocation snowyPoolLocation = ResourceLocation.parse("minecraft:village/snowy/houses");
-		ResourceLocation taigaPoolLocation = ResourceLocation.parse("minecraft:village/taiga/houses");
+		Identifier plainsPoolLocation = Identifier.parse("minecraft:village/plains/houses");
+		Identifier desertPoolLocation = Identifier.parse("minecraft:village/desert/houses");
+		Identifier savannaPoolLocation = Identifier.parse("minecraft:village/savanna/houses");
+		Identifier snowyPoolLocation = Identifier.parse("minecraft:village/snowy/houses");
+		Identifier taigaPoolLocation = Identifier.parse("minecraft:village/taiga/houses");
 
 		// PLAINS VILLAGE HOUSES
 		if (ConfigHelper.generatePlainsHouses()) {

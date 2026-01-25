@@ -13,7 +13,7 @@
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false,
-    "background": "minecraft:textures/block/lime_terracotta.png"
+    "background": "minecraft:block/lime_terracotta"
   },
   "criteria": {
     "always": {
