@@ -1,0 +1,12 @@
+{
+  "gives": {
+    "id": "minecraft:shulker_shell"
+  },
+  "max_uses": 8.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 12.0,
+    "id": "minecraft:emerald"
+  },
+  "xp": 30.0
+}

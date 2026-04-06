@@ -1,55 +1,23 @@
 package com.samebutdifferent.morevillagers.platform;
 
-import dev.architectury.injectables.annotations.ExpectPlatform;
+public interface ConfigHelper {
+    boolean generatePlainsHouses();
 
-public class ConfigHelper {
-    @ExpectPlatform
-    public static boolean generatePlainsHouses() {
-        throw new AssertionError();
-    }
+    boolean generateTaigaHouses();
 
-    @ExpectPlatform
-    public static boolean generateTaigaHouses() {
-        throw new AssertionError();
-    }
+    boolean generateSavannaHouses();
 
-    @ExpectPlatform
-    public static boolean generateSavannaHouses() {
-        throw new AssertionError();
-    }
+    boolean generateSnowyHouses();
 
-    @ExpectPlatform
-    public static boolean generateSnowyHouses() {
-        throw new AssertionError();
-    }
+    boolean generateDesertHouses();
 
-    @ExpectPlatform
-    public static boolean generateDesertHouses() {
-        throw new AssertionError();
-    }
+    int woodworkerHouseWeight();
 
-    @ExpectPlatform
-    public static int woodworkerHouseWeight() {
-        throw new AssertionError();
-    }
+    int oceanographerHouseWeight();
 
-    @ExpectPlatform
-    public static int oceanographerHouseWeight() {
-        throw new AssertionError();
-    }
+    int floristHouseWeight();
 
-    @ExpectPlatform
-    public static int floristHouseWeight() {
-        throw new AssertionError();
-    }
+    int hunterHouseWeight();
 
-    @ExpectPlatform
-    public static int hunterHouseWeight() {
-        throw new AssertionError();
-    }
-
-    @ExpectPlatform
-    public static int engineerHouseWeight() {
-        throw new AssertionError();
-    }
+    int engineerHouseWeight();
 }

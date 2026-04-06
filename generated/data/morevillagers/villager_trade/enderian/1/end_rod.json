@@ -1,0 +1,12 @@
+{
+  "gives": {
+    "count": 3,
+    "id": "minecraft:end_rod"
+  },
+  "max_uses": 16.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 4.0,
+    "id": "minecraft:emerald"
+  }
+}

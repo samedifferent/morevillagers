@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "morevillagers",
-  "version": "${version}",
+  "version": "${modVersion}",
   "name": "More Villagers",
   "description": "Adds new villager jobs, trades, and workstations!",
   "authors": [
@@ -21,17 +21,19 @@
     "main": [
       "com.samebutdifferent.morevillagers.fabric.MoreVillagersFabric"
     ],
+    "fabric-datagen": [
+      "com.samebutdifferent.morevillagers.fabric.datagen.MVDataGenerator"
+    ],
     "modmenu": [
-      "com.samebutdifferent.morevillagers.integration.fabric.ModMenuIntegration"
+      "com.samebutdifferent.morevillagers.fabric.integration.ModMenuIntegration"
     ]
   },
   "mixins": [
     "morevillagers.mixins.json",
     "morevillagers-common.mixins.json"
   ],
-  "accessWidener": "morevillagers.accesswidener",
   "depends": {
-    "fabricloader": ">=0.14.0",
-    "minecraft": ">=1.20"
+    "fabricloader": ">=0.18.5",
+    "minecraft": ">=26.1"
   }
 }

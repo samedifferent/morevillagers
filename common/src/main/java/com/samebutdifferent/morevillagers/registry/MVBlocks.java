@@ -1,7 +1,7 @@
 package com.samebutdifferent.morevillagers.registry;
 
 import com.samebutdifferent.morevillagers.MoreVillagers;
-import com.samebutdifferent.morevillagers.platform.CommonPlatformHelper;
+import com.samebutdifferent.morevillagers.platform.PlatformHooks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
@@ -28,10 +28,10 @@ public class MVBlocks {
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> block, BlockBehaviour.Properties properties) {
         Identifier identifier = Identifier.fromNamespaceAndPath(MoreVillagers.MOD_ID, name);
-        Supplier<T> toReturn = CommonPlatformHelper.registerBlock(name, () -> block.apply(
+        Supplier<T> toReturn = PlatformHooks.PLATFORM_HELPER.registerBlock(name, () -> block.apply(
             properties.setId(ResourceKey.create(Registries.BLOCK, identifier))
         ));
-        CommonPlatformHelper.registerItem(name, () -> new BlockItem(toReturn.get(), new Item.Properties().useBlockDescriptionPrefix().setId(ResourceKey.create(Registries.ITEM, identifier))));
+        PlatformHooks.PLATFORM_HELPER.registerItem(name, () -> new BlockItem(toReturn.get(), new Item.Properties().useBlockDescriptionPrefix().setId(ResourceKey.create(Registries.ITEM, identifier))));
         return toReturn;
     }
 }

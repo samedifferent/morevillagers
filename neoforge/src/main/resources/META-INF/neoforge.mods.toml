@@ -5,7 +5,7 @@ issueTrackerURL="https://github.com/samedifferent/morevillagers/issues"
 
 [[mods]]
 modId="morevillagers"
-version="${version}"
+version="${modVersion}"
 displayName="More Villagers"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/more-villagers"
 logoFile="icon.png"
@@ -17,7 +17,7 @@ Adds new villager jobs, trades, and workstations!
 [[dependencies.morevillagers]]
    modId="neoforge"
    mandatory=true
-   versionRange="[21.11,)"
+   versionRange="[26.1,)"
    ordering="NONE"
    side="BOTH"
 

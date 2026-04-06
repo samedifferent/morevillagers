@@ -1,14 +1,13 @@
 package com.samebutdifferent.morevillagers.fabric;
 
 import com.samebutdifferent.morevillagers.MoreVillagers;
-import com.samebutdifferent.morevillagers.platform.fabric.CommonPlatformHelperImpl;
-import com.samebutdifferent.morevillagers.registry.MVProfessions;
-import com.samebutdifferent.morevillagers.registry.fabric.MVConfigFabric;
+import com.samebutdifferent.morevillagers.fabric.platform.FabricPlatformHelper;
+import com.samebutdifferent.morevillagers.fabric.registry.MVConfigFabric;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -17,12 +16,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
 public class MoreVillagersFabric implements ModInitializer {
-    public static final CreativeModeTab CREATIVE_MODE_TAB = FabricItemGroup.builder()
+    public static final CreativeModeTab CREATIVE_MODE_TAB = FabricCreativeModeTab.builder()
         .icon(() -> new ItemStack(Items.EMERALD))
         .title(Component.translatable("itemGroup." + MoreVillagers.MOD_ID + ".tab"))
-        .displayItems((params, output) -> {
-            CommonPlatformHelperImpl.REGISTERED_BLOCKS.forEach(block -> {
-               output.accept(new ItemStack(block.get()));
+        .displayItems((_, output) -> {
+            FabricPlatformHelper.REGISTERED_ITEMS.forEach(item -> {
+               output.accept(item.get());
             });
         })
         .build();
@@ -31,7 +30,6 @@ public class MoreVillagersFabric implements ModInitializer {
     public void onInitialize() {
         AutoConfig.register(MVConfigFabric.class, GsonConfigSerializer::new);
         MoreVillagers.init();
-        MVProfessions.fillTradeData();
         ServerLifecycleEvents.SERVER_STARTING.register(MoreVillagers::registerJigsaws);
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, MoreVillagers.TAB, CREATIVE_MODE_TAB);
     }
