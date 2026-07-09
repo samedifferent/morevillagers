@@ -1,8 +1,8 @@
 package com.samebutdifferent.morevillagers.registry;
 
 import com.samebutdifferent.morevillagers.MoreVillagers;
-import net.minecraft.advancements.criterion.DataComponentMatchers;
-import net.minecraft.advancements.criterion.ItemPredicate;
+import net.minecraft.advancements.predicates.DataComponentMatchers;
+import net.minecraft.advancements.predicates.ItemPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
@@ -21,7 +21,6 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.trading.TradeCost;
 import net.minecraft.world.item.trading.VillagerTrade;
 import net.minecraft.world.item.trading.VillagerTrades;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.saveddata.maps.MapDecorationType;
 import net.minecraft.world.level.saveddata.maps.MapDecorationTypes;
@@ -320,7 +319,7 @@ public class MVTrades {
     }
 
     private static VillagerTrade tradeEnchanted(BootstrapContext<VillagerTrade> context, Item item, int emeralds, int maxUses, int xp) {
-        Optional<HolderSet<Enchantment>> enchantmentsForTradedEquipment = context.lookup(Registries.ENCHANTMENT).get(EnchantmentTags.ON_TRADED_EQUIPMENT).map((named) -> named);
+        HolderSet<Enchantment> enchantmentsForTradedEquipment = context.lookup(Registries.ENCHANTMENT).getOrThrow(EnchantmentTags.ON_TRADED_EQUIPMENT);
         HolderGetter<Item> items = context.lookup(Registries.ITEM);
 
         return new VillagerTrade(

@@ -13,7 +13,7 @@ public class MVDataGenerator implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(MVRegistryProvider::new);
-        pack.addProvider(MVTradesTagsProvider::new);
+        pack.addProvider(MVTradesFabricTagsProvider::new);
     }
 
     @Override
