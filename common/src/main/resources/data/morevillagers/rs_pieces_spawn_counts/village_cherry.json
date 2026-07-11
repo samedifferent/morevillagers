@@ -1,0 +1,25 @@
+{
+  "target_structure": "repurposed_structures:village_cherry",
+  "pieces_spawn_counts" : [
+    {
+      "nbt_piece_name" : "morevillagers:village/cherry/engineer",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/cherry/florist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/cherry/hunter",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/cherry/oceanographer",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/cherry/woodworker",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "target_pool": "repurposed_structures:villages/jungle/houses",
+  "fallback": "repurposed_structures:villages/jungle/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "morevillagers:village/jungle/engineer",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "morevillagers:village/jungle/florist",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/jungle/hunter",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/jungle/oceanographer",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/jungle/woodworker",
+        "processors": "repurposed_structures:villages/jungle/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

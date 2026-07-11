@@ -1,0 +1,25 @@
+{
+  "target_structure": "repurposed_structures:village_oak",
+  "pieces_spawn_counts" : [
+    {
+      "nbt_piece_name" : "morevillagers:village/oak/engineer",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/oak/florist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/oak/hunter",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/oak/oceanographer",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/oak/woodworker",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

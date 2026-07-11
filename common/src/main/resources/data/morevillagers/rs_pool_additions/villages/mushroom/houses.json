@@ -1,0 +1,51 @@
+{
+  "target_pool": "repurposed_structures:villages/mushroom/houses",
+  "fallback": "repurposed_structures:villages/mushroom/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "morevillagers:village/mushroom/engineer",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/mushroom/florist",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "morevillagers:village/mushroom/hunter",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "morevillagers:village/mushroom/oceanographer",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "morevillagers:village/mushroom/woodworker",
+        "processors": "repurposed_structures:villages/mushroom/general_randomizer",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}
