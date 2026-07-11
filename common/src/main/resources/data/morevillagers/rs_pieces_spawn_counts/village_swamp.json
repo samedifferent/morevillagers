@@ -1,0 +1,25 @@
+{
+  "target_structure": "repurposed_structures:village_swamp",
+  "pieces_spawn_counts" : [
+    {
+      "nbt_piece_name" : "morevillagers:village/swamp/engineer",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/swamp/florist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/swamp/hunter",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/swamp/oceanographer",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/swamp/woodworker",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

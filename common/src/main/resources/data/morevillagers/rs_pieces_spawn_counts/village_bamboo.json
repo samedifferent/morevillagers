@@ -1,0 +1,25 @@
+{
+  "target_structure": "repurposed_structures:village_bamboo",
+  "pieces_spawn_counts" : [
+    {
+      "nbt_piece_name" : "morevillagers:village/bamboo/engineer",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/bamboo/florist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/bamboo/hunter",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/bamboo/oceanographer",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/bamboo/woodworker",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

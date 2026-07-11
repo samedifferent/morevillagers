@@ -1,0 +1,25 @@
+{
+  "target_structure": "repurposed_structures:village_dark_forest",
+  "pieces_spawn_counts" : [
+    {
+      "nbt_piece_name" : "morevillagers:village/dark_forest/engineer",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/dark_forest/florist",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/dark_forest/hunter",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/dark_forest/oceanographer",
+      "never_spawn_more_than_this_many": 1
+    },
+    {
+      "nbt_piece_name" : "morevillagers:village/dark_forest/woodworker",
+      "never_spawn_more_than_this_many": 1
+    }
+  ]
+}

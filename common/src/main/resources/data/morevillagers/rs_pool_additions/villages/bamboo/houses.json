@@ -1,0 +1,51 @@
+{
+  "target_pool": "repurposed_structures:villages/bamboo/houses",
+  "fallback": "repurposed_structures:villages/bamboo/terminators",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "morevillagers:village/bamboo/engineer",
+        "processors": "repurposed_structures:villages/bamboo/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "morevillagers:village/bamboo/florist",
+        "processors": "repurposed_structures:villages/bamboo/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/bamboo/hunter",
+        "processors": "repurposed_structures:villages/bamboo/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/bamboo/oceanographer",
+        "processors": "repurposed_structures:villages/bamboo/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/bamboo/woodworker",
+        "processors": "repurposed_structures:villages/bamboo/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

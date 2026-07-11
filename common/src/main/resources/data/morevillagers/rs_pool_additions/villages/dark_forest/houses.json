@@ -1,0 +1,51 @@
+{
+  "target_pool": "repurposed_structures:villages/dark_forest/houses",
+  "fallback": "repurposed_structures:villages/dark_forest/terminators",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/dark_forest/engineer",
+        "processors": "repurposed_structures:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/dark_forest/florist",
+        "processors": "repurposed_structures:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/dark_forest/hunter",
+        "processors": "repurposed_structures:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/dark_forest/oceanographer",
+        "processors": "repurposed_structures:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "morevillagers:village/dark_forest/woodworker",
+        "processors": "repurposed_structures:villages/dark_forest/mossify",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}
