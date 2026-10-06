@@ -30,7 +30,7 @@ public class MoreVillagersNeoForge {
     public MoreVillagersNeoForge(ModContainer container) {
         MoreVillagers.init();
 
-        container.registerConfig(ModConfig.Type.COMMON, MVConfigNeoForge.COMMON_CONFIG);
+        container.registerConfig(ModConfig.Type.SYNCED, MVConfigNeoForge.COMMON_CONFIG);
 
         CREATIVE_MODE_TABS.register(container.getEventBus());
         NeoForgePlatformHelper.BLOCKS.register(container.getEventBus());
@@ -59,11 +59,11 @@ public class MoreVillagersNeoForge {
     }
 
     private void gatherData(GatherDataEvent.Server event) {
-        event.createDatapackRegistryObjects(
+        event.createReloadableRegistryObjects(
             new RegistrySetBuilder()
-                .add(Registries.TRADE_SET, MVTradeSets::bootstrap)
-                .add(Registries.VILLAGER_TRADE, MVTrades::bootstrap)
+            .add(Registries.TRADE_SET, MVTradeSets::bootstrap)
+            .add(Registries.VILLAGER_TRADE, MVTrades::bootstrap)
         );
-        event.createProvider(packOutput -> new MVTradesTagsProvider(packOutput, event.getLookupProvider()));
+        event.createProvider(packOutput -> new MVTradesTagsProvider(packOutput, event.getReloadableLookupProvider()));
     }
 }

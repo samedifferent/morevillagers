@@ -34,18 +34,18 @@ public class MVConfigFabric implements ConfigData {
 
     public static class Weights {
         @Comment("Woodworker house spawn chance")
-        public int woodworkerHouseWeight = 10;
+        public int woodworkerHouseWeight = 5;
 
         @Comment("Oceanographer house spawn chance")
-        public int oceanographerHouseWeight = 10;
+        public int oceanographerHouseWeight = 5;
 
         @Comment("Oceanographer house spawn chance")
-        public int floristHouseWeight = 10;
+        public int floristHouseWeight = 5;
 
         @Comment("Hunter house spawn chance")
-        public int hunterHouseWeight = 10;
+        public int hunterHouseWeight = 5;
 
         @Comment("Engineer house spawn chance")
-        public int engineerHouseWeight = 10;
+        public int engineerHouseWeight = 5;
     }
 }

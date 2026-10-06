@@ -1,5 +1,5 @@
 {
-  "amount": 2.0,
+  "amount": 2,
   "random_sequence": "morevillagers:trade_set/miner/level_3",
   "trades": "#morevillagers:miner/level_3"
 }

@@ -8,8 +8,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.trading.TradeSet;
 import net.minecraft.world.item.trading.VillagerTrade;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProvider;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
 import java.util.Optional;
 
@@ -118,11 +118,11 @@ public class MVTradeSets {
     public static Holder.Reference<TradeSet> register(
         final BootstrapContext<TradeSet> context, final ResourceKey<TradeSet> resourceKey, final TagKey<VillagerTrade> tradeTag
     ) {
-        return register(context, resourceKey, tradeTag, ConstantValue.exactly(2.0F));
+        return register(context, resourceKey, tradeTag, ContextIntProviders.exactly(2));
     }
 
     public static Holder.Reference<TradeSet> register(
-        final BootstrapContext<TradeSet> context, final ResourceKey<TradeSet> resourceKey, final TagKey<VillagerTrade> tradeTag, final NumberProvider numberProvider
+        final BootstrapContext<TradeSet> context, final ResourceKey<TradeSet> resourceKey, final TagKey<VillagerTrade> tradeTag, final Holder<ContextIntProvider> numberProvider
     ) {
         return context.register(
             resourceKey,

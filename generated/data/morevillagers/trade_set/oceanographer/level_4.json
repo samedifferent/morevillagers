@@ -1,5 +1,5 @@
 {
-  "amount": 2.0,
+  "amount": 2,
   "random_sequence": "morevillagers:trade_set/oceanographer/level_4",
   "trades": "#morevillagers:oceanographer/level_4"
 }
