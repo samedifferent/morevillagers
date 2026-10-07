@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/beehive_end",
+    "east": "morevillagers:block/woodworking_table_side",
+    "north": "morevillagers:block/woodworking_table_front",
+    "particle": "morevillagers:block/woodworking_table_side",
+    "south": "morevillagers:block/woodworking_table_back",
+    "up": "morevillagers:block/woodworking_table_top",
+    "west": "morevillagers:block/woodworking_table_side2"
+  }
+}

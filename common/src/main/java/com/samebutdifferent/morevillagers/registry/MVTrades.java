@@ -1,19 +1,15 @@
 package com.samebutdifferent.morevillagers.registry;
 
 import com.samebutdifferent.morevillagers.MoreVillagers;
-import net.minecraft.advancements.predicates.DataComponentMatchers;
-import net.minecraft.advancements.predicates.ItemPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.tags.StructureTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
@@ -21,17 +17,11 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.trading.TradeCost;
 import net.minecraft.world.item.trading.VillagerTrade;
 import net.minecraft.world.item.trading.VillagerTrades;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.saveddata.maps.MapDecorationType;
 import net.minecraft.world.level.saveddata.maps.MapDecorationTypes;
-import net.minecraft.world.level.storage.loot.functions.DiscardItem;
 import net.minecraft.world.level.storage.loot.functions.ExplorationMapFunction;
-import net.minecraft.world.level.storage.loot.functions.FilteredFunction;
 import net.minecraft.world.level.storage.loot.functions.SetNameFunction;
-
-import java.util.List;
-import java.util.Optional;
 
 public class MVTrades {
     public static final ResourceKey<VillagerTrade> OCEANOGRAPHER_1_PRISMARINE = resourceKey("oceanographer/1/prismarine");

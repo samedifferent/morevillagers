@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:copy_name",
+            "source": "block_entity"
+          },
+          "name": "morevillagers:blueprint_table"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "#minecraft:planks",
+    "$": "minecraft:blue_dye",
+    "@": "minecraft:paper"
+  },
+  "pattern": [
+    "@$",
+    "##",
+    "##"
+  ],
+  "result": {
+    "id": "morevillagers:blueprint_table"
+  }
+}

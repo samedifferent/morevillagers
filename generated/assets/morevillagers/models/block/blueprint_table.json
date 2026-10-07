@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "morevillagers:block/blueprint_table_bottom",
+    "east": "morevillagers:block/blueprint_table_side",
+    "north": "morevillagers:block/blueprint_table_front",
+    "particle": "morevillagers:block/blueprint_table_front",
+    "south": "morevillagers:block/blueprint_table_side",
+    "up": "morevillagers:block/blueprint_table_top",
+    "west": "morevillagers:block/blueprint_table_front"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "always": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:block/lime_terracotta",
+    "description": {
+      "translate": "advancements.root.description"
+    },
+    "icon": {
+      "id": "minecraft:emerald_block"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "always"
+    ]
+  ]
+}

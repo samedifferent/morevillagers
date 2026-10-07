@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "morevillagers:block/gardening_table_bottom",
+    "side": "morevillagers:block/gardening_table_side",
+    "top": "morevillagers:block/gardening_table_top"
+  }
+}

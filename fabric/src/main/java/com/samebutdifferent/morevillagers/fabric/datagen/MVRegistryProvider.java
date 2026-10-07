@@ -17,10 +17,13 @@ public class MVRegistryProvider extends FabricDynamicRegistryProvider {
     protected void configure(HolderLookup.Provider provider, Entries entries) {
         entries.addAll(provider.lookupOrThrow(Registries.TRADE_SET));
         entries.addAll(provider.lookupOrThrow(Registries.VILLAGER_TRADE));
+        entries.addAll(provider.lookupOrThrow(Registries.LOOT_TABLE));
+        entries.addAll(provider.lookupOrThrow(Registries.ADVANCEMENT));
+        entries.addAll(provider.lookupOrThrow(Registries.RECIPE));
     }
 
     @Override
     public String getName() {
-        return "MoreVillagers Trades";
+        return "MoreVillagers Registries";
     }
 }

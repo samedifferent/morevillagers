@@ -1,0 +1,107 @@
+{
+  "parent": "morevillagers:first_village",
+  "criteria": {
+    "desert": {
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "minecraft:village_desert"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:location"
+    },
+    "plains": {
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "minecraft:village_plains"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:location"
+    },
+    "savanna": {
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "minecraft:village_savanna"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:location"
+    },
+    "snowy": {
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "minecraft:village_snowy"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:location"
+    },
+    "taiga": {
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:location": {
+              "structures": "minecraft:village_taiga"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.all_villages.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "minecraft:filled_map"
+    },
+    "title": {
+      "translate": "advancements.all_villages.title"
+    }
+  },
+  "requirements": [
+    [
+      "plains"
+    ],
+    [
+      "desert"
+    ],
+    [
+      "savanna"
+    ],
+    [
+      "snowy"
+    ],
+    [
+      "taiga"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  }
+}

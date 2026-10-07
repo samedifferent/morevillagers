@@ -1,0 +1,37 @@
+{
+  "parent": "morevillagers:root",
+  "criteria": {
+    "killedvillager": {
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:villager"
+          }
+        }
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kill_villager.description"
+    },
+    "hidden": true,
+    "icon": {
+      "id": "minecraft:iron_sword"
+    },
+    "title": {
+      "translate": "advancements.kill_villager.title"
+    }
+  },
+  "requirements": [
+    [
+      "killedvillager"
+    ]
+  ],
+  "rewards": {
+    "experience": 5
+  }
+}

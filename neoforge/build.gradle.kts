@@ -29,4 +29,10 @@ runs {
         programArguments("--all")
         programArguments("--output", rootDir.resolve("generated").absolutePath)
     }
+
+    named("clientData") {
+        programArguments("--mod", "morevillagers")
+        programArguments("--all")
+        programArguments("--output", rootDir.resolve("generated").absolutePath)
+    }
 }

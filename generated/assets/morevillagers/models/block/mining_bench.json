@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "morevillagers:block/mining_bench_bottom",
+    "east": "morevillagers:block/mining_bench_right",
+    "north": "morevillagers:block/mining_bench_front",
+    "particle": "morevillagers:block/mining_bench_bottom",
+    "south": "morevillagers:block/mining_bench_back",
+    "up": "morevillagers:block/mining_bench_top",
+    "west": "morevillagers:block/mining_bench_left"
+  }
+}

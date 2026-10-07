@@ -1,0 +1,40 @@
+{
+  "parent": "morevillagers:first_trade",
+  "criteria": {
+    "enderian": {
+      "conditions": {
+        "villager": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:villager",
+            "minecraft:location": {
+              "dimension": "minecraft:the_end"
+            },
+            "minecraft:nbt": "{VillagerData:{profession:\"morevillagers:enderian\"}}"
+          }
+        }
+      },
+      "trigger": "minecraft:villager_trade"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.end_trade.description"
+    },
+    "icon": {
+      "id": "minecraft:end_stone"
+    },
+    "title": {
+      "translate": "advancements.end_trade.title"
+    }
+  },
+  "requirements": [
+    [
+      "enderian"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}

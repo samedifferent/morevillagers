@@ -1,0 +1,295 @@
+{
+  "parent": "morevillagers:first_workstation_get",
+  "criteria": {
+    "barrel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:barrel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blastfurnace": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:blast_furnace"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blueprinttable": {
+      "conditions": {
+        "items": [
+          {
+            "items": "morevillagers:blueprint_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "brewingstand": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brewing_stand"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "cartographytable": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:cartography_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "cauldron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:cauldron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "composter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:composter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "decayedworkbench": {
+      "conditions": {
+        "items": [
+          {
+            "items": "morevillagers:decayed_workbench"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "fletchingtable": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:fletching_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gardeningtable": {
+      "conditions": {
+        "items": [
+          {
+            "items": "morevillagers:gardening_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "grindstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:grindstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "huntingpost": {
+      "conditions": {
+        "items": [
+          {
+            "items": "morevillagers:hunting_post"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "lectern": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:lectern"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "loom": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:loom"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "miningbench": {
+      "conditions": {
+        "items": [
+          {
+            "items": "morevillagers:mining_bench"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "oceanographytable": {
+      "conditions": {
+        "items": [
+          {
+            "items": "morevillagers:oceanography_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "purpuraltar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "morevillagers:purpur_altar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "smithingtable": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:smithing_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "smoker": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:smoker"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "stonecutter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:stonecutter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "woodworkingtable": {
+      "conditions": {
+        "items": [
+          {
+            "items": "morevillagers:woodworking_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.all_workstations_get.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "minecraft:smithing_table"
+    },
+    "title": {
+      "translate": "advancements.all_workstations_get.title"
+    }
+  },
+  "requirements": [
+    [
+      "blastfurnace"
+    ],
+    [
+      "smoker"
+    ],
+    [
+      "cartographytable"
+    ],
+    [
+      "brewingstand"
+    ],
+    [
+      "composter"
+    ],
+    [
+      "barrel"
+    ],
+    [
+      "fletchingtable"
+    ],
+    [
+      "cauldron"
+    ],
+    [
+      "lectern"
+    ],
+    [
+      "stonecutter"
+    ],
+    [
+      "loom"
+    ],
+    [
+      "smithingtable"
+    ],
+    [
+      "grindstone"
+    ],
+    [
+      "oceanographytable"
+    ],
+    [
+      "decayedworkbench"
+    ],
+    [
+      "woodworkingtable"
+    ],
+    [
+      "purpuraltar"
+    ],
+    [
+      "blueprinttable"
+    ],
+    [
+      "gardeningtable"
+    ],
+    [
+      "huntingpost"
+    ],
+    [
+      "miningbench"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  }
+}

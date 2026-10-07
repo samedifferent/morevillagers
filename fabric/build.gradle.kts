@@ -16,6 +16,7 @@ repositories {
 
 fabricApi {
     configureDataGeneration {
+        client = true
         outputDirectory = rootDir.resolve("generated")
     }
 }

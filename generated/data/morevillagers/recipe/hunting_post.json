@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "#minecraft:logs",
+    "$": "minecraft:arrow",
+    "@": "minecraft:leather"
+  },
+  "pattern": [
+    "@$",
+    "##"
+  ],
+  "result": {
+    "id": "morevillagers:hunting_post"
+  }
+}

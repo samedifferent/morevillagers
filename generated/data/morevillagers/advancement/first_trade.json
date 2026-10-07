@@ -1,0 +1,27 @@
+{
+  "parent": "morevillagers:root",
+  "criteria": {
+    "villagertrade": {
+      "trigger": "minecraft:villager_trade"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.first_trade.description"
+    },
+    "icon": {
+      "id": "minecraft:emerald"
+    },
+    "title": {
+      "translate": "advancements.first_trade.title"
+    }
+  },
+  "requirements": [
+    [
+      "villagertrade"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  }
+}

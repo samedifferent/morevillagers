@@ -1,0 +1,103 @@
+{
+  "parent": "morevillagers:first_village",
+  "criteria": {
+    "desert": {
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:cat",
+            "minecraft:location": {
+              "structures": "minecraft:village_desert"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:tame_animal"
+    },
+    "plains": {
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:cat",
+            "minecraft:location": {
+              "structures": "minecraft:village_plains"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:tame_animal"
+    },
+    "savanna": {
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:cat",
+            "minecraft:location": {
+              "structures": "minecraft:village_savanna"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:tame_animal"
+    },
+    "snowy": {
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:cat",
+            "minecraft:location": {
+              "structures": "minecraft:village_snowy"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:tame_animal"
+    },
+    "taiga": {
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:cat",
+            "minecraft:location": {
+              "structures": "minecraft:village_taiga"
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:tame_animal"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.tame_cat.description"
+    },
+    "icon": {
+      "id": "minecraft:cod"
+    },
+    "title": {
+      "translate": "advancements.tame_cat.title"
+    }
+  },
+  "requirements": [
+    [
+      "plains",
+      "desert",
+      "savanna",
+      "snowy",
+      "taiga"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  }
+}

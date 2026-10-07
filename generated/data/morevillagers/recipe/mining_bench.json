@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "minecraft:stone",
+    "$": "minecraft:raw_iron",
+    "@": "minecraft:iron_pickaxe"
+  },
+  "pattern": [
+    "@$",
+    "##"
+  ],
+  "result": {
+    "id": "morevillagers:mining_bench"
+  }
+}

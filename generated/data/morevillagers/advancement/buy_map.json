@@ -1,0 +1,32 @@
+{
+  "parent": "morevillagers:first_trade",
+  "criteria": {
+    "trade": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:filled_map"
+        }
+      },
+      "trigger": "minecraft:villager_trade"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buy_map.description"
+    },
+    "icon": {
+      "id": "minecraft:compass"
+    },
+    "title": {
+      "translate": "advancements.buy_map.title"
+    }
+  },
+  "requirements": [
+    [
+      "trade"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
+  }
+}
