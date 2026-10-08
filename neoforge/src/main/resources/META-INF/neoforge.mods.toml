@@ -8,7 +8,7 @@ modId="morevillagers"
 version="${modVersion}"
 displayName="More Villagers"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/more-villagers"
-logoFile="icon.png"
+iconFile="icon.png"
 authors="SameButDifferent, Zero_DSRS_VX, Drex"
 description='''
 Adds new villager jobs, trades, and workstations!
