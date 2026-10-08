@@ -218,7 +218,7 @@ public class MVTrades {
         register(context, FLORIST_3_BOTTLE, tradeSellSingle(Items.HONEY_BOTTLE, 6, 16, 10));
 
         register(context, FLORIST_4_MOSS, tradeBuy(Items.MOSS_BLOCK, 32, 16, 30));
-        register(context, FLORIST_4_MAP, tradeMap(context, Items.SWAMP_HUT_MAP, 13, structures.getOrThrow(StructureTags.ON_SWAMP_HUT_MAPS), "filled_map.swamp_hut", MapDecorationTypes.GREEN_BANNER, 12, 15));
+        register(context, FLORIST_4_MAP, tradeMap(context, Items.SWAMP_HUT_MAP, 13, structures.getOrThrow(StructureTags.ON_SWAMP_HUT_MAPS), "filled_map.swamp_hut", MapDecorationTypes.SWAMP_HUT, 12, 15));
 
         register(context, FLORIST_5_NEST, tradeSellSingle(Items.BEE_NEST, 6, 12, 30));
         register(context, FLORIST_5_JUNGLE, tradeMap(context, Items.JUNGLE_PYRAMID_MAP, 15, structures.getOrThrow(StructureTags.ON_JUNGLE_PYRAMID_MAPS), "filled_map.jungle_pyramid", MapDecorationTypes.JUNGLE_TEMPLE, 12, 30));
@@ -234,7 +234,7 @@ public class MVTrades {
         register(context, HUNTER_3_MAGMA, tradeSellSingle(Items.MAGMA_CREAM, 5, 12, 10));
 
         register(context, HUNTER_4_BLAZE, tradeSellSingle(Items.BLAZE_ROD, 5, 12, 15));
-        register(context, HUNTER_4_MAP, tradeMap(context, Items.FILLED_MAP, 13, structures.getOrThrow(StructureTags.ON_PLAINS_VILLAGE_MAPS), "filled_map.pillager_outpost", MapDecorationTypes.BLACK_BANNER, 12, 15));
+        register(context, HUNTER_4_MAP, tradeMap(context, Items.FILLED_MAP, 13, structures.getOrThrow(MVTags.ON_PILLAGER_OUTPOST_EXPLORER_MAPS), "filled_map.pillager_outpost", MapDecorationTypes.BLACK_BANNER, 12, 15));
 
         register(context, HUNTER_5_GHAST, tradeSellSingle(Items.GHAST_TEAR, 8, 12, 30));
         register(context, HUNTER_5_RABBIT, tradeSellSingle(Items.RABBIT_FOOT, 8, 12, 30));
@@ -250,10 +250,10 @@ public class MVTrades {
         register(context, MINER_3_AMETHYST, tradeSell(Items.AMETHYST_SHARD, 1, 2, 12, 10));
 
         register(context, MINER_4_TORCH, tradeBuy(Items.TORCH, 50, 12, 30));
-        register(context, MINER_4_MAP, tradeMap(context, Items.BURIED_MINESHAFT_MAP, 13, structures.getOrThrow(StructureTags.ON_MINESHAFT_MAPS), "filled_map.mineshaft", MapDecorationTypes.BROWN_BANNER, 12, 15));
+        register(context, MINER_4_MAP, tradeMap(context, Items.BURIED_MINESHAFT_MAP, 13, structures.getOrThrow(StructureTags.ON_MINESHAFT_MAPS), "filled_map.mineshaft", MapDecorationTypes.MINESHAFT, 12, 15));
 
         register(context, MINER_5_PICKAXE, tradeEnchanted(context, Items.DIAMOND_PICKAXE, 12, 3, 15));
-        register(context, MINER_5_CITY, tradeMap(context, Items.BURIED_ANCIENT_CITY_MAP, 15, structures.getOrThrow(StructureTags.ON_ANCIENT_CITY_MAPS), "filled_map.ancient_city", MapDecorationTypes.BLUE_BANNER, 12, 15));
+        register(context, MINER_5_CITY, tradeMap(context, Items.BURIED_ANCIENT_CITY_MAP, 15, structures.getOrThrow(StructureTags.ON_ANCIENT_CITY_MAPS), "filled_map.ancient_city", MapDecorationTypes.ANCIENT_CITY, 12, 15));
 
         return null;
     }

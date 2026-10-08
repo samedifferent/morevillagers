@@ -60,6 +60,7 @@ public final class MVTagsProviders {
             tag(MVTags.ON_FORTRESS_EXPLORER_MAPS).add(BuiltinStructures.FORTRESS);
             tag(MVTags.ON_BASTION_REMNANT_EXPLORER_MAPS).add(BuiltinStructures.BASTION_REMNANT);
             tag(MVTags.ON_END_CITY_EXPLORER_MAPS).add(BuiltinStructures.END_CITY);
+            tag(MVTags.ON_PILLAGER_OUTPOST_EXPLORER_MAPS).add(BuiltinStructures.PILLAGER_OUTPOST);
         }
     }
 }

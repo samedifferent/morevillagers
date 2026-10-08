@@ -6,7 +6,7 @@
     {
       "type": "minecraft:exploration_map",
       "decoration": "minecraft:banner_black",
-      "destination": "#minecraft:on_plains_village_maps",
+      "destination": "#morevillagers:on_pillager_outpost_explorer_maps",
       "search_radius": 100
     },
     {

@@ -5,7 +5,7 @@
   "given_item_modifier": [
     {
       "type": "minecraft:exploration_map",
-      "decoration": "minecraft:banner_blue",
+      "decoration": "minecraft:ancient_city",
       "destination": "#minecraft:on_ancient_city_maps",
       "search_radius": 100
     },
