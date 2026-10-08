@@ -6,7 +6,7 @@
     {
       "type": "minecraft:exploration_map",
       "decoration": "minecraft:banner_brown",
-      "destination": "#morevillagers:on_mineshaft_explorer_maps",
+      "destination": "#minecraft:on_mineshaft_maps",
       "search_radius": 100
     },
     {
@@ -29,7 +29,7 @@
     }
   ],
   "gives": {
-    "id": "minecraft:map"
+    "id": "minecraft:buried_mineshaft_map"
   },
   "max_uses": 12,
   "reputation_discount": 0.2,

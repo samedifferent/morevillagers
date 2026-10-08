@@ -29,7 +29,7 @@
     }
   ],
   "gives": {
-    "id": "minecraft:map"
+    "id": "minecraft:buried_treasure_map"
   },
   "max_uses": 12,
   "reputation_discount": 0.2,

@@ -5,8 +5,8 @@
   "given_item_modifier": [
     {
       "type": "minecraft:exploration_map",
-      "decoration": "minecraft:banner_lime",
-      "destination": "#morevillagers:on_jungle_temple_explorer_maps",
+      "decoration": "minecraft:jungle_temple",
+      "destination": "#minecraft:on_jungle_pyramid_maps",
       "search_radius": 100
     },
     {
@@ -29,7 +29,7 @@
     }
   ],
   "gives": {
-    "id": "minecraft:map"
+    "id": "minecraft:jungle_pyramid_map"
   },
   "max_uses": 12,
   "reputation_discount": 0.2,

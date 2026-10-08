@@ -60,11 +60,6 @@ public final class MVTagsProviders {
             tag(MVTags.ON_FORTRESS_EXPLORER_MAPS).add(BuiltinStructures.FORTRESS);
             tag(MVTags.ON_BASTION_REMNANT_EXPLORER_MAPS).add(BuiltinStructures.BASTION_REMNANT);
             tag(MVTags.ON_END_CITY_EXPLORER_MAPS).add(BuiltinStructures.END_CITY);
-            tag(MVTags.ON_SWAMP_HUT_EXPLORER_MAPS).add(BuiltinStructures.SWAMP_HUT);
-            tag(MVTags.ON_JUNGLE_TEMPLE_EXPLORER_MAPS).add(BuiltinStructures.JUNGLE_TEMPLE);
-            tag(MVTags.ON_PILLAGER_OUTPOST_EXPLORER_MAPS).add(BuiltinStructures.PILLAGER_OUTPOST);
-            tag(MVTags.ON_MINESHAFT_EXPLORER_MAPS).add(BuiltinStructures.MINESHAFT);
-            tag(MVTags.ON_ANCIENT_CITY_EXPLORER_MAPS).add(BuiltinStructures.ANCIENT_CITY);
         }
     }
 }

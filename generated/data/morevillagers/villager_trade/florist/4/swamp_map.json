@@ -6,7 +6,7 @@
     {
       "type": "minecraft:exploration_map",
       "decoration": "minecraft:banner_green",
-      "destination": "#morevillagers:on_swamp_hut_explorer_maps",
+      "destination": "#minecraft:on_swamp_hut_maps",
       "search_radius": 100
     },
     {
@@ -29,7 +29,7 @@
     }
   ],
   "gives": {
-    "id": "minecraft:map"
+    "id": "minecraft:swamp_hut_map"
   },
   "max_uses": 12,
   "reputation_discount": 0.2,

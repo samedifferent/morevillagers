@@ -129,7 +129,7 @@ public class MVTrades {
         register(context, OCEANOGRAPHER_2_SPONGE, tradeSell(Items.SPONGE, 4, 2, 16, 5));
 
         register(context, OCEANOGRAPHER_3_DARK_PRISMARINE, tradeBuy(Items.DARK_PRISMARINE, 12, 16, 20));
-        register(context, OCEANOGRAPHER_3_MAP, tradeMap(context, 13, structures.getOrThrow(StructureTags.ON_TREASURE_MAPS), "filled_map.buried_treasure", MapDecorationTypes.RED_X, 12, 10));
+        register(context, OCEANOGRAPHER_3_MAP, tradeMap(context, Items.BURIED_TREASURE_MAP, 13, structures.getOrThrow(StructureTags.ON_TREASURE_MAPS), "filled_map.buried_treasure", MapDecorationTypes.RED_X, 12, 10));
 
         register(context, OCEANOGRAPHER_4_NAUTILUS, tradeSellSingle(Items.NAUTILUS_SHELL, 3, 12, 15));
         register(context, OCEANOGRAPHER_4_HEART, tradeSellSingle(Items.HEART_OF_THE_SEA, 8, 12, 15));
@@ -144,10 +144,10 @@ public class MVTrades {
         register(context, NETHERIAN_2_QUARTZ, tradeSellSingle(Items.NETHER_QUARTZ_ORE, 4, 16, 5));
 
         register(context, NETHERIAN_3_OBSIDIAN, tradeBuy(Items.OBSIDIAN, 4, 16, 20));
-        register(context, NETHERIAN_3_MAP, tradeMap(context, 13, structures.getOrThrow(MVTags.ON_FORTRESS_EXPLORER_MAPS), "filled_map.fortress", MapDecorationTypes.RED_BANNER, 12, 10));
+        register(context, NETHERIAN_3_MAP, tradeMap(context, Items.FILLED_MAP, 13, structures.getOrThrow(MVTags.ON_FORTRESS_EXPLORER_MAPS), "filled_map.fortress", MapDecorationTypes.RED_BANNER, 12, 10));
 
         register(context, NETHERIAN_4_GOLD, tradeBuy(Items.GOLD_INGOT, 4, 16, 30));
-        register(context, NETHERIAN_4_BASTION, tradeMap(context, 14, structures.getOrThrow(MVTags.ON_BASTION_REMNANT_EXPLORER_MAPS), "filled_map.bastion_remnant", MapDecorationTypes.YELLOW_BANNER, 12, 15));
+        register(context, NETHERIAN_4_BASTION, tradeMap(context, Items.FILLED_MAP, 14, structures.getOrThrow(MVTags.ON_BASTION_REMNANT_EXPLORER_MAPS), "filled_map.bastion_remnant", MapDecorationTypes.YELLOW_BANNER, 12, 15));
 
         register(context, NETHERIAN_5_PIGSTEP, tradeSellSingle(Items.MUSIC_DISC_PIGSTEP, 20, 12, 30));
 
@@ -184,7 +184,7 @@ public class MVTrades {
         register(context, ENDERIAN_3_FIREWORK, tradeSell(Items.FIREWORK_ROCKET, 3, 8, 16, 10));
 
         register(context, ENDERIAN_4_BREATH, tradeSell(Items.DRAGON_BREATH, 6, 2, 12, 15));
-        register(context, ENDERIAN_4_MAP, tradeMap(context, 14, structures.getOrThrow(MVTags.ON_END_CITY_EXPLORER_MAPS), "filled_map.endcity", MapDecorationTypes.PURPLE_BANNER, 12, 15));
+        register(context, ENDERIAN_4_MAP, tradeMap(context, Items.FILLED_MAP, 14, structures.getOrThrow(MVTags.ON_END_CITY_EXPLORER_MAPS), "filled_map.endcity", MapDecorationTypes.PURPLE_BANNER, 12, 15));
 
         register(context, ENDERIAN_5_SHULKER, tradeSellSingle(Items.SHULKER_SHELL, 12, 8, 30));
         register(context, ENDERIAN_5_HEAD, tradeSellSingle(Items.DRAGON_HEAD, 20, 2, 30));
@@ -218,10 +218,10 @@ public class MVTrades {
         register(context, FLORIST_3_BOTTLE, tradeSellSingle(Items.HONEY_BOTTLE, 6, 16, 10));
 
         register(context, FLORIST_4_MOSS, tradeBuy(Items.MOSS_BLOCK, 32, 16, 30));
-        register(context, FLORIST_4_MAP, tradeMap(context, 13, structures.getOrThrow(MVTags.ON_SWAMP_HUT_EXPLORER_MAPS), "filled_map.swamp_hut", MapDecorationTypes.GREEN_BANNER, 12, 15));
+        register(context, FLORIST_4_MAP, tradeMap(context, Items.SWAMP_HUT_MAP, 13, structures.getOrThrow(StructureTags.ON_SWAMP_HUT_MAPS), "filled_map.swamp_hut", MapDecorationTypes.GREEN_BANNER, 12, 15));
 
         register(context, FLORIST_5_NEST, tradeSellSingle(Items.BEE_NEST, 6, 12, 30));
-        register(context, FLORIST_5_JUNGLE, tradeMap(context, 15, structures.getOrThrow(MVTags.ON_JUNGLE_TEMPLE_EXPLORER_MAPS), "filled_map.jungle_pyramid", MapDecorationTypes.LIME_BANNER, 12, 30));
+        register(context, FLORIST_5_JUNGLE, tradeMap(context, Items.JUNGLE_PYRAMID_MAP, 15, structures.getOrThrow(StructureTags.ON_JUNGLE_PYRAMID_MAPS), "filled_map.jungle_pyramid", MapDecorationTypes.JUNGLE_TEMPLE, 12, 30));
 
 
         register(context, HUNTER_1_BONE, tradeBuy(Items.BONE, 32, 16, 2));
@@ -234,7 +234,7 @@ public class MVTrades {
         register(context, HUNTER_3_MAGMA, tradeSellSingle(Items.MAGMA_CREAM, 5, 12, 10));
 
         register(context, HUNTER_4_BLAZE, tradeSellSingle(Items.BLAZE_ROD, 5, 12, 15));
-        register(context, HUNTER_4_MAP, tradeMap(context, 13, structures.getOrThrow(MVTags.ON_PILLAGER_OUTPOST_EXPLORER_MAPS), "filled_map.pillager_outpost", MapDecorationTypes.BLACK_BANNER, 12, 15));
+        register(context, HUNTER_4_MAP, tradeMap(context, Items.FILLED_MAP, 13, structures.getOrThrow(StructureTags.ON_PLAINS_VILLAGE_MAPS), "filled_map.pillager_outpost", MapDecorationTypes.BLACK_BANNER, 12, 15));
 
         register(context, HUNTER_5_GHAST, tradeSellSingle(Items.GHAST_TEAR, 8, 12, 30));
         register(context, HUNTER_5_RABBIT, tradeSellSingle(Items.RABBIT_FOOT, 8, 12, 30));
@@ -250,10 +250,10 @@ public class MVTrades {
         register(context, MINER_3_AMETHYST, tradeSell(Items.AMETHYST_SHARD, 1, 2, 12, 10));
 
         register(context, MINER_4_TORCH, tradeBuy(Items.TORCH, 50, 12, 30));
-        register(context, MINER_4_MAP, tradeMap(context, 13, structures.getOrThrow(MVTags.ON_MINESHAFT_EXPLORER_MAPS), "filled_map.mineshaft", MapDecorationTypes.BROWN_BANNER, 12, 15));
+        register(context, MINER_4_MAP, tradeMap(context, Items.BURIED_MINESHAFT_MAP, 13, structures.getOrThrow(StructureTags.ON_MINESHAFT_MAPS), "filled_map.mineshaft", MapDecorationTypes.BROWN_BANNER, 12, 15));
 
         register(context, MINER_5_PICKAXE, tradeEnchanted(context, Items.DIAMOND_PICKAXE, 12, 3, 15));
-        register(context, MINER_5_CITY, tradeMap(context, 15, structures.getOrThrow(MVTags.ON_ANCIENT_CITY_EXPLORER_MAPS), "filled_map.ancient_city", MapDecorationTypes.BLUE_BANNER, 12, 15));
+        register(context, MINER_5_CITY, tradeMap(context, Items.BURIED_ANCIENT_CITY_MAP, 15, structures.getOrThrow(StructureTags.ON_ANCIENT_CITY_MAPS), "filled_map.ancient_city", MapDecorationTypes.BLUE_BANNER, 12, 15));
 
         return null;
     }
@@ -278,13 +278,13 @@ public class MVTrades {
         return tradeSell(item, emeralds, 1, maxUses, xp);
     }
 
-    private static VillagerTrade tradeMap(BootstrapContext<VillagerTrade> context, int emeralds, HolderSet<Structure> destination, String nameKey, Holder<MapDecorationType> mapDecoration, int maxUses, int xp) {
+    private static VillagerTrade tradeMap(BootstrapContext<VillagerTrade> context, Item mapItem, int emeralds, HolderSet<Structure> destination, String nameKey, Holder<MapDecorationType> mapDecoration, int maxUses, int xp) {
         HolderGetter<Item> items = context.lookup(Registries.ITEM);
 
         return VillagerTrade.builder(
             new TradeCost(Items.EMERALD, emeralds),
             new TradeCost(Items.COMPASS, 1),
-            new ItemStackTemplate(Items.MAP),
+            new ItemStackTemplate(mapItem),
             maxUses, xp, 0.2F
         ).addModifiers(
             Holder.direct(
