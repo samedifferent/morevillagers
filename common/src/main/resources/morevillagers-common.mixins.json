@@ -4,6 +4,7 @@
   "package": "com.samebutdifferent.morevillagers.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
+    "GiveGiftToHeroMixin",
     "PoiTypesInvoker",
     "StructureTemplatePoolAccessor"
   ],

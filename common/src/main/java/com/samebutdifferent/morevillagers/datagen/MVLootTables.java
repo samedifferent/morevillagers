@@ -1,12 +1,15 @@
 package com.samebutdifferent.morevillagers.datagen;
 
 import com.samebutdifferent.morevillagers.registry.MVBlocks;
+import com.samebutdifferent.morevillagers.registry.MVGifts;
+import com.samebutdifferent.morevillagers.registry.MVProfessions;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.entity.npc.villager.VillagerProfession;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -33,6 +36,24 @@ public class MVLootTables {
         }
         chest(context, "hunter", Items.ARROW, Items.SPIDER_EYE, Items.ENDER_PEARL, Items.LEATHER, Items.APPLE);
         chest(context, "oceanographer", Items.PRISMARINE_CRYSTALS, Items.PAPER, Items.SEA_PICKLE, Items.MAP, Items.DRIED_KELP);
+        gift(context, MVProfessions.OCEANOGRAPHER, Items.PRISMARINE_SHARD, Items.PRISMARINE_CRYSTALS, Items.SEA_PICKLE);
+        gift(context, MVProfessions.NETHERIAN, Items.QUARTZ, Items.GLOWSTONE_DUST, Items.NETHER_BRICK);
+        gift(context, MVProfessions.WOODWORKER, Items.OAK_LOG, Items.SPRUCE_LOG, Items.BIRCH_LOG, Items.STICK);
+        gift(context, MVProfessions.ENDERIAN, Items.CHORUS_FRUIT, Items.POPPED_CHORUS_FRUIT, Items.END_STONE);
+        gift(context, MVProfessions.ENGINEER, Items.REDSTONE, Items.REPEATER, Items.COMPARATOR);
+        gift(context, MVProfessions.FLORIST, Items.POPPY, Items.DANDELION, Items.BLUE_ORCHID, Items.ALLIUM,
+            Items.AZURE_BLUET, Items.OXEYE_DAISY, Items.CORNFLOWER, Items.LILY_OF_THE_VALLEY);
+        gift(context, MVProfessions.HUNTER, Items.RABBIT_HIDE, Items.FEATHER, Items.LEATHER, Items.ARROW);
+        gift(context, MVProfessions.MINER, Items.COAL, Items.RAW_IRON, Items.RAW_COPPER);
+    }
+
+    private static void gift(BootstrapContext<LootTable> context, ResourceKey<VillagerProfession> profession, Item... items) {
+        LootPool.Builder pool = LootPool.lootPool().setRolls(ContextIntProviders.exactly(1));
+        for (Item item : items) {
+            pool.add(LootItem.lootTableItem(item));
+        }
+        context.register(MVGifts.TABLES.get(profession), LootTable.lootTable()
+            .setParamSet(LootContextParamSets.GIFT).withPool(pool).build());
     }
 
     private static void chest(BootstrapContext<LootTable> context, String profession, Item... items) {

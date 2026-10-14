@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:gift",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:redstone"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:repeater"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:comparator"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}
